@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif !important;
+}
+
+*, h1, h2, h3, h4, h5, h6, p, button, a {
+  font-family: "Noto Sans", sans-serif !important;
+}/*# sourceMappingURL=styles.css.map */
