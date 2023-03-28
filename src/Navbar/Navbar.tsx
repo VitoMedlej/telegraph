@@ -14,67 +14,95 @@ import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
 import {BiMenuAltRight} from 'react-icons/bi'
-import {IoIosClose} from 'react-icons/io'
+import {IoMdClose} from 'react-icons/io'
 
 
 import { useRouter } from 'next/router';
+import { Button } from '@mui/material';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = [{href:'/',title:'Home'}, {title:'Services',href:'/services'}, {title:'Pricing',href:'#pricing'},{title:'Portfolio',href:'#portfolio'},{href:'/blog',title:'Blog'},{href:'#contact',title:'Contact'}];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-  const animateNavbar = (open?:boolean) => {
-    const tl = gsap.timeline()
-    if (open) {
+  // const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  // React.useEffect(() => {
+  //   if (!hide) {
+  //     isHidden(true)
+  //   }
+  
+  //   return () => {
+  //     isHidden(true)
+  //   }
+  // }, [])
+  
+  const animateNavbar = (reverse?:boolean) => {
+    if (reverse) {
 
-    tl.to('.menu',{opacity:1,display:'flex',top:0, ease:'power1'})
-  return  
-  }
-    tl.to('.menu',{opacity:1,display:'flex',top:0, ease:'power1'}).reverse()
-    
+      // gsap.to('.logo',{
+      //   filter:'none'
+      // })
+      gsap.to('.lista-item',{opacity:0,top:'0', ease:'power1',stagger:.15})
+      gsap.to('.menu',{duration:1,opacity:0.1,top:'-150%',delay:.85})
+      gsap.to('.menu2',{duration:1,opacity:0.1,top:'-150%',delay:1})
+      gsap.fromTo('.logo',{filter:'invert(1)'},{
+        delay:1,
+        filter:' inherit'
+      })
+      // setTimeout(() => {
+      gsap.fromTo('.drawer',{display:'flex'},{display:'none',delay:1})
+      // }, 2000);
+      return 
+    }
+
+    gsap.fromTo('.drawer',{display:'none'},{display:'flex',duration:.1})
+
+    gsap.fromTo('.menu',{opacity:0,top:'-150%'},{duration:1,opacity:1,display:'flex',top:0, ease:'cric'})
+    gsap.fromTo('.menu2',{opacity:0,top:'-150%'},{delay:.25,duration:1,opacity:1,display:'flex',top:0, ease:'cric'})
+    gsap.fromTo('.lista-item',{opacity:0,top:'10px'},{opacity:1,top:0, ease:'cric',stagger:0.2})
+    gsap.fromTo('.logo',{filter:'inherit'},{
+      delay:1,
+      filter:'invert(1)'
+    })
+
   }
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    
     setAnchorElNav(event.currentTarget);
     animateNavbar()
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-
-    animateNavbar(false)
+    setAnchorElNav(null);        
+    animateNavbar(true)
   };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  
   const router = useRouter()
-  // React.useEffect(() => {
-   
-  // }, [])
+
 
   
   return (
     <AppBar position="static" sx={{background:'white',boxShadow:'none'}}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{margin:'0 auto'}}>
         <Toolbar 
-        sx={{my:1}}
+        
+        sx={{
+          maxWidth:"xl",
+          py:1,margin:'0 auto'}}
         disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Link
             className='logo'
-            // variant="h5"
-            // noWrap
-            // component="a"
             href="/"
-         
+            
           >
-            <img src={Boolean(anchorElUser) ? 'https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/' : "https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png"} className='img' alt="" />
+    
+            
+              <img src={  'https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png'
+             } 
+             className='img' alt="" />
+
+            
+        
+
           </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex' },justifyContent:'flex-end',alignItems: 'right'}}>
@@ -93,93 +121,52 @@ function ResponsiveAppBar() {
               onClick={Boolean(anchorElNav) ? handleCloseNavMenu : handleOpenNavMenu}
               color="inherit"
             >
-            {Boolean(anchorElNav) ?  <IoIosClose color='red'/> : <BiMenuAltRight color='black'/>}
+            {Boolean(anchorElNav) ?  <IoMdClose color='red'/> : <BiMenuAltRight color='black'/>}
             </IconButton>
-
-            {/* <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
-        
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-     
-          {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box> */}
+          
 
-          <Box sx={{ flexGrow: 0 }}>
-            {/* <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip> */}
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+   
         </Toolbar>
       </Container>
-      <Box
-            className={`menu absolute ${Boolean(anchorElNav) ? 'open' : ''}`}
-                // sx={{
-                //   display : 
-                // }}
-           //  open={Boolean(anchorElNav)}
-                 // onClose={handleCloseNavMenu}
-               >
-              
-                   
-   asfasfasf
+        <Box
+        className='drawer'
+        sx={{
+          
+          width:'100vw',height:'100vh'}}>
+            <Box 
+            sx={{width:{xs:'100%',sm:'50%'},zIndex:'241432'}}
+            className={` menu  absolute ${Boolean(anchorElNav) ? 'open' : ''}`}
+            >
+                <Container
+                sx={
+                  {width:'50%',
+                    margin:'0 auto', flexGrow: 1, display: 'flex',alignItems:'start',px:2,flexDirection:'column',justifyContent:'center' }}
+                >
+                {pages.map((page) => (
+              <Button
+              className={`lista-item`}
+                key={page.title}
+                onClick={()=>{handleCloseNavMenu();router.push(`${page.href}`)}}
+                sx={{ my: {xs:1,sm:1.5}, color: 'white', display: 'block' }}
+              >
+                <Typography sx={{fontSize:{xs:'1.75em',sm:'2.3em'},fontWeight:'bolder'}} component='h4'>
+                {page.title}
+                </Typography>
+              </Button>
+            ))}
+                </Container>
+            </Box>
+            <Box
+            sx={{width:{xs:'100%',sm:'50%'}}}
 
-               </Box>
+            className={`center menu2  absolute ${Boolean(anchorElNav) ? 'open' : ''}`}
+            >
+          <Container className='center align-center'>
+          Contact Us Today
+          </Container>
+            </Box>
+        </Box>
     </AppBar>
   );
 }

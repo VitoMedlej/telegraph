@@ -9,13 +9,95 @@ body {
   font-family: "Noto Sans", sans-serif !important;
 }
 
+.decor-none {
+  text-decoration: none !important;
+}
+
+.clr {
+  color: #0D2068 !important;
+}
+
+.clr4 {
+  color: #2751f3 !important;
+}
+
+.clr3 {
+  color: #d1d1d1 !important;
+}
+
 .bg {
-  background: rgb(0, 0, 255) !important;
+  background: #0D2068 !important;
+}
+
+.smIcon {
+  border: 1px solid white;
+  padding: 0.61em;
+  width: 1.25em;
+  gap: 0.25em;
+  height: 1.25em;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.w100 {
+  width: 100% !important;
+}
+
+.wfit {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
+.pointer {
+  cursor: pointer !important;
+}
+
+.white {
+  color: white;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.bg2 {
+  background: #161616 !important;
+}
+
+.hover {
+  transition: all 0.3s ease;
+}
+.hover:hover {
+  color: #0D2068 !important;
+}
+
+.clr2 {
+  color: #161616 !important;
 }
 
 .logo {
+  display: flex;
   width: 100px;
   z-index: 2414124124;
+}
+
+.filter {
+  filter: invert(1);
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.auto {
+  margin: 0 auto;
 }
 
 .img {
@@ -29,12 +111,58 @@ body {
   position: absolute;
 }
 
+.relative {
+  position: relative !important;
+}
+
+.drawer {
+  display: none;
+  flex-direction: row;
+  width: 100%;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+}
+
 .menu {
   top: -150%;
-  right: 0;
-  width: 100vw;
   height: 100vh;
-  background: rgb(0, 0, 255);
+  background: #0D2068;
+  justify-content: end;
   opacity: 0;
   display: none;
+}
+.menu div {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  max-width: 768px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.menu2 {
+  background: #161616;
+  top: -150%;
+  height: 100vh;
+  opacity: 0;
+  display: none;
+  right: 0;
+}
+.menu2 div {
+  display: flex;
+  margin: 0;
+  width: 100%;
+}
+
+.flex {
+  display: flex !important;
 }/*# sourceMappingURL=styles.css.map */
