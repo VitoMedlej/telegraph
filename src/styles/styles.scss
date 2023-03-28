@@ -16,6 +16,10 @@ $trans : all .3s ease;
 .decor-none {
     text-decoration: none !important;
 }
+.grad {
+    background: rgb(13,32,104);
+    background: linear-gradient(336deg, rgba(13,32,104,0.7833508403361344) 12%, rgba(13,32,104,1) 100%);
+}
 .clr {
     color: $clr !important;
 }
@@ -95,6 +99,7 @@ $trans : all .3s ease;
 }
 .drawer {
     display: none;
+    position: fixed;
     flex-direction: row;
     width: 100%;
 }
@@ -103,7 +108,7 @@ $trans : all .3s ease;
 }
 .footer{
     display: flex;
-
+   
 }
 .menu {
     top: -150%;

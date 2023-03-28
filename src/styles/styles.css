@@ -13,6 +13,11 @@ body {
   text-decoration: none !important;
 }
 
+.grad {
+  background: rgb(13, 32, 104);
+  background: linear-gradient(336deg, rgba(13, 32, 104, 0.7833508403) 12%, rgb(13, 32, 104) 100%);
+}
+
 .clr {
   color: #0D2068 !important;
 }
@@ -50,7 +55,6 @@ body {
 }
 
 .wfit {
-  width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
 }
@@ -117,6 +121,7 @@ body {
 
 .drawer {
   display: none;
+  position: fixed;
   flex-direction: row;
   width: 100%;
 }

@@ -44,9 +44,9 @@ const Footer = () => {
               </Link>
             ))}
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={8} md={6}>
         <Typography sx={{color:"white",fontSize:'1.5em',fontWeight:'700',pb:'.25em'}} className='clr4'>Contact Us</Typography>
-        <Typography sx={{color:"white",fontSize:'2.5em',fontWeight:'500',pb:'.25em'}} >onbeirut@gmail.com</Typography>
+        <Typography sx={{color:"white",fontSize:{xs:'2em',md:'2.3em'},fontWeight:'500',pb:'.25em'}} >onbeirut@gmail.com</Typography>
 
           <SMicons/>
         </Grid>

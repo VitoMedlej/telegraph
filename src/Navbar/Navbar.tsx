@@ -132,7 +132,7 @@ function ResponsiveAppBar() {
         <Box
         className='drawer'
         sx={{
-          
+          background:'transparent',
           width:'100vw',height:'100vh'}}>
             <Box 
             sx={{width:{xs:'100%',sm:'50%'},zIndex:'241432'}}
