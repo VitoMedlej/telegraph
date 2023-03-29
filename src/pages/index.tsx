@@ -1,3 +1,4 @@
+import Goal from '@/Components/Home/Goal'
 import Hero from '@/Components/Home/Hero'
 import Navbar from '@/Navbar/Navbar'
 import Head from 'next/head'
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
       <main>
         <Hero/>
+        <Goal/>
       </main>
     </>
   )

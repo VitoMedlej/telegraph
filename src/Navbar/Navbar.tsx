@@ -44,10 +44,10 @@ function ResponsiveAppBar() {
       gsap.to('.lista-item',{opacity:0,top:'0', ease:'power1',stagger:.15})
       gsap.to('.menu',{duration:1,opacity:0.1,top:'-150%',delay:.85})
       gsap.to('.menu2',{duration:1,opacity:0.1,top:'-150%',delay:1})
-      gsap.fromTo('.logo',{filter:'invert(1)'},{
-        delay:1,
-        filter:' inherit'
-      })
+      // gsap.fromTo('.logo',{filter:'invert(1)'},{
+      //   delay:1,
+      //   filter:' inherit'
+      // })
       // setTimeout(() => {
       gsap.fromTo('.drawer',{display:'flex'},{display:'none',delay:1})
       // }, 2000);
@@ -81,7 +81,7 @@ function ResponsiveAppBar() {
 
   
   return (
-    <AppBar position="static" sx={{background:'white',boxShadow:'none'}}>
+    <AppBar position="static" sx={{background:'transparent',boxShadow:'none'}}>
       <Container maxWidth="xl" sx={{margin:'0 auto'}}>
         <Toolbar 
         
@@ -90,7 +90,7 @@ function ResponsiveAppBar() {
           py:1,margin:'0 auto'}}
         disableGutters>
           <Link
-            className='logo'
+            className='logo filter'
             href="/"
             
           >
@@ -107,21 +107,21 @@ function ResponsiveAppBar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex' },justifyContent:'flex-end',alignItems: 'right'}}>
           <MenuItem  onClick={()=>router.push('/')}>
-                  <Typography sx={{color:'black'}} textAlign="center">{'Projects'}</Typography>
+                  <Typography sx={{color:'white'}} textAlign="center">{'Projects'}</Typography>
                 </MenuItem>
                 <MenuItem sx={{mx:1}}  onClick={()=>router.push('/')}>
-                  <Typography sx={{color:'black'}} textAlign="center">{'Contact'}</Typography>
+                  <Typography sx={{color:'white'}} textAlign="center">{'Contact'}</Typography>
                 </MenuItem>
             <IconButton
               size="large"
-              sx={{zIndex:'23124124'}}
+              sx={{zIndex:'124124'}}
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
+              color='inherit'
               onClick={Boolean(anchorElNav) ? handleCloseNavMenu : handleOpenNavMenu}
-              color="inherit"
             >
-            {Boolean(anchorElNav) ?  <IoMdClose color='red'/> : <BiMenuAltRight color='black'/>}
+            {Boolean(anchorElNav) ?  <IoMdClose color='red'/> : <BiMenuAltRight color='white'/>}
             </IconButton>
           </Box>
           
@@ -135,7 +135,7 @@ function ResponsiveAppBar() {
           background:'transparent',
           width:'100vw',height:'100vh'}}>
             <Box 
-            sx={{width:{xs:'100%',sm:'50%'},zIndex:'241432'}}
+            sx={{width:{xs:'100%',sm:'50%'},zIndex:'222'}}
             className={` menu  absolute ${Boolean(anchorElNav) ? 'open' : ''}`}
             >
                 <Container
