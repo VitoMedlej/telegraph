@@ -1,5 +1,7 @@
 import Goal from '@/Components/Home/Goal'
 import Hero from '@/Components/Home/Hero'
+import Teaser from '@/Components/Home/Teaser'
+import VerticalCarousel from '@/Components/Home/VerticalCarousel/VerticalCarousel'
 import Navbar from '@/Navbar/Navbar'
 import Head from 'next/head'
 
@@ -16,6 +18,8 @@ export default function Home() {
       <main>
         <Hero/>
         <Goal/>
+        <Teaser/>
+        <VerticalCarousel/>
       </main>
     </>
   )

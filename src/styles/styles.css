@@ -2,11 +2,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans", sans-serif !important;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 *, h1, h2, h3, h4, h5, h6, p, button, a {
-  font-family: "Noto Sans", sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 .decor-none {
@@ -59,6 +60,7 @@ body {
 }
 
 .wfit {
+  width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
 }
@@ -73,6 +75,10 @@ body {
 
 .rounded {
   border-radius: 50%;
+}
+
+.br8 {
+  border-radius: 8px;
 }
 
 .bg2 {

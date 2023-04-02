@@ -28,15 +28,14 @@ const Footer = () => {
             veritatis perspiciatis expedita quaerat voluptatum debitis. Veniam voluptatibus, quae amet reprehenderit perspiciatis quisquam eius!
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={4} md={3} sx={{my:{xs:4,sm:0}}}>
+        <Grid item xs={12} sm={4} md={2} sx={{my:{xs:4,sm:0}}}>
             <Typography sx={{color:"white",fontSize:'1.5em',fontWeight:'700',pb:'.25em'}} className='clr4'>Links</Typography>
         {pages.map((page) => (
               <Link
                 href={page.href}
                 className={` decor-none wfit flex`}
                 key={page.title}
-                onClick={()=>{router.push(`${page.href}`)}}
-                
+                onClick={()=>{router.push(`${page.href}`)}}        
               >
                 <Typography className='hover clr3' sx={{color:'white',my:.5,fontSize:{xs:'1.05em',sm:'1.11em'},fontWeight:'500'}} component='h4'>
                 {page.title}
@@ -44,7 +43,7 @@ const Footer = () => {
               </Link>
             ))}
         </Grid>
-        <Grid item xs={12} sm={8} md={6}>
+        <Grid item xs={12} sm={8} md={5}>
         <Typography sx={{color:"white",fontSize:'1.5em',fontWeight:'700',pb:'.25em'}} className='clr4'>Contact Us</Typography>
         <Typography sx={{color:"white",fontSize:{xs:'2em',md:'2.3em'},fontWeight:'500',pb:'.25em'}} >onbeirut@gmail.com</Typography>
 
