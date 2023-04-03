@@ -1,5 +1,7 @@
 import Goal from '@/Components/Home/Goal'
 import Hero from '@/Components/Home/Hero'
+import Portfolio from '@/Components/Home/Portfolio'
+import Services from '@/Components/Home/Services'
 import Teaser from '@/Components/Home/Teaser'
 import VerticalCarousel from '@/Components/Home/VerticalCarousel/VerticalCarousel'
 import Navbar from '@/Navbar/Navbar'
@@ -20,6 +22,8 @@ export default function Home() {
         <Goal/>
         <Teaser/>
         <VerticalCarousel/>
+        <Services/>
+        <Portfolio/>
       </main>
     </>
   )

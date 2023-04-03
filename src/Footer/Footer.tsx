@@ -23,7 +23,7 @@ const Footer = () => {
              } 
              className='img' alt="" />
           </Link>
-          <Typography component='h1' className='clr3' sx={{maxWidth:'450px',mt:1}}>
+          <Typography component='h1' className='clr3' sx={{fontWeight:'100',maxWidth:'450px',mt:1}}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut in ullam quas officiis eligendi molestias, repellat 
             veritatis perspiciatis expedita quaerat voluptatum debitis. Veniam voluptatibus, quae amet reprehenderit perspiciatis quisquam eius!
           </Typography>
@@ -37,7 +37,7 @@ const Footer = () => {
                 key={page.title}
                 onClick={()=>{router.push(`${page.href}`)}}        
               >
-                <Typography className='hover clr3' sx={{color:'white',my:.5,fontSize:{xs:'1.05em',sm:'1.11em'},fontWeight:'500'}} component='h4'>
+                <Typography className=' clr3' sx={{':hover':{color:'white !important'},my:.5,fontSize:{xs:'1.05em',sm:'1.11em'},fontWeight:'100'}} component='h4'>
                 {page.title}
                 </Typography>
               </Link>

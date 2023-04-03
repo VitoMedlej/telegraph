@@ -34,7 +34,7 @@ const Item = ({n}:{n:number}) => {
         </Grid>
         <Grid item xs={12} md={6} lg={6} className={`flex center  col title-trigger${n} `}>
             <Box 
-            className={`animated-img${n} `}
+            className={`relative animated-img${n} `}
             sx={{opacity:0,
                 // position:'sticky',top:0,
                 maxWidth:'650px',
@@ -43,6 +43,9 @@ const Item = ({n}:{n:number}) => {
                 margin:{xs:'1em 0',md:'0 auto'},
                 borderRadius: '8px'
             }}>
+                <Box className={`absolute hider-${n}`} sx={{background:'white',height:'20%',top:0,width:'100%',maxWidth:'650px'}}>
+    
+                </Box>
                 <img
                     src="https://kota.co.uk/static/be60274f17826f2f328c276b8404f6bc/17f62/homepage-tribepad.webp"
                     alt="Image"
@@ -54,15 +57,11 @@ const Item = ({n}:{n:number}) => {
 const VerticalCarousel = () => {
 useEffect(() => {
 
-gsap.fromTo('.animated-img1',{opacity:0,y:'20px'},{y:'0%',opacity:1,scrollTrigger:{
+gsap.fromTo('.animated-img1',{opacity:0,y:'10px'},{y:'0%',opacity:1,scrollTrigger:{
     trigger:'.title-trigger1',
     start:'10% 50%',
-    // start: 'top top',
-    // end: 'bottom top',
-    // scrub:true,
-    // pin: true,
-    // markers:true
 }})
+gsap.to('.hider-1',{height:'0%',scrollTrigger:{trigger:'.title-trigger1',start:'10% 50%'}})
 gsap.fromTo('.nb-1 > *',{opacity:0,y:'10px'},{opacity:1,y:'0',
 stagger:.25,
 scrollTrigger:{
@@ -71,10 +70,12 @@ scrollTrigger:{
 }})
 
 
-gsap.fromTo('.animated-img2',{opacity:0,y:'15px'},{opacity:1,y:'0',ease:'ease-in',scrollTrigger:{
+gsap.fromTo('.animated-img2',{opacity:0,y:'10px'},{opacity:1,y:'0',ease:'ease-in',scrollTrigger:{
     trigger:'.title-trigger2',
     start:'10% 50%',
 }})
+gsap.to('.hider-2',{height:'0%',scrollTrigger:{trigger:'.title-trigger2',start:'10% 50%'}})
+
 gsap.fromTo('.nb-2 > *',{opacity:0,y:'10px'},{opacity:1,y:'0',
 stagger:.25,
 scrollTrigger:{
@@ -83,10 +84,12 @@ scrollTrigger:{
 }})
 
 
-gsap.fromTo('.animated-img3',{opacity:0,y:'15px'},{opacity:1,y:'0',ease:'ease-in',scrollTrigger:{
+gsap.fromTo('.animated-img3',{opacity:0,y:'10px'},{opacity:1,y:'0',ease:'ease-in',scrollTrigger:{
     trigger:'.title-trigger3',
     start:'10% 50%',
 }})
+gsap.to('.hider-3',{height:'0%',scrollTrigger:{trigger:'.title-trigger3',start:'10% 50%'}})
+
 gsap.fromTo('.nb-3 > *',{opacity:0,y:'10px'},{opacity:1,y:'0',
 stagger:.25,
 scrollTrigger:{
