@@ -1,3 +1,4 @@
+import BlogSections from '@/Components/Home/BlogSections'
 import Goal from '@/Components/Home/Goal'
 import Hero from '@/Components/Home/Hero'
 import Plans from '@/Components/Home/Plans'
@@ -26,6 +27,7 @@ export default function Home() {
         <Services/>
         <Portfolio/>
         <Plans/>
+        <BlogSections/>
       </main>
     </>
   )

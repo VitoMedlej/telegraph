@@ -14,6 +14,10 @@ body {
   text-decoration: none !important;
 }
 
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
 .grad {
   background: rgb(13, 32, 104);
   background: linear-gradient(336deg, rgba(13, 32, 104, 0.7833508403) 12%, rgb(13, 32, 104) 100%);
@@ -60,7 +64,6 @@ body {
 }
 
 .wfit {
-  width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
 }
