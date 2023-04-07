@@ -1,5 +1,6 @@
 import Goal from '@/Components/Home/Goal'
 import Hero from '@/Components/Home/Hero'
+import Plans from '@/Components/Home/Plans'
 import Portfolio from '@/Components/Home/Portfolio'
 import Services from '@/Components/Home/Services'
 import Teaser from '@/Components/Home/Teaser'
@@ -24,6 +25,7 @@ export default function Home() {
         <VerticalCarousel/>
         <Services/>
         <Portfolio/>
+        <Plans/>
       </main>
     </>
   )
