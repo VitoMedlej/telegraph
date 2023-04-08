@@ -106,12 +106,12 @@ function ResponsiveAppBar({dark}:{dark?:boolean}) {
                 <MenuItem sx={{mx:1}}  onClick={()=>router.push('/')}>
                   <Typography sx={{color:dark ? 'black':'white'}} textAlign="center">{'Contact'}</Typography>
                 </MenuItem>
-          <MenuItem   onClick={()=>router.push('/')}>
-                  <Typography sx={{fontSize:'.9em',color:dark ? 'black': 'white'}} textAlign="center">{'Projects'}</Typography>
+          <MenuItem    onClick={()=>router.push('/')}>
+                  <Typography sx={{ fontSize:'.9em',color:dark ? 'black': 'white'}} textAlign="center">{'Projects'}</Typography>
                 </MenuItem>
             <IconButton
               size="large"
-              sx={{zIndex:'124124'}}
+              sx={{border:'1px solid #ffffff4d',zIndex:'124124'}}
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"

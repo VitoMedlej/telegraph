@@ -64,7 +64,6 @@ body {
 }
 
 .wfit {
-  width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
 }
@@ -186,7 +185,6 @@ body {
 }
 
 .hero-img {
-  max-height: 550px;
   width: 100%;
   top: 0;
   z-index: -1;

@@ -1,25 +1,36 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
 import Btn from '../Btn/Btn'
+import {VscWorkspaceTrusted} from 'react-icons/vsc'
+import {GrContact} from 'react-icons/gr'
+
 
 const Hero = () => {
   return (
-    <Box className='' sx={{width:'100%',minHeight:'600px'}}>
-        <Grid container maxWidth='xl' className='auto' sx={{color:'white'}}>
-                <Grid item md={12} sx={{height:'100%',mt:{xs:4,sm:5}}} className='flex center col'>
+    <Box className='' sx={{width:'100%'}}>
+        <Grid  container maxWidth='xl' className='auto' sx={{my:5,color:'white'}}>
+                <Grid item md={12} sx={{height:'100%'}} className='flex center col'>
                   <Container >
 
                     <Typography  sx={{lineHeight:'1.1em',maxWidth:'md',fontSize:{xs:'2.75em',sm:'4.2em',md:'4.7em'},fontWeight:'bolder'}} component='h1'>
-                        From OnBeirut, To the World
+                    Grow Better With OnBeirut
                     </Typography>
+                 
                     <Typography sx={{maxWidth:'600px',my:{xs:2.5,md:2.5},fontSize:{xs:'.89em'}}} className='clr3' component='h4'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corporis molestias fugit animi incidunt dolorum, optio quam eos facere error illum rerum deserunt sed minus.
+
+                    Getting People To Your Website And Turning Them Into Happy Paying Customers Is What We Do Best
                     </Typography>
+
                     <Box>
                         {/* <Link href='/'>Contact</Link> */}
-                        <Btn blur sx={{mt:1}}>
+                        <Btn blur sx={{mt:0}}>
                             Home
                         </Btn>
+                      
+                        <Typography sx={{maxWidth:'600px',my:{xs:2.5,md:2.5},gap:.5,fontWeight:300,fontSize:{xs:'.75em'}}} className='clr3 flex align-center' component='h4'>
+                            Trusted by hundreds of clients
+                            <VscWorkspaceTrusted/>
+                    </Typography>
                     </Box>
                     </Container>
                     <Box sx={{display:{xs:'none',md:'flex'}}} className='hero-img absolute'>
