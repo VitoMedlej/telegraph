@@ -4,12 +4,9 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 // import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import gsap from 'gsap';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
@@ -19,10 +16,11 @@ import {IoMdClose} from 'react-icons/io'
 
 import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
+import Btn from '@/Components/Btn/Btn';
 
 const pages = [{href:'/',title:'Home'}, {title:'Services',href:'/services'}, {title:'Pricing',href:'#pricing'},{title:'Portfolio',href:'#portfolio'},{href:'/blog',title:'Blog'},{href:'#contact',title:'Contact'}];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({dark}:{dark?:boolean}) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   // const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
   // React.useEffect(() => {
@@ -61,7 +59,7 @@ function ResponsiveAppBar() {
     gsap.fromTo('.lista-item',{opacity:0,top:'10px'},{opacity:1,top:0, ease:'cric',stagger:0.2})
     gsap.fromTo('.logo',{filter:'inherit'},{
       delay:1,
-      filter:'invert(1)'
+      filter:dark ? '' : 'invert(1)'
     })
 
   }
@@ -90,9 +88,8 @@ function ResponsiveAppBar() {
           py:1,margin:'0 auto'}}
         disableGutters>
           <Link
-            className='logo filter'
+            className={`logo ${dark ? '' : 'filter' }`}
             href="/"
-            
           >
     
             
@@ -106,11 +103,11 @@ function ResponsiveAppBar() {
           </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex' },justifyContent:'flex-end',alignItems: 'right'}}>
-          <MenuItem  onClick={()=>router.push('/')}>
-                  <Typography sx={{color:'white'}} textAlign="center">{'Projects'}</Typography>
-                </MenuItem>
                 <MenuItem sx={{mx:1}}  onClick={()=>router.push('/')}>
-                  <Typography sx={{color:'white'}} textAlign="center">{'Contact'}</Typography>
+                  <Typography sx={{color:dark ? 'black':'white'}} textAlign="center">{'Contact'}</Typography>
+                </MenuItem>
+          <MenuItem   onClick={()=>router.push('/')}>
+                  <Typography sx={{fontSize:'.9em',color:dark ? 'black': 'white'}} textAlign="center">{'Projects'}</Typography>
                 </MenuItem>
             <IconButton
               size="large"
@@ -121,7 +118,7 @@ function ResponsiveAppBar() {
               color='inherit'
               onClick={Boolean(anchorElNav) ? handleCloseNavMenu : handleOpenNavMenu}
             >
-            {Boolean(anchorElNav) ?  <IoMdClose color='red'/> : <BiMenuAltRight color='white'/>}
+            {Boolean(anchorElNav) ?  <IoMdClose color='red'/> : <BiMenuAltRight color={dark ? 'black' : 'white'}/>}
             </IconButton>
           </Box>
           

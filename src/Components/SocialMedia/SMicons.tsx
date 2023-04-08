@@ -11,14 +11,14 @@ const sm = [
 
     Icon:FaFacebook,   href:'https://www.facebook.com/onbeirut'
 }]
-const SMicons = () => {
+const SMicons = ({sx,color}:{color?:string,sx?:any}) => {
   return (
-    <Box className='row flex' sx={{maxWidth:'200px'}}>
+    <Box className='row flex' sx={{maxWidth:'200px',...sx}}>
 
     {sm.map((item)=>{
       return <a key={item.href} className='center flex auto rounded smIcon pointer align-center gap white' href={`${item.href}`} target='_blank' rel={'noneferrer'}>
 
-            <item.Icon size='2em'/>
+            <item.Icon color={color || 'white'} size='2em'/>
          </a>
     })}
     </Box>

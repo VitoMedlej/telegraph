@@ -64,6 +64,7 @@ body {
 }
 
 .wfit {
+  width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
 }
@@ -111,6 +112,10 @@ body {
 
 .space-between {
   justify-content: space-between;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
 }
 
 .auto {

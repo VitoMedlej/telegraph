@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
 import gsap from 'gsap';
+import Btn from '../Btn/Btn';
 
 
 
@@ -58,7 +59,12 @@ const Portfolio = () => {
               </Box>
             </Box>})}
             </Box>
-        
+            <Box className='auto center'  sx={{pt:5,with:'100%'}}>
+              
+            <Btn  >
+              Get Your Own
+            </Btn>
+            </Box>
         </Container>
     </Box>
   )

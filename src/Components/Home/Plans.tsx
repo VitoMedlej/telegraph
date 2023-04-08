@@ -132,7 +132,7 @@ const Index = () => {
         
         sx={{
             pb: '3em',
-            mt:'6em'
+            my:'6em'
         }}>
             <Container
                 className='mx'
