@@ -7,16 +7,15 @@ const Services = () => {
     <Box className='bg '>
         <Grid container className='flex center items-center align-center auto'  maxWidth='xl' sx={{height:'100%',minHeight:'600px'}} >
              <Grid item xs={12} sm={7}>
-                    <Container sx={{color:'white'}}>
+                    <Container sx={{mt:{xs:4,sm:0},textAlign:{xs:'center',sm:'left'},color:'white'}}>
 
                     <Typography sx={{fontWeight:"700",fontSize:{xs:'2em',sm:'3em'}}}>
                     Website Design & Development,
                     Software development.
                     </Typography>
-                    <Btn blur sx={{mt:2}}>
+                    <Btn blur sx={{my:2}}>
                       <Typography sx={{fontSize:'.85em'}}>
                       Check Our Services
-
                       </Typography>
                     </Btn>
                     </Container>

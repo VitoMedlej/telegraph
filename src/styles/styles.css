@@ -64,6 +64,7 @@ body {
 }
 
 .wfit {
+  width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
 }
@@ -185,15 +186,22 @@ body {
 }
 
 .hero-img {
-  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://ucarecdn.com/1320e76b-8092-4a85-b4b3-ece1972cd17e/ColourfulMinimalBrainstormRoadmapMindMap3.png");
   top: 0;
   z-index: -1;
   right: 0;
 }
 .hero-img img {
-  height: 550px;
+  height: 100%;
 }
 
+@media (min-width: 600px) {
+  .hero-img {
+    background-image: url("https://ucarecdn.com/5c2b213c-8e9e-4090-b37d-5ae49a5a3eaf/ColourfulMinimalBrainstormRoadmapMindMap1.png");
+  }
+}
 .menu {
   top: -150%;
   height: 100vh;

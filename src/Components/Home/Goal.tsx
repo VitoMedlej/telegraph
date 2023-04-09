@@ -4,7 +4,7 @@ import Btn from '../Btn/Btn'
 
 const Goal = () => {
     return (
-        <Box>
+        <Box sx={{mt:{xs:4}}}>
             <Grid
                 container
                 className='flex auto'
@@ -32,7 +32,7 @@ const Goal = () => {
                         className='center flex auto align- col'>
 
                         <Typography component='h2' className='h2 clr2 '>
-                            Making brands a damn site better
+                        Your One-Stop Web Development Partner
                         </Typography>
                         <Typography
                             component='p'
@@ -40,10 +40,10 @@ const Goal = () => {
                             mt: 1.5
                         }}
                             className='clr2 '>
-                            Let’s face it, first impressions matter. Your website’s an opportunity to wow
-                            your audience, so why waste it with bad design? Because brands win new fans when
-                            they’re brave enough to go beyond their creative comfort zone.
-                        </Typography>
+                            Our goal is to empower small and medium-sized businesses by providing affordable, high-quality web development services.
+                            We understand the importance of a strong online presence in today's digital world, and we're committed to helping you achieve it without costing you a fortune. 
+                            Experience the perfect balance of quality and affordability with OnBeirut – let us be your partner in online success.
+                            </Typography>
                         <Btn
                             dark
                             sx={{

@@ -7,6 +7,7 @@ import Services from '@/Components/Home/Services'
 import Teaser from '@/Components/Home/Teaser'
 import VerticalCarousel from '@/Components/Home/VerticalCarousel/VerticalCarousel'
 import Navbar from '@/Navbar/Navbar'
+import { Box } from '@mui/material'
 import Head from 'next/head'
 
 
@@ -20,8 +21,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Box className='hero-img' >
+
   <Navbar/>
         <Hero/>
+        </Box>
         <Goal/>
         <Teaser/>
         <VerticalCarousel/>
