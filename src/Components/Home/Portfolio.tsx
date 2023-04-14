@@ -8,7 +8,41 @@ import Btn from '../Btn/Btn';
 
 
 
-
+const projects = [
+  {
+    title : 'TeenTops Electronics',
+    href : 'teentops-lb.com',
+    link : 'https://teentops-lb.com/',
+    description : 'An Online Electronics Store ',
+    img : 'https://images.pexels.com/photos/5632384/pexels-photo-5632384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    cate : ['Web dev','ecommerce','online shop']
+  },
+  {
+    title : 'Powerhouse European Appliances',
+    href : 'powerhouse-lb.com',
+    link : 'https://powerhouse-lb.com/',
+    description : 'European house appliances supplier',
+    img : 'https://images.pexels.com/photos/4865059/pexels-photo-4865059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    cate : ['Web dev','ecommerce']
+  },
+  {
+    title : 'Zekra For Natural Cosmetics',
+    href : 'zekra.shop',
+    link : 'https://zekra.shop/',
+    description : 'A natural cosmetics online shop',
+    img : 'https://images.pexels.com/photos/7038154/pexels-photo-7038154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    cate : ['Web dev','ecommerce']
+  },
+  {
+    title : 'Cash Delivery Website',
+    href : 'cashdeliver-lb.com',
+    link : 'https://cashdeliver-lb.com/',
+    description : 'A lebanese company which provides various delivery services',
+    img : 'https://images.pexels.com/photos/6170398/pexels-photo-6170398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    cate : ['Web design','Brand']
+  },
+  
+]
 const Portfolio = () => {
     useEffect(() => {
       gsap.to('.portfolio',{background:'#000000f0',duration:.5,scrollTrigger:{trigger:'.portfolio',markers:false,start:'top 50%'}})
@@ -20,41 +54,55 @@ const Portfolio = () => {
     }, [])
     
   return (
-    <Box className='portfolio' sx={{minHeight:'700px',width:'100%',background:'white'}}>
+    <Box className='portfolio' id='portfolio' sx={{minHeight:'700px',width:'100%',background:'white'}}>
         <Container sx={{pb:"4em"}}  maxWidth='lg'>
             <Box  sx={{py:'4em',textAlign:'center'}}>
                 <Typography sx={{color:"white",fontWeight:'700',fontSize:{xs:'2em',sm:'3em',md:'3.5em'}}}>
-                    Some Text And Shit
+                 Success Stories Showcase
                 </Typography>
                 <Typography sx={{color:"white",fontWeight:'200',fontSize:{xs:'1em',sm:'1.2em'},mb:2}} className='clr3'>
-                    Some Text And Shit
+                    Few of our recent projects from clients that rate us 5 stars 
                 </Typography>
             </Box>
             <Box className='flex space-between wrap'>
 
-         {[1,2,3,4].map((i,idx)=>{   return <Box
-         key={i}
+         {projects.map((project,idx)=>{   return <Box
+         key={project.title}
          className={`project-${idx}`}
          sx={{
-          mt: idx % 2 === 0 ? 0 : 15
-          ,width:'50%',maxWidth:'500px'}}>
+          pb:{xs:4,sm:'auto'},
+          mt: {xs:0,sm:idx % 2 === 0 ? 0 : 15}
+          ,width:{xs:'99%',sm:'50%'},maxWidth:'500px'}}>
                 
                 <Box className='relative' sx={{maxWidth:'500px'}}>
                   
                   <Box className={`absolute img-hider-${idx}`} sx={{background:'#0f0f0f',height:'20%',top:0,width:'100%',maxWidth:'650px'}}/>
-                  <img src="https://kota.co.uk/static/04aafd9a73dd39f39aa06dbae5e151d0/2ad7f/jamie-portrait.webp" alt="Project Image" className="img" />
+                  <img src={project.img} alt="Project Image" className="img" />
                 </Box>
-                <Box>
-                  <Typography sx={{fontWeight:"600",fontSize:'.9em',my:1}} className='clr'>
-                    Web Development
+                <Box className='flex row' sx={{gap:'.5em'}}>
+                    {
+                      project.cate.map(cate=>{
+                        return <Typography key={cate} sx={{fontWeight:"600",fontSize:'.9em',my:1}} className='clr'>
+                      {cate}
                   </Typography>
+                      })
+                    }
                 </Box>
+                <a href={project.link} target='_blank' style={{color:'white'}} rel={'noneferrer'}>
+
+                  <Typography sx={{fontWeight:"600",fontSize:'.9em',my:.15}} className='clr3'>
+                  {project.href}
+              </Typography>
+                </a>
               <Box sx={{color:'white'}}>
-                  <Typography sx={{fontWeight:'900',fontSize:{xs:'1.8em',sm:'2.5em'}}}>
-                    My Project Titlte
+                <a href={project.link} target='_blank' rel={'noneferrer'} style={{color:'white',textDecoration:'none'}}>
+
+                  <Typography sx={{fontWeight:'900',cursor:'pointer',fontSize:{xs:'1.8em',sm:'2.5em'}}}>
+                    {project.title}
                   </Typography>
+                </a>
                   <Typography className='clr3' sx={{fontWeight:"400",py:'.15em',fontSize:{xs:'.8em'}}}>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing.
+                      {project.description}
                   </Typography>
               </Box>
             </Box>})}

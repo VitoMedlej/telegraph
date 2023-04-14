@@ -1,32 +1,46 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Btn from '../Btn/Btn'
 import {VscWorkspaceTrusted} from 'react-icons/vsc'
-
+import gsap from 'gsap';
+import Link from 'next/link';
 
 const Hero = () => {
+  
+  useEffect(() => {
+    gsap.to('.hero-t1',{opacity:1,y:0,delay:.85})
+    gsap.to('.hero-t2',{opacity:1,y:0,delay:1.1})
+    gsap.to('.hero-btn',{opacity:1,y:0,delay:1.35,stagger:.25})
+    gsap.to('.hero-trust',{opacity:1,y:0,delay:1.55})
+  }, [])
+  
   return (
     <Box   sx={{py:4,width:'100%'}}>
         <Grid  container maxWidth='xl' className='auto' sx={{my:5,color:'white'}}>
                 <Grid item md={12} sx={{height:'100%'}} className='flex center col'>
                   <Container>
-                    <Typography  sx={{lineHeight:'1.1em',maxWidth:'md',fontSize:{xs:'2.75em',sm:'4.2em',md:'4.7em'},fontWeight:'bolder'}} component='h1'>
+                    <Typography  className='hero-t1 hid' sx={{lineHeight:'1.1em',maxWidth:'md',fontSize:{xs:'2.75em',sm:'4.2em',md:'4.7em'},fontWeight:'bolder'}} component='h1'>
                     Grow Better With OnBeirut
                     </Typography>
-                    <Typography sx={{maxWidth:'600px',my:{xs:2.5,md:2.5},fontSize:{xs:'.89em'}}} className='clr3' component='h4'>
+                    <Typography className=' hero-t2 clr3 hid' sx={{maxWidth:'600px',my:{xs:2.5,md:2.5},fontSize:{xs:'.89em'}}} component='h4'>
                     We specialize in crafting stunning, responsive, and SEO-friendly websites that fuel your growth and enhances your digital presence.
                     </Typography>
 
                     <Box sx={{py:2}}>
                         {/* <Link href='/'>Contact</Link> */}
-                        <Btn blur sx={{}}>
-                        Contact Us 
+                        <Link className='decor-none' href='/services'>
+                        <Btn blur   className='hid hero-btn'>
+                        Our Services
                         </Btn>
-                        <Btn  sx={{mx:1,border:'none !important'}}>
-                        Projects 
+                        </Link>
+                        <Link href='/contact' className='decor-none'>
+
+                        <Btn  className='hero-btn hid' sx={{mx:1,border:'none !important'}}>
+                         Contact Us
                         </Btn>
+                        </Link>
                       
-                        <Typography sx={{maxWidth:'600px',my:{xs:2.5,md:2.5},gap:.5,fontWeight:300,fontSize:{xs:'.75em'}}} className='clr3 flex align-center' component='h4'>
+                        <Typography sx={{maxWidth:'600px',my:{xs:2.5,md:2.5},gap:.5,fontWeight:300,fontSize:{xs:'.75em'}}} className='clr3 flex hero-trust hid align-center' component='h4'>
                             Trusted by hundreds of clients
                             <VscWorkspaceTrusted/>
                     </Typography>

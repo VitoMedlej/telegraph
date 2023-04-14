@@ -2,7 +2,7 @@ import {Box, Container, Grid, Typography} from '@mui/material'
 import React, { useEffect } from 'react'
 import gsap from 'gsap';
 
-const Item = ({n}:{n:number}) => {
+const Item = ({title,text,img,n}:{img:string,title:string,text:string,n:number}) => {
     return <Grid container sx={{mb:{xs:11,sm:8,md:0},height:{lg:'700px'}}}>
         <Grid 
         className={`flex center col auto`} item xs={12} md={6} lg={5}>
@@ -16,19 +16,16 @@ const Item = ({n}:{n:number}) => {
                     0{n}
                 </Typography>
                 <Box className='flex align- gap ' >
-                <Typography component='h2' className='h2 clr2 '>
-                    Making brands a damn site better
+                <Typography   component='h2' className='h2 clr2 '>
+                    {title}
                 </Typography>
                 </Box>
                 <Typography
+                sx={{maxWidth:'sm',fontSize:'1.2em',mt:1.5}}
                     component='p'
-                    sx={{
-                    mt: 1.5
-                }}
+                    
                     className='clr2 '>
-                    Let’s face it, first impressions matter. Your website’s an opportunity to wow
-                    your audience, so why waste it with bad design? Because brands win new fans when
-                    they’re brave enough to go beyond their creative comfort zone.
+          {text}
                 </Typography>
             </Box>
         </Grid>
@@ -104,9 +101,11 @@ scrollTrigger:{
         <Box>
             <Container maxWidth='xl'>
 
-                <Item n={1}/>
-                <Item n={2}/>
-                <Item n={3}/>
+                <Item title={'All Budgets'} text={'We charge 50-70% less than other agencies and our plan options are super flexible and tailored to your unique needs.'} img={''} n={1}/>
+                <Item title={'Impact and Effect'} text={'We create visually stunning, user-friendly websites that engage visitors and drive conversions and promote long-term customer loyalty.'} img={''} n={2}/>
+                <Item title={'Quality and Speed'} text={'We create high performance websites that deliver a seamless user experience, driving success for your business.'} img={''} n={3}/>
+                {/* <Item n={2}/> */}
+                {/* <Item n={3}/> */}
 
             </Container>
         </Box>

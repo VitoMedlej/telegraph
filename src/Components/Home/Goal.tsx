@@ -1,8 +1,18 @@
 import {Container, Box, Grid, Typography} from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Btn from '../Btn/Btn'
+import gsap from 'gsap';
+import Link from 'next/link';
+
+
 
 const Goal = () => {
+    useEffect(() => {
+        gsap.to('.goal-t1',{opacity:1,y:0,scrollTrigger:{trigger:'.goal-t1',start:'top 50%'}})
+        gsap.to('.goal-t2',{opacity:1,y:0,delay:.15,scrollTrigger:{trigger:'.goal-t1',start:'top 50%'}})
+        gsap.to('.goal-img',{opacity:1,y:0,delay:.35,duration:1,scrollTrigger:{trigger:'.goal-img',start:'top 50%'}})
+        gsap.to('.goal-btn',{opacity:1,y:0,delay:.35,scrollTrigger:{trigger:'.goal-t1',start:'top 50%'}})
+      }, [])
     return (
         <Box sx={{mt:{xs:4}}}>
             <Grid
@@ -31,7 +41,7 @@ const Goal = () => {
                     }}
                         className='center flex auto align- col'>
 
-                        <Typography component='h2' className='h2 clr2 '>
+                        <Typography component='h2' className='h2 clr2 goal-t1 hid '>
                         Your One-Stop Web Development Partner
                         </Typography>
                         <Typography
@@ -39,26 +49,30 @@ const Goal = () => {
                             sx={{
                             mt: 1.5
                         }}
-                            className='clr2 '>
+                            className='clr2 goal-t2 hid '>
                             Our goal is to empower small and medium-sized businesses by providing affordable, high-quality web development services.
-                            We understand the importance of a strong online presence in today's digital world, and we're committed to helping you achieve it without costing you a fortune. 
+                            We understand the importance of a strong online presence in today&apos;s digital world, and we&apos;re committed to helping you achieve it without costing you a fortune. 
                             Experience the perfect balance of quality and affordability with OnBeirut – let us be your partner in online success.
                             </Typography>
+            <Link href='/services' className="decor-none">
+
                         <Btn
-                            dark
-                            sx={{
+                        className='goal-btn hid'
+                        dark
+                        sx={{
                             color: '#0D2068',
                             borderColor: '#0D2068',
                             width: 'fit-content',
                             mt: 2
                         }}>
 
-                            Navigate
+                            What We Offer
                         </Btn>
+                            </Link>
                     </Container>
                 </Grid>
                 <Grid item xs={12} sm={5} md={6}>
-                    <Box className='goal-bg'>
+                    <Box className='goal-bg goal-img hid'>
 
                         <img
                             src="https://www.eight25media.com/wp-content/uploads/2021/02/group-46@-1.png"

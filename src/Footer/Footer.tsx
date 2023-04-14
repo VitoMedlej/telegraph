@@ -24,8 +24,9 @@ const Footer = () => {
              className='img' alt="" />
           </Link>
           <Typography component='h1' className='clr3' sx={{fontWeight:'100',maxWidth:'450px',mt:1}}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut in ullam quas officiis eligendi molestias, repellat 
-            veritatis perspiciatis expedita quaerat voluptatum debitis. Veniam voluptatibus, quae amet reprehenderit perspiciatis quisquam eius!
+          Our experienced team of web professionals specializes in crafting tailored solutions for businesses of all sizes.
+           We focus on delivering engaging, user-friendly websites, and provide ongoing support to help you achieve lasting online success. 
+          With our expertise and passion for the digital world, we&apos;re your reliable partner for all your web development needs
           </Typography>
           <SMicons sx={{mt:2}}/>
 

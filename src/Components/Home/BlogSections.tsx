@@ -7,7 +7,7 @@ const BlogSections = () => {
     <Box sx={{mb:6}}>
         <Container className='flex wrap auto' sx={{justifyContent:{xs:'center',sm:'space-between'}}} maxWidth='lg'>
         <Typography component='h2' className='h2 clr2 '>
-                            Making brands a damn site better
+                            Read Our Articles
                         </Typography>
                         <Typography
                             component='p'
@@ -15,9 +15,7 @@ const BlogSections = () => {
                             mt: 1.5,mb:4,
                         }}
                             className='clr2 '>
-                            Let’s face it, first impressions matter. Your website’s an opportunity to wow
-                            your audience, so why waste it with bad design? Because brands win new fans when
-                            they’re brave enough to go beyond their creative comfort zone.
+                            Stay informed with our blog, featuring expert insights and industry updates for web enthusiasts
                         </Typography>
        {[1,2,3].map(i=>{
 
@@ -47,7 +45,7 @@ const BlogSections = () => {
                    })}
                      <Box className='auto center'  sx={{pt:5,with:'100%'}}>
               <Btn dark sx={{px:3,py:.8,fontSize:'.9em'}}>
-                Get Your Own
+                Read More
               </Btn>
               </Box>
         </Container>

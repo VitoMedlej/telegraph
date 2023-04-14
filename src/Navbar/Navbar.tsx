@@ -18,7 +18,9 @@ import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
 import Btn from '@/Components/Btn/Btn';
 
-const pages = [{href:'/',title:'Home'}, {title:'Services',href:'/services'}, {title:'Pricing',href:'#pricing'},{title:'Portfolio',href:'#portfolio'},{href:'/blog',title:'Blog'},{href:'#contact',title:'Contact'}];
+const pages = [{href:'/',title:'Home',isHome:true}, {title:'Services',isHome:false,href:'/services'}, {
+  
+  isHome:true,title:'Pricing',href:'#pricing'},{isHome:true,title:'Portfolio',href:'#portfolio'},{isHome:false,mhref:'/blog',title:'Blog'},{isHome:false,href:'/contact',title:'Contact'}];
 
 function ResponsiveAppBar({dark}:{dark?:boolean}) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -75,7 +77,15 @@ function ResponsiveAppBar({dark}:{dark?:boolean}) {
   };
   
   const router = useRouter()
+const handleRoute = (scrollTo?:string,isHome?:boolean) => {
+  
+  if (scrollTo && window !== undefined ) {
+    router.push(isHome ? `/?scrollTo=${scrollTo}` : scrollTo);
+  } 
 
+  
+  // ()=>router.push('#portfolio')
+}
 
   
   return (
@@ -91,23 +101,19 @@ function ResponsiveAppBar({dark}:{dark?:boolean}) {
             className={`logo ${dark ? '' : 'filter' }`}
             href="/"
           >
-    
             
               <img src={  'https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png'
              } 
              className='img' alt="" />
 
-            
-        
-
           </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex' },justifyContent:'flex-end',alignItems: 'right'}}>
-                <MenuItem sx={{mx:1}}  onClick={()=>router.push('/')}>
+                <MenuItem sx={{mx:1}}  onClick={()=>router.push('/contact')}>
                   <Typography sx={{color:dark ? 'black':'white'}} textAlign="center">{'Contact'}</Typography>
                 </MenuItem>
-          <MenuItem    onClick={()=>router.push('/')}>
-                  <Typography sx={{ fontSize:'.9em',color:dark ? 'black': 'white'}} textAlign="center">{'Projects'}</Typography>
+          <MenuItem    onClick={()=>handleRoute('#portfolio',true)}>
+                  <Typography sx={{ fontSize:'.9em',color:dark ? 'black': 'white'}} textAlign="center">{'Our Work'}</Typography>
                 </MenuItem>
             <IconButton
               size="large"
@@ -144,7 +150,7 @@ function ResponsiveAppBar({dark}:{dark?:boolean}) {
               <Button
               className={`lista-item`}
                 key={page.title}
-                onClick={()=>{handleCloseNavMenu();router.push(`${page.href}`)}}
+                onClick={()=>{handleCloseNavMenu(); handleRoute(`${page.href}`,page.isHome)}}
                 sx={{ my: {xs:1,sm:1.5}, color: 'white', display: 'block' }}
               >
                 <Typography sx={{fontSize:{xs:'1.75em',sm:'2.3em'},fontWeight:'bolder'}} component='h4'>

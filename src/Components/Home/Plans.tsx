@@ -146,7 +146,7 @@ const Index = () => {
             }}>
 
 <Typography component='h2' className='h2 clr2 '>
-                            Making brands a damn site better
+Flexible Service Plans for all Web Solutions 
                         </Typography>
                         <Typography
                             component='p'
@@ -154,9 +154,7 @@ const Index = () => {
                             mt: 1.5
                         }}
                             className='clr2 '>
-                            Let’s face it, first impressions matter. Your website’s an opportunity to wow
-                            your audience, so why waste it with bad design? Because brands win new fans when
-                            they’re brave enough to go beyond their creative comfort zone.
+                            Tailored web solutions at competitive prices, designed to fit any business size and budget.
                         </Typography>
                
 
@@ -218,7 +216,7 @@ const Index = () => {
                             bg={` linear-gradient(135deg,rgb(255 226 0 / 10%),hsl(53deg 100% 45% / 52%))`}
                                price={249.99}
                                height={{xs:'100%',md:'540px'}}
-                               title='Ultimate Service Plan'
+                               title='Gold Service Plan'
                                description={`This customized service plan is great for any type of business that requires high & guaranteed efficiency.`}
                                planFeatures={['Up to 16 pages of your choice',
                                 `Premium & unique web design`,

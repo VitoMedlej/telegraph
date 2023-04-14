@@ -1,28 +1,35 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Btn from '../Btn/Btn'
+import gsap from 'gsap';
+
 
 const Services = () => {
+  useEffect(() => {
+    gsap.to('.service-bg',{x:0,scrollTrigger:{trigger:'.service-bg',start:'top 40%'}})
+    gsap.to('.serv-t1',{opacity:1,y:0,delay:.55,scrollTrigger:{trigger:'.service-bg',start:'top 60%'}})
+    gsap.to('.serv-btn',{opacity:1,y:0,delay:.8,scrollTrigger:{trigger:'.service-bg',start:'top 60%'}})
+    gsap.to('.serv-img',{opacity:1,y:0,delay:1,scrollTrigger:{trigger:'.service-bg',start:'top 60%'}})
+  }, [])
+  
   return (
-    <Box className='bg '>
+    <Box className='bg service-bg' >
         <Grid container className='flex center items-center align-center auto'  maxWidth='xl' sx={{height:'100%',minHeight:'600px'}} >
              <Grid item xs={12} sm={7}>
                     <Container sx={{mt:{xs:4,sm:0},textAlign:{xs:'center',sm:'left'},color:'white'}}>
-
-                    <Typography sx={{fontWeight:"700",fontSize:{xs:'2em',sm:'3em'}}}>
-                    Website Design & Development,
-                    Software development.
+                    <Typography className='hid serv-t1' sx={{fontWeight:"700",fontSize:{xs:'2em',sm:'3em'}}}>
+                    Landing pages, Ecommerce sites & Web Apps
                     </Typography>
-                    <Btn blur sx={{my:2}}>
-                      <Typography sx={{fontSize:'.85em'}}>
-                      Check Our Services
+                    <Btn blur sx={{my:2}} className='hid serv-btn'>
+                      <Typography  sx={{fontSize:'.85em'}}>
+                      View All Services
                       </Typography>
                     </Btn>
                     </Container>
 
                 </Grid>       
                 <Grid item xs={12} sm={5}>
-                    <Box sx={{maxWidth:'550px'}}>
+                    <Box className='hid serv-img' sx={{maxWidth:'550px'}}>
                       <img src="https://i.pinimg.com/736x/36/12/9a/36129a92cce2616d027d0a427a0c95be.jpg" alt="" className="img" />
                     </Box>
                 </Grid>       
