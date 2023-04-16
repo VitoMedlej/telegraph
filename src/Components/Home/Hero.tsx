@@ -5,8 +5,8 @@ import {VscWorkspaceTrusted} from 'react-icons/vsc'
 import gsap from 'gsap';
 import Link from 'next/link';
 
-const Hero = () => {
-  
+const Hero = ({imgmd,title,desc}:{imgmd?:string,title?:string,desc?:string}) => {
+
   useEffect(() => {
     gsap.to('.hero-t1',{opacity:1,y:0,delay:.85})
     gsap.to('.hero-t2',{opacity:1,y:0,delay:1.1})
@@ -20,22 +20,22 @@ const Hero = () => {
                 <Grid item md={12} sx={{height:'100%'}} className='flex center col'>
                   <Container>
                     <Typography  className='hero-t1 hid' sx={{lineHeight:'1.1em',maxWidth:'md',fontSize:{xs:'2.75em',sm:'4.2em',md:'4.7em'},fontWeight:'bolder'}} component='h1'>
-                    Grow Better With OnBeirut
+                    {title ? title : 'Grow Better With OnBeirut'}
                     </Typography>
                     <Typography className=' hero-t2 clr3 hid' sx={{maxWidth:'600px',my:{xs:2.5,md:2.5},fontSize:{xs:'.89em'}}} component='h4'>
-                    We specialize in crafting stunning, responsive, and SEO-friendly websites that fuel your growth and enhances your digital presence.
+                    {desc ? desc : 'We specialize in crafting stunning, responsive, and SEO-friendly websites that fuel your growth and enhances your digital presence.'}
                     </Typography>
 
                     <Box sx={{py:2}}>
                         {/* <Link href='/'>Contact</Link> */}
                         <Link className='decor-none' href='/services'>
-                        <Btn blur   className='hid hero-btn'>
+                        <Btn  blur  sx={{px:{xs:2,sm:3}}} className='hid hero-btn'>
                         Our Services
                         </Btn>
                         </Link>
                         <Link href='/contact' className='decor-none'>
 
-                        <Btn  className='hero-btn hid' sx={{mx:1,border:'none !important'}}>
+                        <Btn   className='hero-btn hid' sx={{mx:1,border:'none !important'}}>
                          Contact Us
                         </Btn>
                         </Link>
@@ -46,7 +46,14 @@ const Hero = () => {
                     </Typography>
                     </Box>
                     </Container>
-                    {/* <Box sx={{display:{xs:'none',md:'flex'}}} className='hero-img absolute'>
+                    <Box sx={{height:'550px',display:{xs:'none',md:'flex'}}} className='hero-img absolute'>
+                        <img src={imgmd ? imgmd : "https://ucarecdn.com/5c2b213c-8e9e-4090-b37d-5ae49a5a3eaf/ColourfulMinimalBrainstormRoadmapMindMap1.png"} alt="" className="img" />
+                    </Box>
+                    <Box sx={{height:'480px',display:{xs:'flex',md:'none'}}} className='hero-img absolute'>
+                        <img src="https://ucarecdn.com/1320e76b-8092-4a85-b4b3-ece1972cd17e/ColourfulMinimalBrainstormRoadmapMindMap3.png" alt="" className="img" />
+                    </Box>
+{/* 
+                    <Box sx={{display:{xs:'none',md:'flex'}}} className='hero-img absolute'>
                         <img src="https://ucarecdn.com/5c2b213c-8e9e-4090-b37d-5ae49a5a3eaf/ColourfulMinimalBrainstormRoadmapMindMap1.png" alt="" className="img" />
                     </Box>
                     <Box sx={{display:{xs:'flex',md:'none'}}} className='hero-img absolute'>

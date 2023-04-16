@@ -22,9 +22,10 @@ const styles =(dark?:boolean) => {
   }
   return a
 }
-const Btn = ({className,dark,children,blur,sx}:{className?:string,dark?:boolean,blur?:boolean,sx?:any,children?:any}) => {
+const Btn = ({onClick,className,dark,children,blur,sx}:{onClick?:any,className?:string,dark?:boolean,blur?:boolean,sx?:any,children?:any}) => {
   return (
     <Button 
+    onClick={onClick && onClick}
     className={`${blur ? 'blur' :'' } ${className ? className : ""}`}
     sx={{
      ...styles(dark),

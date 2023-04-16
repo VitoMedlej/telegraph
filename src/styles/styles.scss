@@ -142,8 +142,8 @@ border: 1px solid rgba(255, 255, 255, 0.138);
 }
 }
 .h2 {
-    font-size: 2.55em;
-    font-weight: bolder;
+    font-size: 2.55em !important;
+    font-weight: bolder !important;
 }
 .contain {
     object-fit: contain !important;
@@ -168,10 +168,10 @@ text-decoration: none !important;
     height: 100%;
 }
 .hero-img {
-    // width: 100%;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('https://ucarecdn.com/1320e76b-8092-4a85-b4b3-ece1972cd17e/ColourfulMinimalBrainstormRoadmapMindMap3.png');
+    // background-image: url('https://ucarecdn.com/1320e76b-8092-4a85-b4b3-ece1972cd17e/ColourfulMinimalBrainstormRoadmapMindMap3.png');
     img {
         height: 100%;
     }
@@ -181,8 +181,7 @@ text-decoration: none !important;
 }
 @media (min-width:600px) {
     .hero-img {
-        background-image: url('https://ucarecdn.com/5c2b213c-8e9e-4090-b37d-5ae49a5a3eaf/ColourfulMinimalBrainstormRoadmapMindMap1.png');
-    
+        // background-image: url('https://ucarecdn.com/5c2b213c-8e9e-4090-b37d-5ae49a5a3eaf/ColourfulMinimalBrainstormRoadmapMindMap1.png');
     }
 }
 .menu {

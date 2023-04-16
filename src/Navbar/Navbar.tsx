@@ -16,11 +16,10 @@ import {IoMdClose} from 'react-icons/io'
 
 import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
-import Btn from '@/Components/Btn/Btn';
 
 const pages = [{href:'/',title:'Home',isHome:true}, {title:'Services',isHome:false,href:'/services'}, {
   
-  isHome:true,title:'Pricing',href:'#pricing'},{isHome:true,title:'Portfolio',href:'#portfolio'},{isHome:false,mhref:'/blog',title:'Blog'},{isHome:false,href:'/contact',title:'Contact'}];
+  isHome:true,title:'Pricing',href:'#pricing'},{isHome:true,title:'Portfolio',href:'#portfolio'},{isHome:false,href:'/blog',title:'Blog'},{isHome:false,href:'/contact',title:'Contact'}];
 
 function ResponsiveAppBar({dark}:{dark?:boolean}) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
