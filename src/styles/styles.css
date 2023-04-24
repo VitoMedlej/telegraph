@@ -35,6 +35,13 @@ body {
   color: #2751f3 !important;
 }
 
+.blog-h1 {
+  padding: 1em 0 !important;
+  color: #0D2068 !important;
+  font-size: 2em !important;
+  font-weight: 700 !important;
+}
+
 .clr3 {
   color: #d1d1d1 !important;
 }
@@ -43,12 +50,45 @@ body {
   background: #0D2068 !important;
 }
 
+.bg4 {
+  background: #f5f5f5 !important;
+}
+
+.blog-p {
+  font-weight: 400 !important;
+  font-size: 1.15em !important;
+}
+
+.blog-h2 {
+  font-weight: 700 !important;
+  font-size: 1.5em !important;
+  color: #161616;
+  padding: 0.75em 0;
+}
+
+.bg3 {
+  background: white !important;
+}
+
+.table {
+  margin: 0 !important;
+  padding: 0 1em !important;
+}
+
 .smIcon {
   border: 1px solid white;
   padding: 0.61em;
   width: 1.25em;
   gap: 0.25em;
   height: 1.25em;
+}
+
+.gap2 {
+  gap: 0.5em !important;
+}
+
+.gap4 {
+  gap: 1em !important;
 }
 
 .col {
@@ -211,6 +251,10 @@ body {
 }
 .hero-img img {
   height: 100%;
+}
+
+.rounded {
+  border-radius: 50% !important;
 }
 
 .menu {

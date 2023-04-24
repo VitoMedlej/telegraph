@@ -29,7 +29,7 @@ export default function Home() {
         <Box sx={{mb:{xs:5,sm:6,md:9}}} className='hero-img' >
 
   <Navbar/>
-        <Hero  title={'Expand Your Knowledge With OnBeirut Blog'} imgmd={`https://ucarecdn.com/4a88fc30-1397-43dd-9ed9-2949b788d7b6/Capture.JPG`}/>
+        <Hero blog={true}  title={'Expand Your Knowledge'} imgmd={`https://ucarecdn.com/4a88fc30-1397-43dd-9ed9-2949b788d7b6/Capture.JPG`}/>
         </Box>
         
         <BlogSections/>

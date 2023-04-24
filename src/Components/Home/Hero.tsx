@@ -5,7 +5,7 @@ import {VscWorkspaceTrusted} from 'react-icons/vsc'
 import gsap from 'gsap';
 import Link from 'next/link';
 
-const Hero = ({imgmd,title,desc}:{imgmd?:string,title?:string,desc?:string}) => {
+const Hero = ({blog,imgmd,title,desc}:{blog?:boolean,imgmd?:string,title?:string,desc?:string}) => {
 
   useEffect(() => {
     gsap.to('.hero-t1',{opacity:1,y:0,delay:.85})
@@ -15,7 +15,7 @@ const Hero = ({imgmd,title,desc}:{imgmd?:string,title?:string,desc?:string}) => 
   }, [])
   
   return (
-    <Box   sx={{py:4,width:'100%'}}>
+    <Box sx={{py:4,width:'100%'}}>
         <Grid  container maxWidth='xl' className='auto' sx={{my:5,color:'white'}}>
                 <Grid item md={12} sx={{height:'100%'}} className='flex center col'>
                   <Container>
@@ -28,20 +28,19 @@ const Hero = ({imgmd,title,desc}:{imgmd?:string,title?:string,desc?:string}) => 
 
                     <Box sx={{py:2}}>
                         {/* <Link href='/'>Contact</Link> */}
-                        <Link className='decor-none' href='/services'>
+                        <Link className='decor-none' href={blog ? '#latest':'/services'}>
                         <Btn  blur  sx={{px:{xs:2,sm:3}}} className='hid hero-btn'>
-                        Our Services
+                      {blog ? 'Latest Articles' :  'Our Services'}
                         </Btn>
                         </Link>
                         <Link href='/contact' className='decor-none'>
-
-                        <Btn   className='hero-btn hid' sx={{mx:1,border:'none !important'}}>
+                        <Btn className='hero-btn hid' sx={{mx:1,border:'none !important'}}>
                          Contact Us
                         </Btn>
                         </Link>
                       
                         <Typography sx={{maxWidth:'600px',my:{xs:2.5,md:2.5},gap:.5,fontWeight:300,fontSize:{xs:'.75em'}}} className='clr3 flex hero-trust hid align-center' component='h4'>
-                            Trusted by hundreds of clients
+                           Trusted by hundreds of clients
                             <VscWorkspaceTrusted/>
                     </Typography>
                     </Box>

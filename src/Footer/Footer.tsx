@@ -49,8 +49,10 @@ const Footer = () => {
         <Grid item xs={12} sm={6} md={3} lg={2}>
 
         <Typography sx={{color:"white",fontSize:'1.5em',fontWeight:'700',pb:'.25em'}} className='clr4'>Contact Us</Typography>
+       <a href="https://www.instagram.com/onbeirut/" rel='noreferrer' target='_blank'>
         <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >@onbeirut</Typography>
-        <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >+961 71 920 255</Typography>
+       </a>
+        <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >+961 76 910 252</Typography>
         <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >onbeirut@gmail.com</Typography>
 
         </Grid>

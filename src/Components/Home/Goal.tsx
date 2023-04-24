@@ -50,9 +50,13 @@ const Goal = () => {
                             mt: 1.5
                         }}
                             className='clr2 goal-t2 hid '>
-                            Our goal is to empower small and medium-sized businesses by providing affordable, high-quality web development services.
+
+Our goal is to empower businesses by providing affordable, high-quality web development services.
+                            We&apos;re committed to helping you achieve online presence without costing you a fortune. 
+                            Experience the perfect balance of quality and affordability with OnBeirut – let us be your partner in online success.                                
+                            {/* Our goal is to empower small and medium-sized businesses by providing affordable, high-quality web development services.
                             We understand the importance of a strong online presence in today&apos;s digital world, and we&apos;re committed to helping you achieve it without costing you a fortune. 
-                            Experience the perfect balance of quality and affordability with OnBeirut – let us be your partner in online success.
+                            Experience the perfect balance of quality and affordability with OnBeirut – let us be your partner in online success. */}
                             </Typography>
             <Link href='/services' className="decor-none">
 
@@ -75,7 +79,7 @@ const Goal = () => {
                     <Box className='goal-bg goal-img hid'>
 
                         <img
-                            src="https://www.eight25media.com/wp-content/uploads/2021/02/group-46@-1.png"
+                            src="https://cdn.dribbble.com/userupload/4395742/file/original-a42b4c3859b1aa2770c49139fd8b97fb.png?compress=1&resize=1024x768"
                             alt=""
                             className="contain img"/>
                     </Box>
