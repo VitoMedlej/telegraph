@@ -40,7 +40,7 @@ export default function Index() {
   <Navbar/>
 
 
-    <Grid sx={{pt:4,maxWidth:'lg'}} className=' auto' container>
+    {/* <Grid sx={{pt:4,maxWidth:'lg'}} className=' auto' container>
             <Grid  xs={12} md={8} lg={9} item>
                     <Container  className='bg3 auto' sx={{py:2,border:'1px solid',height:'100%'}}>
                         <Box>
@@ -135,7 +135,7 @@ export default function Index() {
                 
             </Grid>
             </Grid>
-        </Grid>
+        </Grid> */}
 
         Under development...
 
