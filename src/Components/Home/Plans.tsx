@@ -7,7 +7,7 @@ import { BsArrowUpRight} from 'react-icons/bs';
 
 
 interface IPlanCard {
-    price : number
+    price ?: number
     title : string;
     planFeatures : string[];
     description : string;
@@ -67,7 +67,7 @@ const PlanCard = ({
                 fontSize: '3.5em'
             }}
                 >
-                    ${price}
+                    {price ? `$${price}` : 'Custom '}
                 </Typography>
             <Link
             // variant='v3'
@@ -167,12 +167,12 @@ Flexible Service Plans for all Web Solutions
                                <PlanCard
                                 height={{xs:'100%',md:'540px'}}
 
-                               price={29.99}
-                               title='Basic Service Plan'
+                            //    price={0}
+                               title='Custom Service Plan'
                                description={`Ideal for new businesses or individuals planning to start a new business. Helps build credibility.`}
-                               planFeatures={['2 Pages website','Simple but effective design','Free simple Logo','Low risk, high value investment','Simple CMS interface'
+                               planFeatures={['Any nb of Pages','Custom design','Full freedom plan','Low risk, high value investment','Simple CMS interface'
                                
-                               ,'3 free month maintenance']}
+                               ,'Custom Maintenance timeline']}
                                />
                      
                         </Grid>
@@ -196,28 +196,11 @@ Flexible Service Plans for all Web Solutions
                           
                         <PlanCard
                             bg={` linear-gradient(135deg,rgb(255 255 255 / 10%),hsl(108.22deg 100% 45% / 52%))`}
-                               price={149.99}
-                               height={{xs:'100%',md:'540px'}}
-                               title='Ultimate Service Plan'
-                               description={`This customized service plan is great for any type of business that requires high & guaranteed efficiency.`}
-                                planFeatures={['8 pages of your choice',' Full control over design',' Full Seo optimization', 'Free 1 year domain + permanent hosting',' Custom functionalities', 
-                                'Enterprise-level marketing data', 'Google analytics setup', 'full dashboard customization', 'u\p to 6 months support']}
-                     
-                            //    planFeatures={['8 pages web application ','Full control over design','Full SEO optimization','Free domain + hosting','Custom functionalities','Enterprise-level marketing data and analytics','12 month Support & maintenance']}
-                               />
-                        </Grid>
-
-<Grid xs={12} sm={5.9}
-                        sx={{mt:{xs:2}}}
-
-                        item>
-                     
-                        <PlanCard
-                            bg={` linear-gradient(135deg,rgb(255 226 0 / 10%),hsl(53deg 100% 45% / 52%))`}
                                price={249.99}
                                height={{xs:'100%',md:'540px'}}
                                title='Gold Service Plan'
-                               description={`This customized service plan is great for any type of business that requires high & guaranteed efficiency.`}
+
+                               description={`This is a service plan designed for .`}
                                planFeatures={['Up to 16 pages of your choice',
                                 `Premium & unique web design`,
                                 `Full Search Engine Optimization`, 
@@ -231,6 +214,26 @@ Flexible Service Plans for all Web Solutions
                                 `Chatbot/Livechat optional Setup`,  
                                 `Unlimited support & maintenance`,
                                 `Long-term scalability and best performance`,]}
+                            
+                     
+                            //    planFeatures={['8 pages web application ','Full control over design','Full SEO optimization','Free domain + hosting','Custom functionalities','Enterprise-level marketing data and analytics','12 month Support & maintenance']}
+                               />
+                        </Grid>
+
+<Grid xs={12} sm={5.9}
+                        sx={{mt:{xs:2}}}
+
+                        item>
+                     
+                        <PlanCard
+                               title='Ecommerce Service Plan'
+
+                            bg={` linear-gradient(135deg,rgb(255 226 0 / 10%),hsl(53deg 100% 45% / 52%))`}
+                               price={399.99}
+                               height={{xs:'100%',md:'540px'}}
+                               description={`This customized service plan is great for any type of business that requires high & guaranteed efficiency.`}
+                               planFeatures={['Full ecommerce site','Full control over design','Full Seo optimization', 'Free 3 year domain + permanent hosting','Custom functionalities', 
+                               'Enterprise-level marketing data', 'Graphics design','Coded from scratch','Chatbot/Livechat optional Setup','Google analytics setup', 'Full dashboard customization', 'Up to 6 months support']}
                                />
    </Grid>
             </Grid>

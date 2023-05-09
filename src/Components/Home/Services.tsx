@@ -17,9 +17,10 @@ const Services = () => {
         <Grid container className='flex center items-center align-center auto'  maxWidth='xl' sx={{height:'100%',minHeight:'600px'}} >
              <Grid item xs={12} sm={7}>
                     <Container sx={{mt:{xs:4,sm:0},textAlign:{xs:'center',sm:'left'},color:'white'}}>
-                    <Typography className='hid serv-t1' sx={{fontWeight:"700",fontSize:{xs:'2em',sm:'3em'}}}>
-                    Landing pages, Ecommerce sites & Web Apps
+                    <Typography className='hid serv-t1' sx={{fontWeight:"700",fontSize:{xs:'2em',sm:'3.2em',lg:'3.5em'}}}>
+                    Ecommerce sites, Web Apps & Mobile Apps
                     </Typography>
+                    
                     <Btn blur sx={{my:2}} className='hid serv-btn'>
                       <Typography  sx={{fontSize:'.85em'}}>
                       View All Services
@@ -30,7 +31,7 @@ const Services = () => {
                 </Grid>       
                 <Grid item xs={12} sm={5}>
                     <Box className='hid serv-img' sx={{maxWidth:'550px'}}>
-                      <img src="https://i.pinimg.com/736x/36/12/9a/36129a92cce2616d027d0a427a0c95be.jpg" alt="" className="img" />
+                      <img src="https://ucarecdn.com/94429ac2-a97b-4250-9a70-66aa8655c7b2/-/crop/2578x2362/310,0/-/preview/3000x3000/" alt="" className="img" />
                     </Box>
                 </Grid>       
         </Grid>
