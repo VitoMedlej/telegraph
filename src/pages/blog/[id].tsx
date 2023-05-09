@@ -137,6 +137,8 @@ export default function Index() {
             </Grid>
         </Grid>
 
+        Under development...
+
       </main>
     </>
   )
