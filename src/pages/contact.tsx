@@ -67,12 +67,15 @@ const Index = () => {
     </Container>
         </Grid>
         <Grid item xs={12} sm={6}>
-            <Container component='form' sx={{gap:1}} className='flex space-between wrap'>
+            <Container component='form' sx={{gap:1,background:'#f4f4f4',
+          py:2.5,
+
+          boxShadow: 'rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px'}} className='flex space-between wrap'>
               <TextField sx={{width:'49%',py:1}} variant='outlined' placeholder='First Name'/>
-              <TextField variant='outlined' sx={{width:'49%',py:1}} placeholder='Last Name'/>
-              <TextField variant='outlined' sx={{width:'99%',py:1}} type='email' placeholder='Email'/>
-              <TextField variant='outlined' sx={{width:'99%',py:1}} placeholder='Phone Number (Optional)'/>
-              <TextField multiline={true} variant='outlined' rows={4}  sx={{width:'99%',py:2}} placeholder='Message'/>
+              <TextField variant='outlined' sx={{background:'white',width:'49%',py:1}} placeholder='Last Name'/>
+              <TextField variant='outlined' sx={{background:'white',width:'99%',py:1}} type='email' placeholder='Email'/>
+              <TextField variant='outlined' sx={{width:'99%',py:1,background:'white',}} placeholder='Phone Number (Optional)'/>
+              <TextField multiline={true} variant='outlined' rows={4}  sx={{width:'99%',background:'white',py:2}} placeholder='Message'/>
               <Btn dark >
                 Submit
                 <BsFillSendFill/>

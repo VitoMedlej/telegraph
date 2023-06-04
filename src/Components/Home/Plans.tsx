@@ -60,6 +60,16 @@ const PlanCard = ({
                 {description}
                     
                 </Typography>
+             { price &&  <Typography
+            component='h4'
+                sx={{
+                fontWeight: '500 !important',
+                fontSize: '1.5em'
+            }}
+                >
+                Starting From:
+
+                </Typography>}
             <Typography
             component='h4'
                 sx={{
@@ -67,6 +77,7 @@ const PlanCard = ({
                 fontSize: '3.5em'
             }}
                 >
+                   
                     {price ? `$${price}` : 'Custom '}
                 </Typography>
             <Link
@@ -146,7 +157,7 @@ const Index = () => {
             }}>
 
 <Typography component='h2' className='h2 clr2 '>
-Flexible Service Plans for all Web Solutions 
+Flexible Service Plans For Everyone 
                         </Typography>
                         <Typography
                             component='p'
@@ -154,7 +165,7 @@ Flexible Service Plans for all Web Solutions
                             mt: 1.5
                         }}
                             className='clr2 '>
-                            Tailored web solutions at competitive prices, designed to fit any business size and budget.
+                            Note that pricing might differ significantly from one project to another, depending on your requirements.
                         </Typography>
                
 

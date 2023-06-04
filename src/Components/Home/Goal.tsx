@@ -42,7 +42,7 @@ const Goal = () => {
                         className='center flex auto align- col'>
 
                         <Typography component='h2' className='h2 clr2 goal-t1 hid '>
-                        Your One-Stop Web Development Partner
+                        Your One-Stop Software Development Partner
                         </Typography>
                         <Typography
                             component='p'
@@ -51,7 +51,7 @@ const Goal = () => {
                         }}
                             className='clr2 goal-t2 hid '>
 
-Our goal is to empower businesses by providing affordable, high-quality web development services.
+Our goal is to empower businesses by providing affordable, high-quality web and mobile apps development services.
                             We&apos;re committed to helping you achieve online presence without costing you a fortune. 
                             Experience the perfect balance of quality and affordability with OnBeirut – let us be your partner in online success.                                
                             {/* Our goal is to empower small and medium-sized businesses by providing affordable, high-quality web development services.
@@ -80,7 +80,7 @@ Our goal is to empower businesses by providing affordable, high-quality web deve
 
                         <img
                             src="https://cdn.dribbble.com/userupload/4395742/file/original-a42b4c3859b1aa2770c49139fd8b97fb.png?compress=1&resize=1024x768"
-                            alt=""
+                            alt="Image List of Website designs "
                             className="contain img"/>
                     </Box>
                 </Grid>

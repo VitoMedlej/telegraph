@@ -12,6 +12,7 @@ import Head from 'next/head'
 import gsap from 'gsap';
 import { useRouter } from 'next/router'
 import {useEffect} from 'react';
+import Testimonial from '@/Components/Home/Testimonial'
 
 export default function Home() {
   const router = useRouter();
@@ -28,9 +29,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>OnBeirut Web Dev Agency | Software Engineering In Lebanon </title>
+      <title>OnBeirut Software Development Agency | Developers In Lebanon </title>
         <meta name="description" content={`
-        Expert web design & development services for a strong online presence. Get responsive, SEO-friendly sites & increase conversions. Start now
+     Looking for a top software development agency in Lebanon? Look no further than OnBeirut. Our skilled developers deliver high-quality web and mobile solutions.
         `} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="https://ucarecdn.com/3d4abdb1-ac77-45ea-9fc2-30f85a0e1b06/obiconv3.JPG" />
@@ -47,6 +48,7 @@ export default function Home() {
         <Services/>
         <Portfolio/>
         <Plans/>
+        <Testimonial/>
         <BlogSections/>
       </main>
     </>

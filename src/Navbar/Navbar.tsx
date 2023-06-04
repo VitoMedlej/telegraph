@@ -16,6 +16,7 @@ import {IoMdClose} from 'react-icons/io'
 
 import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
+import Btn from '@/Components/Btn/Btn';
 
 const pages = [{href:'/',title:'Home',isHome:true}, {title:'Services',isHome:false,href:'/services'}, {
   
@@ -165,7 +166,11 @@ const handleRoute = (scrollTo?:string,isHome?:boolean) => {
             className={`center menu2  absolute ${Boolean(anchorElNav) ? 'open' : ''}`}
             >
           <Container className='center align-center'>
+          <Btn 
+           onClick={()=>{handleCloseNavMenu(); handleRoute(`/contact`,false)}}
+          >
           Contact Us Today
+          </Btn>
           </Container>
             </Box>
         </Box>

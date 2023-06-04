@@ -1,5 +1,5 @@
 import SMicons from '@/Components/SocialMedia/SMicons';
-import { Container, Grid, Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 import React from 'react'
@@ -24,9 +24,7 @@ const Footer = () => {
              className='img' alt="" />
           </Link>
           <Typography component='h1' className='clr3' sx={{fontWeight:'100',maxWidth:'450px',mt:1}}>
-          Our experienced team of web professionals specializes in crafting tailored solutions for businesses of all sizes.
-           We focus on delivering engaging, user-friendly websites, and provide ongoing support to help you achieve lasting online success. 
-          With our expertise and passion for the digital world, we&apos;re your reliable partner for all your web development needs
+          Our experienced team of web professionals specializes in crafting tailored solutions for businesses of all sizes. We focus on delivering engaging, user-friendly websites and mobile apps, and provide ongoing support to help you achieve lasting online success. With our expertise and passion for the digital world, we’re your reliable partner for all your web and mobile development needs.
           </Typography>
           <SMicons sx={{mt:2}}/>
 
