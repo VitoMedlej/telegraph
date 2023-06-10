@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import gsap from 'gsap';
 
 const Item = ({title,text,img,n}:{img:string,title:string,text:string,n:number}) => {
-    return <Grid container sx={{mb:{xs:11,sm:8,md:0},width:'100%',height:{lg:'700px'}}}>
+    return <Grid container sx={{mb:{xs:11,sm:8,md:0},py:{md:'2em',lg:0},width:'100%',justifyContent:{md:'space-between'},height:{lg:'700px'}}}>
         <Grid 
         className={`flex center col auto`} item xs={12} md={6} lg={5}>
             <Box

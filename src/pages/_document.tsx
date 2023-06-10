@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -13,6 +14,9 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <Box sx={{width:'50px',position:'fixed',bottom:'5%',right:'3%'}}>
+         <img src="https://www.freeiconspng.com/thumbs/logo-whatsapp-png/get-logo-whatsapp-png-pictures-1.png" alt="Whatsapp Icon" className="img" />
+        </Box>
       </body>
     </Html>
   )

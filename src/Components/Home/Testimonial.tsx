@@ -31,7 +31,7 @@ const Testimonial = () => {
             xs: '3em',
             sm: '3.5em'
         },
-        backgroundImage: 'url(https://rare-gallery.com/thumbs/963368-digital-digital-art-artwork-simple-simple-background.jpg)'
+        backgroundImage: 'url(https://img.freepik.com/free-vector/black-desktop-background-geometric-pattern-design-vector_53876-140229.jpg?w=826&t=st=1686216169~exp=1686216769~hmac=db0094bd88fafd2bb654bb5cdf6b28796f7293901e4b68cb627ea1513de01cd8)'
     }}>
         {/* <Box sx={{height:'400px'}}>
             <img src="https://rare-gallery.com/thumbs/963368-digital-digital-art-artwork-simple-simple-background.jpg" alt="" className="img" />
@@ -43,15 +43,16 @@ const Testimonial = () => {
                
                 // px: '1em'
             }}>
-                <Typography component='h2' sx={{textTransform:'capitalize'}} className='h2 clr2 '>
+                <Typography component='h2' sx={{textTransform:'capitalize',color:'white !important'}} className='h2  '>
                         What our clients say about us 
                         </Typography>
                         <Typography
                             component='p'
                             sx={{
-                            mt: 1.5
+                                color:'white !important',
+                                mt: 1.5
                         }}
-                            className='clr2 '>
+                          >
                            Happy clients, happy life. We value our promises to the maximum.
                         </Typography>
                

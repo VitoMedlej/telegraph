@@ -25,6 +25,7 @@ const styles =(dark?:boolean) => {
 const Btn = ({onClick,className,dark,children,blur,sx}:{onClick?:any,className?:string,dark?:boolean,blur?:boolean,sx?:any,children?:any}) => {
   return (
     <Button 
+    type='submit'
     onClick={onClick && onClick}
     className={`${blur ? 'blur' :'' } ${className ? className : ""}`}
     sx={{

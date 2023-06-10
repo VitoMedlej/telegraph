@@ -2,6 +2,7 @@ import { Box, Container, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
 import gsap from 'gsap';
 import Btn from '../Btn/Btn';
+import Link from 'next/link';
 
 
 
@@ -35,8 +36,8 @@ const projects = [
   },
   {
     title : 'Cash Delivery Website',
-    href : 'cashdeliver-lb.com',
-    link : 'https://cashdeliver-lb.com/',
+    href : 'cashdelivery-lb.com',
+    link : 'https://cashdelivery-lb.com/',
     description : 'A lebanese company which provides various delivery services',
     img : 'https://images.pexels.com/photos/6170398/pexels-photo-6170398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     cate : ['Web design','Brand']
@@ -108,10 +109,12 @@ const Portfolio = () => {
             </Box>})}
             </Box>
             <Box className='auto center'  sx={{pt:5,with:'100%'}}>
-              
-            <Btn  >
+            <Link href='/contact'>
+
+            <Btn >
               Get Your Own
             </Btn>
+            </Link>
             </Box>
         </Container>
     </Box>

@@ -161,6 +161,12 @@ $trans : all .3s ease;
 .align-center {
     align-items: center;
 }
+.centerize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 .footer{
     display: flex;
    

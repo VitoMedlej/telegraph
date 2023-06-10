@@ -2,6 +2,7 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
 import Btn from '../Btn/Btn'
 import gsap from 'gsap';
+import { useRouter } from 'next/router';
 
 
 const Services = () => {
@@ -11,7 +12,7 @@ const Services = () => {
     gsap.to('.serv-btn',{opacity:1,y:0,delay:.8,scrollTrigger:{trigger:'.service-bg',start:'top 60%'}})
     gsap.to('.serv-img',{opacity:1,y:0,delay:1,scrollTrigger:{trigger:'.service-bg',start:'top 60%'}})
   }, [])
-  
+  const router = useRouter()
   return (
     <Box className='bg service-bg' >
         <Grid container className='flex center items-center align-center auto'  maxWidth='xl' sx={{height:'100%',minHeight:'600px'}} >
@@ -21,7 +22,7 @@ const Services = () => {
                     Ecommerce sites, Web Apps & Mobile Apps
                     </Typography>
                     
-                    <Btn blur sx={{my:2}} className='hid serv-btn'>
+                    <Btn blur onClick={()=>router.push('/services')} sx={{my:2}} className='hid serv-btn'>
                       <Typography  sx={{fontSize:'.85em'}}>
                       View All Services
                       </Typography>

@@ -1,19 +1,19 @@
 import SMicons from '@/Components/SocialMedia/SMicons'
 import Navbar from '@/Navbar/Navbar'
-import { Box, Container, Grid, TextField, Typography } from '@mui/material'
+import {  Container,Box, Grid, TextField, Typography } from '@mui/material'
 import Head  from 'next/head'
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import Btn from '@/Components/Btn/Btn'
 import {BsFillSendFill} from 'react-icons/bs'
 const Index = () => {
-  const ref = useRef();
-  const form = useRef();
+ 
+  const form :any = useRef();
   const [status,
       setStatus] = useState(0)
   const [email,
       setEmail] = useState('')
-  const sendEmail = async(e : any) => {
+  const sendMessage = async(e : any) => {
 
     e.preventDefault();
 
@@ -25,9 +25,12 @@ const Index = () => {
         return;
     }
 
-    const req = await emailjs.sendForm(`service_fvka279`, 'template_veigfx8', form.current, 'lbTdA9-5crCdl733u')
+    const req = await emailjs.sendForm(`service_eig2qxb`, 'template_gc3j6xq', form.current, '8qJYIm7toZyMq3yN_')
     const res = await req
-    setStatus(res ? res.status : 400)
+    setStatus(res ? res?.status : 400)
+    if (res?.status && form?.current) {
+      form?.current?.reset()
+    }
 };
 
   return (
@@ -55,7 +58,7 @@ const Index = () => {
             @onbeirut
         </Typography>
         <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>
-            +961 71 920 255
+            +961 76 910 252
         </Typography>
         <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>    
         onbeirut@gmail.com
@@ -65,22 +68,24 @@ const Index = () => {
         </Typography>
         <SMicons color='black' sx={{'a':{borderColor:'black'},mt:2.5}}/>
     </Container>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-            <Container component='form' sx={{gap:1,background:'#f4f4f4',
+        </Grid>  
+        <Grid sx={{mt:{xs:2,sm:0}}} item xs={12} sm={6}>
+          <Typography component='h1' sx={{color:'green',fontWeight:'500',textAlign:'center'}} className='h1'>{status === 200 ? 'Thanks for messaging us, expect a reply soon!' : ""}</Typography>
+            <Box ref={form} onSubmit={(e)=>sendMessage(e)} component='form' sx={{gap:1,
           py:2.5,
-
+          px:'1em',
+            
           boxShadow: 'rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px'}} className='flex space-between wrap'>
-              <TextField sx={{width:'49%',py:1}} variant='outlined' placeholder='First Name'/>
-              <TextField variant='outlined' sx={{background:'white',width:'49%',py:1}} placeholder='Last Name'/>
-              <TextField variant='outlined' sx={{background:'white',width:'99%',py:1}} type='email' placeholder='Email'/>
-              <TextField variant='outlined' sx={{width:'99%',py:1,background:'white',}} placeholder='Phone Number (Optional)'/>
-              <TextField multiline={true} variant='outlined' rows={4}  sx={{width:'99%',background:'white',py:2}} placeholder='Message'/>
-              <Btn dark >
+              <TextField name={'FirstName'} sx={{width:'49%',py:1}} variant='standard' placeholder='First Name'/>
+              <TextField name={'LastName'} variant='standard' sx={{width:'49%',py:1}} placeholder='Last Name'/>
+              <TextField name={'Email'} onChange={(e)=>setEmail(e?.target?.value)} variant='standard' sx={{width:'99%',py:1}} type='email' placeholder='Email'/>
+              <TextField name={'Phone'} variant='standard' sx={{width:'99%',py:1,}} placeholder='Phone Number (Optional)'/>
+              <TextField name={'Message'} multiline={true} variant='standard' rows={4}  sx={{width:'99%',py:2}} placeholder='Message'/>
+              <Btn dark>
                 Submit
                 <BsFillSendFill/>
               </Btn>
-            </Container>
+            </Box>
         </Grid>
     </Grid>
 
