@@ -14,9 +14,18 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Box sx={{width:'50px',position:'fixed',bottom:'5%',right:'3%'}}>
+        <a 
+        href='https://wa.me/+96176910252'
+        target="_blank"
+        rel='nonreferrer'>
+        <Box 
+        
+        sx={{
+          cursor: 'pointer',
+          width:'50px',position:'fixed',bottom:'5%',right:'3%'}}>
          <img src="https://www.freeiconspng.com/thumbs/logo-whatsapp-png/get-logo-whatsapp-png-pictures-1.png" alt="Whatsapp Icon" className="img" />
         </Box>
+        </a>
       </body>
     </Html>
   )
