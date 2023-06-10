@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 export default function App({ Component, pageProps }: AppProps) {
   return <>
 {/* <!-- Google tag (gtag.js) --> */}
-<Script strategy="lazyOnload"   async src="https://www.googletagmanager.com/gtag/js?id=G-6FMZ4XFZ6X"></Script>
+<Script strategy="lazyOnload"   async src="https://www.googletagmanager.com/gtag/js?id=G-3FLXJPDH9B"></Script>
 <Script strategy="lazyOnload"
 id="google-analytics"
 >
@@ -21,7 +21,7 @@ id="google-analytics"
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-6FMZ4XFZ6X');
+  gtag('config', 'G-3FLXJPDH9B');
   `}
 </Script>
  
