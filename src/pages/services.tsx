@@ -104,7 +104,7 @@ const Services = () => {
     <Box  maxWidth='xl' sx={{margin:'0 auto',px:'1em'}}>
   
 
-    <Grid container sx={{mb:{xs:11,sm:8,md:0},py:{md:'2em',lg:0},width:'100%',justifyContent:{md:'space-between'},height:{lg:'700px'}}}>
+    <Grid container sx={{mb:{xs:11,sm:8,md:0},py:{md:'2em',lg:5},width:'100%',justifyContent:{md:'space-between'},height:{lg:'700px'}}}>
     <Grid item xs={12} md={6} lg={6} className={`flex center  col title-trigger1 `}>
             <Box 
             className={`relative animated-img1 `}
@@ -178,7 +178,7 @@ const Services = () => {
                             mt: 2
                         }}>
 
-                            Learn More
+                            View More
                         </Btn>
                             </Link>
             </Box>
@@ -310,7 +310,7 @@ const Services = () => {
                             mt: 2
                         }}>
 
-                            Learn More
+                            Know More
                         </Btn>
                             </Link>
             </Box>
@@ -398,7 +398,7 @@ const Services = () => {
                             mt: 2
                         }}>
 
-                            Learn More
+                            More Details
                         </Btn>
                             </Link>
             </Box>

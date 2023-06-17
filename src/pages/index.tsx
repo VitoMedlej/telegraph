@@ -29,9 +29,9 @@ export default function Home() {
   return (
     <>
       <Head>
-      <title>Empowering Businesses with Tech | OnBeirut Software Engineering Agency</title>
+      <title>Empowering Businesses with Tech | OnBeirut Software Dev Agency</title>
         <meta name="description" content={`
-At OnBeirut, we empower businesses with custom web and mobile development solutions. Our expert software engineers work with you to build innovative, user-friendly applications that drive growth and streamline operations. Contact us today to bring your business to the next level.
+At OnBeirut, we empower and grow businesses with custom web and mobile development solutions. Our expert software engineers work with you to build innovative, user-friendly applications that drive growth and streamline operations.
         `} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="https://ucarecdn.com/3d4abdb1-ac77-45ea-9fc2-30f85a0e1b06/obiconv3.JPG" />

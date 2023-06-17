@@ -50,7 +50,7 @@ const BlogSections = () => {
 
  return <Box key={i.id} className='shadow' sx={{maxWidth:'400px',my:1,width:{xs:'99%',sm:'49%',md:'33%'},}}>
                 <Box sx={{width:'100%',height:'260px'}}>
-                    <img src={i.img} alt="" className="img" />
+                    <img src={i.img} alt="Blog Post Image" className="img" />
                 </Box>
                 <Box sx={{px:1}}>
                     <Typography className='clr' sx={{pt:'.25em',fontWeight:'600',fontSize:'.8em'}}>

@@ -33,9 +33,7 @@ const Testimonial = () => {
         },
         backgroundImage: 'url(https://img.freepik.com/free-vector/black-desktop-background-geometric-pattern-design-vector_53876-140229.jpg?w=826&t=st=1686216169~exp=1686216769~hmac=db0094bd88fafd2bb654bb5cdf6b28796f7293901e4b68cb627ea1513de01cd8)'
     }}>
-        {/* <Box sx={{height:'400px'}}>
-            <img src="https://rare-gallery.com/thumbs/963368-digital-digital-art-artwork-simple-simple-background.jpg" alt="" className="img" />
-        </Box> */}
+       
             <Container
                 className='mx'
                 sx={{
@@ -64,7 +62,7 @@ const Testimonial = () => {
                                 transform: {lg:item.id !== 2  ? `translateY(-${item.id * 13}px)` : ''},
                             px:'1.5em',py:'1.25em',maxWidth:{xs:'100%',sm:'300px',lg:'320px'},background:'white',borderRadius:'20px',display:'flex'}}>
                             <Box sx={{width:'150px',borderRadius:'50%',transform:'translateX(-15px)',mt:'7px',height:'45px'}}>
-                                <img src={item.img} alt="" className="img cover"  />
+                                <img src={item.img} alt="Client's Testimonial  Logo" className="img cover"  />
                             </Box>
                             <Box>
                             <Typography component='h4' sx={{color:'black',fontWeight:500}}>{item.name}</Typography>

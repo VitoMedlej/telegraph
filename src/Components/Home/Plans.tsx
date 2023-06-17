@@ -50,7 +50,7 @@ const PlanCard = ({
                 >
                     {title}
                 </Typography>
-            <Typography
+            {/* <Typography
                 sx={{
                     py:'.5em',
                     fontSize:{xs:'.9em',sm:'1em'},
@@ -59,12 +59,12 @@ const PlanCard = ({
                 >
                 {description}
                     
-                </Typography>
+                </Typography> */}
              { price &&  <Typography
             component='h4'
                 sx={{
                 fontWeight: '500 !important',
-                fontSize: '1.5em'
+                fontSize: '.9em'
             }}
                 >
                 Starting From:
@@ -116,7 +116,7 @@ const PlanCard = ({
                     {planFeatures.map((feature,idx:number)=>{
 
                        return <li  key={idx}>
-                        <Typography component='p'>
+                        <Typography sx={{fontSize:{xs:'.85em',sm:'auto'}}} component='p'>
                             {feature}
                         </Typography>
                     </li>
@@ -198,7 +198,7 @@ Flexible Service Plans For Everyone
                                price={79.99}
                                title='Advanced Service Plan'
                                description={`Great for small-medium businesses that want to increase sales, customers, or building their online presence.`}
-                               planFeatures={['4 Pages website/web application','Custom & advanced design','Couple of free image designs','SEO optimized','Free domain + hosting','Full content control','6 month maintenance']}
+                               planFeatures={['4 Pages business website','Custom & advanced design','Couple of free image designs','SEO optimized','Free domain + hosting','Full content control','6 month maintenance']}
                                />
                         </Grid>
                         <Grid xs={12} sm={5.9}
@@ -206,10 +206,11 @@ Flexible Service Plans For Everyone
                         item>
                           
                         <PlanCard
-                            bg={` linear-gradient(135deg,rgb(255 255 255 / 10%),hsl(108.22deg 100% 45% / 52%))`}
+                        
                                price={249.99}
                                height={{xs:'100%',md:'540px'}}
                                title='Gold Service Plan'
+                               bg={` linear-gradient(135deg,rgb(255 226 0 / 10%),hsl(53deg 100% 45% / 52%))`}
 
                                description={`This is a service plan designed for .`}
                                planFeatures={['Up to 16 pages of your choice',
@@ -238,8 +239,7 @@ Flexible Service Plans For Everyone
                      
                         <PlanCard
                                title='Ecommerce Service Plan'
-
-                            bg={` linear-gradient(135deg,rgb(255 226 0 / 10%),hsl(53deg 100% 45% / 52%))`}
+                               bg={` linear-gradient(135deg,rgb(255 255 255 / 10%),hsl(108.22deg 100% 45% / 52%))`}
                                price={399.99}
                                height={{xs:'100%',md:'540px'}}
                                description={`This customized service plan is great for any type of business that requires high & guaranteed efficiency.`}

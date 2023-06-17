@@ -46,7 +46,7 @@ const Item = ({title,text,img,n}:{img:string,title:string,text:string,n:number})
                 </Box>
                 <img
                     src={img || "https://kota.co.uk/static/be60274f17826f2f328c276b8404f6bc/17f62/homepage-tribepad.webp"}
-                    alt="Image"
+                    alt="Why Choose Us Image"
                     className="img br8"/>
             </Box>
         </Grid>

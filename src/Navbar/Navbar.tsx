@@ -104,7 +104,7 @@ const handleRoute = (scrollTo?:string,isHome?:boolean) => {
             
               <img src={  'https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png'
              } 
-             className='img' alt="" />
+             className='img' alt="onbeirut logo" />
 
           </Link>
 

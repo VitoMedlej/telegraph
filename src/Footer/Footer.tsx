@@ -21,7 +21,7 @@ const Footer = () => {
           > 
               <img src={  'https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png'
              } 
-             className='img' alt="" />
+             className='img' alt="onbeirut logo" />
           </Link>
           <Typography component='h1' className='clr3' sx={{fontWeight:'100',maxWidth:'450px',mt:1}}>
           Our experienced team of web professionals specializes in crafting tailored solutions for businesses of all sizes. We focus on delivering engaging, user-friendly websites and mobile apps, and provide ongoing support to help you achieve lasting online success. With our expertise and passion for the digital world, we’re your reliable partner for all your web and mobile development needs.
