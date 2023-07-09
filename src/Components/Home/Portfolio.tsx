@@ -35,11 +35,11 @@ const projects = [
     cate : ['Web dev','ecommerce']
   },
   {
-    title : 'Cash Delivery Website',
-    href : 'cashdelivery-lb.com',
-    link : 'https://cashdelivery-lb.com/',
-    description : 'A lebanese company which provides various delivery services',
-    img : 'https://images.pexels.com/photos/6170398/pexels-photo-6170398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title : 'Namliieh Online Shop',
+    href : 'namliiehshop.com',
+    link : 'https://namliiehshop.com/',
+    description : 'Dynamic lifestyle brand from Lebanon. Makers of artisan products.',
+    img : 'https://images.pexels.com/photos/6042358/pexels-photo-6042358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     cate : ['Web design','Brand']
   },
   
@@ -75,7 +75,7 @@ const Portfolio = () => {
           mt: {xs:0,sm:idx % 2 === 0 ? 0 : 15}
           ,width:{xs:'99%',sm:'50%'},maxWidth:'500px'}}>
                 
-                <Box className='relative' sx={{maxWidth:'500px'}}>
+                <Box className='relative' sx={{height:'100%',maxHeight:{xs:'450px',sm:'550px',md:'600px',lg:'650px'},maxWidth:'500px'}}>
                   
                   <Box className={`absolute img-hider-${idx}`} sx={{background:'#0f0f0f',height:'20%',top:0,width:'100%',maxWidth:'650px'}}/>
                   <img src={project.img} alt="Project Image" className="img" />

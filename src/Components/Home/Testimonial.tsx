@@ -25,13 +25,14 @@ const Testimonial = () => {
         },
         backgroundRepeat: 'no-repeat',
         width: '100%',
+        backgroundColor: '#000000f0',
         backgroundSize:'cover',
         color:'white',
         py : {
             xs: '3em',
             sm: '3.5em'
         },
-        backgroundImage: 'url(https://img.freepik.com/free-vector/black-desktop-background-geometric-pattern-design-vector_53876-140229.jpg?w=826&t=st=1686216169~exp=1686216769~hmac=db0094bd88fafd2bb654bb5cdf6b28796f7293901e4b68cb627ea1513de01cd8)'
+        // backgroundImage: 'url(https://img.freepik.com/free-vector/black-desktop-background-geometric-pattern-design-vector_53876-140229.jpg?w=826&t=st=1686216169~exp=1686216769~hmac=db0094bd88fafd2bb654bb5cdf6b28796f7293901e4b68cb627ea1513de01cd8)'
     }}>
        
             <Container

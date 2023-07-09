@@ -60,8 +60,8 @@ const Index = () => {
         <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>
             +961 76 910 252
         </Typography>
-        <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>    
-        onbeirut@gmail.com
+      <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>    
+        contact@onbeirut.com
         </Typography>
         <Typography className='clr' sx={{fontSize:{xs:'2em'},my:3,fontWeight:'800'}}>
         Social media:

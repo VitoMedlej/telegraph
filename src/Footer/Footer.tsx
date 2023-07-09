@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import React from 'react'
 
 
-const pages = [{href:'/',title:'Home'}, {title:'Services',href:'/services'}, {title:'Pricing',href:'#pricing'},{title:'Portfolio',href:'#portfolio'},{href:'/blog',title:'Blog'},{href:'#contact',title:'Contact'}];
+const pages = [{href:'/',title:'Home'}, {title:'Services',href:'/services'}, {title:'Pricing',href:'#pricing'},{title:'Portfolio',href:'#portfolio'},{href:'/blog',title:'Blog'},{href:'/contact',title:'Contact'}];
 
 const Footer = () => {
   const router = useRouter()
@@ -51,7 +51,7 @@ const Footer = () => {
         <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >@onbeirut</Typography>
        </a>
         <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >+961 76 910 252</Typography>
-        <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >onbeirut@gmail.com</Typography>
+        <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >contact@onbeirut.com</Typography>
 
         </Grid>
         <Grid item xs={12} sm={6} md={3} lg={4} sx={{my:{xs:4,sm:0}}}>
