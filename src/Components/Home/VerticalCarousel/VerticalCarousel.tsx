@@ -36,7 +36,7 @@ const Item = ({title,text,img,n}:{img:string,title:string,text:string,n:number})
                 // position:'sticky',top:0,
                 // maxWidth:'650px',
                 maxHeight:'410px',
-                width:'650px',
+                width:{xs:'100%',sm:'400px',lg:'600px',xl:'650px'},
                 height:'100%',
                 margin:{xs:'1em 0',md:'0 auto'},
                 borderRadius: '8px'

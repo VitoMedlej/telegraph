@@ -5,7 +5,7 @@ import {VscWorkspaceTrusted} from 'react-icons/vsc'
 import gsap from 'gsap';
 import Link from 'next/link';
 
-const Hero = ({blog,imgmd,title,desc}:{blog?:boolean,imgmd?:string,title?:string,desc?:string}) => {
+const Hero = ({blog,imgsm,imgmd,title,desc}:{imgsm?:string,blog?:boolean,imgmd?:string,title?:string,desc?:string}) => {
 
   useEffect(() => {
     gsap.to('.hero-t1',{opacity:1,y:0,delay:.85})
@@ -46,10 +46,10 @@ const Hero = ({blog,imgmd,title,desc}:{blog?:boolean,imgmd?:string,title?:string
                     </Box>
                     </Container>
                     <Box sx={{height:'550px',display:{xs:'none',md:'flex'}}} className='hero-img absolute'>
-                        <img src={imgmd ? imgmd : "https://ucarecdn.com/5c2b213c-8e9e-4090-b37d-5ae49a5a3eaf/ColourfulMinimalBrainstormRoadmapMindMap1.png"} alt="" className="img" />
+                        <img src={imgmd ? imgmd : "https://ucarecdn.com/5c2b213c-8e9e-4090-b37d-5ae49a5a3eaf/ColourfulMinimalBrainstormRoadmapMindMap1.png"} alt="Main Section Background Image Large Devices" className="img" />
                     </Box>
                     <Box sx={{height:'480px',display:{xs:'flex',md:'none'}}} className='hero-img absolute'>
-                        <img src="https://ucarecdn.com/1320e76b-8092-4a85-b4b3-ece1972cd17e/ColourfulMinimalBrainstormRoadmapMindMap3.png" alt="" className="img" />
+                        <img src={imgsm ? imgsm : "https://ucarecdn.com/1320e76b-8092-4a85-b4b3-ece1972cd17e/ColourfulMinimalBrainstormRoadmapMindMap3.png"} alt="Main Section Background Image Small Devices" className="img" />
                     </Box>
 {/* 
                     <Box sx={{display:{xs:'none',md:'flex'}}} className='hero-img absolute'>

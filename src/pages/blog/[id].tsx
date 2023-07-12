@@ -14,14 +14,7 @@ import { useRouter } from 'next/router'
 
 
 
-const test = [{
- 
-      P :  `<p>
 
-      this is a text with a link to <a href='https://google.com' target='_blank'>google</a>
-      </p>`
-  
-}]
 export default function Index() {
   const router = useRouter();
 
@@ -59,10 +52,7 @@ export default function Index() {
                             Everyone can make money blogging, everyone, including you. So get that doubt and fear out of your heart and read till the end, it is worth it. Now let's get started.
                             </Typography>
 
-                                {test.map((text)  =>{
-                                  console.log('P: ', text);
-                                      return <text.P/>
-                                })}
+                              
                         </Box>
                         <Box sx={{p:1.5}}>
                                     <ul className='table'>
