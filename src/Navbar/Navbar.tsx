@@ -16,6 +16,7 @@ import {IoMdClose} from 'react-icons/io'
 
 import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
+import Btn from '@/Components/Btn/Btn';
 
 const pages = [{href:'/',title:'Home',isHome:true}, {title:'Services',isHome:false,href:'/services'}, {
   
@@ -103,7 +104,7 @@ const handleRoute = (scrollTo?:string,isHome?:boolean) => {
             
               <img src={  'https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png'
              } 
-             className='img' alt="" />
+             className='img' alt="onbeirut logo" />
 
           </Link>
 
@@ -165,7 +166,11 @@ const handleRoute = (scrollTo?:string,isHome?:boolean) => {
             className={`center menu2  absolute ${Boolean(anchorElNav) ? 'open' : ''}`}
             >
           <Container className='center align-center'>
+          <Btn 
+           onClick={()=>{handleCloseNavMenu(); handleRoute(`/contact`,false)}}
+          >
           Contact Us Today
+          </Btn>
           </Container>
             </Box>
         </Box>

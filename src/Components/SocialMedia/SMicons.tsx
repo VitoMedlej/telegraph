@@ -6,7 +6,7 @@ const sm = [
         Icon:FaInstagram,
         href:'https://www.instagram.com/onbeirut/'
     },
-    {Icon:FaWhatsapp,href:'https://wa.me/+96171920255'},
+    {Icon:FaWhatsapp,href:'https://wa.me/+96176910252'},
     {
 
     Icon:FaFacebook,   href:'https://www.facebook.com/onbeirut'

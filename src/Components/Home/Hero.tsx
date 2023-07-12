@@ -23,7 +23,7 @@ const Hero = ({blog,imgsm,imgmd,title,desc}:{imgsm?:string,blog?:boolean,imgmd?:
                     {title ? title : 'Grow Better With OnBeirut'}
                     </Typography>
                     <Typography className=' hero-t2 clr3 hid' sx={{maxWidth:'600px',my:{xs:2.5,md:2.5},fontSize:{xs:'.89em'}}} component='h4'>
-                    {desc ? desc : 'We specialize in crafting stunning, responsive, and SEO-friendly websites that fuel your growth and enhances your digital presence.'}
+                    {desc ? desc : 'We specialize in crafting stunning, responsive, budget-friendly web & mobile apps that fuel your growth and enhances your digital presence.'}
                     </Typography>
 
                     <Box sx={{py:2}}>
@@ -39,8 +39,8 @@ const Hero = ({blog,imgsm,imgmd,title,desc}:{imgsm?:string,blog?:boolean,imgmd?:
                         </Btn>
                         </Link>
                       
-                        <Typography sx={{maxWidth:'600px',my:{xs:2.5,md:2.5},gap:.5,fontWeight:300,fontSize:{xs:'.75em'}}} className='clr3 flex hero-trust hid align-center' component='h4'>
-                           Trusted by hundreds of clients
+                            <Typography sx={{maxWidth:'600px',my:{xs:2.5,md:2.5},gap:.5,fontWeight:300,fontSize:{xs:'.75em'}}} className='clr3 flex hero-trust hid align-center' component='h4'>
+                            100% of our clients trust us
                             <VscWorkspaceTrusted/>
                     </Typography>
                     </Box>
