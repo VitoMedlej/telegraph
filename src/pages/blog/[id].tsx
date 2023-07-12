@@ -30,10 +30,10 @@ export default function Index() {
         <link rel="icon" href="https://ucarecdn.com/3d4abdb1-ac77-45ea-9fc2-30f85a0e1b06/obiconv3.JPG" />
       </Head>
       <main className="bg4">
-  <Navbar/>
+  <Navbar dark/>
 
 
-    {/* <Grid sx={{pt:4,maxWidth:'lg'}} className=' auto' container>
+    <Grid sx={{py:4,px:1,maxWidth:'lg'}} className=' auto' container>
             <Grid  xs={12} md={8} lg={9} item>
                     <Container  className='bg3 auto' sx={{py:2,border:'1px solid',height:'100%'}}>
                         <Box>
@@ -51,7 +51,6 @@ export default function Index() {
                             <Typography className='blog-p' component='p'>
                             Everyone can make money blogging, everyone, including you. So get that doubt and fear out of your heart and read till the end, it is worth it. Now let's get started.
                             </Typography>
-
                               
                         </Box>
                         <Box sx={{p:1.5}}>
@@ -125,9 +124,9 @@ export default function Index() {
                 
             </Grid>
             </Grid>
-        </Grid> */}
+        </Grid>
 
-        Under development...
+        {/* Under development... */}
 
       </main>
     </>
