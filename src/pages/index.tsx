@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <>
       <Head>
-      <title>Empowering Businesses with Tech | OnBeirut Software Dev Agency</title>
+      <title>OnBeirut Agency | Empowering Businesses with Software</title>
         <meta name="description" content={`
 At OnBeirut, we empower and grow businesses with custom web and mobile development solutions. Our expert software engineers work with you to build innovative, user-friendly applications that drive growth and streamline operations.
         `} />
