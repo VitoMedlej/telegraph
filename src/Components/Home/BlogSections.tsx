@@ -10,14 +10,12 @@ const posts = [
         title : 'Start a Blog in 5 Easy Steps (do this before monetizing it)',
         date : 'Jan 20, 2023 ',
         img : 'https://images.pexels.com/photos/5849592/pexels-photo-5849592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        href : '/blog', 
         id:1,
     },
     {
         title : 'Blog Post Coming Soon | Check Our Insta For News',
         date : '2023/7/4',
         img : 'https://img.freepik.com/free-vector/red-grunge-style-coming-soon-design_1017-26691.jpg',
-        href : '/blog', 
         id:2,
     }
     ,
@@ -26,7 +24,6 @@ const posts = [
         title : 'Blog Post Coming Soon | Check Our Insta For News',
         date : '2023/7/4',
         img : 'https://img.freepik.com/free-vector/red-grunge-style-coming-soon-design_1017-26691.jpg',
-        href : '/blog', 
     }
 ]
 const BlogSections = () => {
@@ -56,12 +53,15 @@ const BlogSections = () => {
                     <Typography className='clr' sx={{pt:'.25em',fontWeight:'600',fontSize:'.8em'}}>
                         Web Development • Tech • Web Design
                     </Typography>
-                    <Typography className='pointer' sx={{fontWeight:'700',fontSize:{xs:'1.05em',sm:'1.15em',md:'1.25em'}}}>
+                    <Typography
+                    
+                    onClick={()=>router.push(`/blog/${i.title.replaceAll(' ', '-')}`)}
+                    className='pointer' sx={{fontWeight:'700',fontSize:{xs:'1.05em',sm:'1.15em',md:'1.25em'}}}>
                         {i.title}
                     </Typography>
                 </Box>
                 <Box className='flex   align-center ' sx={{gap:1.55,px:1}}>
-                    <Btn onClick={()=>router.push(`${i.href}`)} dark  sx={{border:'none',px:0}}>
+                    <Btn onClick={()=>router.push(`/blog/${i.title}`)} dark  sx={{border:'none',px:0}}>
                         <Typography className='clr' sx={{fontWeight:'600 !important',textAlign:'left',fontSize:".8em"}}>
                         Read Now
                         </Typography>

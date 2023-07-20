@@ -104,7 +104,6 @@ body {
 }
 
 .wfit {
-  width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
 }

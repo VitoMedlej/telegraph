@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>OnBeirut Web Dev Agency | Software Engineering In Lebanon </title>
+        <title>OnBeirut Web Dev Blog | Tech Related Blog </title>
         <meta name="description" content={`
         Expert web design & development services for a strong online presence. Get responsive, SEO-friendly sites & increase conversions. Start now
         `} />
@@ -29,7 +29,10 @@ export default function Home() {
         <Box sx={{mb:{xs:5,sm:6,md:9}}} className='hero-img' >
 
   <Navbar/>
-        <Hero blog={true}  title={'Expand Your Knowledge'} imgmd={`https://ucarecdn.com/4a88fc30-1397-43dd-9ed9-2949b788d7b6/Capture.JPG`}/>
+        <Hero blog={true} 
+        
+        imgsm={'https://ucarecdn.com/4a88fc30-1397-43dd-9ed9-2949b788d7b6/Capture.JPG'}
+        title={'Expand Your Knowledge'} imgmd={`https://ucarecdn.com/4a88fc30-1397-43dd-9ed9-2949b788d7b6/Capture.JPG`}/>
         </Box>
         
         <BlogSections/>
