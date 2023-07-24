@@ -7,7 +7,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import gsap from "gsap";
 import Script from 'next/script'
-
+import "swiper/css";
+import "swiper/css/navigation";
 
 gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 export default function App({ Component, pageProps }: AppProps) {

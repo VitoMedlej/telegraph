@@ -246,7 +246,7 @@ export default function Index() {
                         </Box>
                         <Box>
                             <Typography className='blog-p' component='p'>
-                            Everyone can make money blogging, everyone, including you. So get that doubt and fear out of your heart and read till the end, it is worth it. Now let's get started.
+                            Everyone can make money blogging, everyone, including you. So get that doubt and fear out of your heart and read till the end, it is worth it. Now let&apos;s get started.
                             </Typography>
                               
                         </Box>
@@ -270,13 +270,13 @@ export default function Index() {
 
                         {posts.map((post, index) => {
         if (post.type === 'sectionTitle') {
-          return    <Typography component='h1' className='blog-h1' >
+          return    <Typography key={index} component='h1' className='blog-h1' >
          {`${post.content}`}
           </Typography>
         }
         else if (post.type === 'paragraph') {
           return (
-            <Typography sx={{py:1}} component='p' className='blog-p'>
+            <Typography key={index} sx={{py:1}} component='p' className='blog-p'>
      
               {Array.isArray(post.content)
                 ? post.content.map((item, i) => {

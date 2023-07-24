@@ -11,12 +11,12 @@ const Footer = () => {
   const router = useRouter()
     return (
     <footer className='footer bg2'>
-        <Grid  className=' auto flex space-between' container sx={{maxWidth:'xl',padding:'2em 1em',width:'100%',minHeight:'300px'}}>
+        <Grid  className=' auto flex space-between' container sx={{maxWidth:'xl',padding:'4.5em .9em',width:'100%',minHeight:'300px'}}>
         <Grid item xs={12} sm={6} md={4}>
             
         <Link
 
-            className='logo filter'
+            className=' filter footerlogo'
             href="/" 
           > 
               <img src={  'https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png'

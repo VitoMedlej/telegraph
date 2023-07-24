@@ -1,88 +1,123 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
-import {AiFillStar} from 'react-icons/ai';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {FreeMode, Autoplay, Pagination} from "swiper";
+import UserReview from './UserReview.tsx/UserReview';
 
 
 
-const Clients = [
-    {id:1,
-        description:`We’re a local business and most of our clients are Lebanese. What I love about the site is that it supports both arabic and english at the same time.`,
-        name:'Zekra Advertising Specialist',img:'https://res.cloudinary.com/dwxm8f25f/image/upload/v1675713948/logo_sktnut_1_jwy2hk.png'},
-        {id:2,
-            description:`I was so impressed with the shop they built for me - it was so easy to use! And when they built my Android app, I knew I made the right choice. No regrets at all.`,
-            name:'Yehya, Co-Founder of Teentops',img:'https://ucarecdn.com/6e360177-750f-4671-8b74-edbc38f20c90/337875439_610147264297606_3941855933110310434_nremovebgpreview.png'},
-        {id:3,
-            description:`OnBeirut really came through for me. I was worried that my huge inventory would be too much for the site to handle, but they made it work perfectly. I’m so grateful for them.`,
-            name:`Powerhouse’s Owner `,img:'https://ucarecdn.com/3b40bedc-0aa3-4247-a196-fd05de4d4f87/003011.jpg'}
+// const Clients = [
+//     {id:1,
+//         description:``,
+//         name:'Zekra Advertising Specialist',img:'https://res.cloudinary.com/dwxm8f25f/image/upload/v1675713948/logo_sktnut_1_jwy2hk.png'},
+//         {id:2,
+//             description:``,
+//             name:'',img:'https://ucarecdn.com/6e360177-750f-4671-8b74-edbc38f20c90/337875439_610147264297606_3941855933110310434_nremovebgpreview.png'},
+//         {id:3,
+//             description:``,
+//             name:`Powerhouse’s Owner `,img:'https://ucarecdn.com/3b40bedc-0aa3-4247-a196-fd05de4d4f87/003011.jpg'}
 
-]
+// ]
+
+
 const Testimonial = () => {
-  return (
-    <Box sx={{
-        my: {
-            xs: '3em',
-            sm: '3.5em'
+    const tests = [
+        {
+            title : `I just love it! -`,
+            reviewer:`“(Zekra Advertising Specialist)`,
+            description : `We’re a local business and most of our clients are 
+            Lebanese. What I love about
+             the site is that it supports both arabic and english at the same time.`
         },
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        backgroundColor: '#000000f0',
-        backgroundSize:'cover',
-        color:'white',
-        py : {
-            xs: '3em',
-            sm: '3.5em'
+        {
+            title :`I knew I made the right choice - `,
+            reviewer:`”(Yehya, Co-Founder of Teentops)`,
+            description : `I was so impressed with the shop they built for me - it was so easy 
+            to use! And when they built my 
+            Android app, I knew I made the right choice. No regrets at all.
+            `
         },
-        // backgroundImage: 'url(https://img.freepik.com/free-vector/black-desktop-background-geometric-pattern-design-vector_53876-140229.jpg?w=826&t=st=1686216169~exp=1686216769~hmac=db0094bd88fafd2bb654bb5cdf6b28796f7293901e4b68cb627ea1513de01cd8)'
-    }}>
+        
+        {
+            title :`They made it work perfectly - `,
+            reviewer:`”(Powerhouse’s Owner)`,
+            description : `OnBeirut really came through for me. I was worried that my huge inventory 
+            would be too much for the site to handle, 
+            but they made it work perfectly. I’m so grateful for them.`
+        }
        
-            <Container
-                className='mx'
-                sx={{
-                  maxWidth:'xl',
-               
-                // px: '1em'
-            }}>
-                <Typography component='h2' sx={{textTransform:'capitalize',color:'white !important'}} className='h2  '>
-                        What our clients say about us 
-                        </Typography>
-                        <Typography
-                            component='p'
-                            sx={{
-                                color:'white !important',
-                                mt: 1.5
-                        }}
-                          >
-                           Happy clients, happy life. We value our promises to the maximum.
-                        </Typography>
-               
-               <Box sx={{display:"flex",gap:{xs:'1em',sm:'1.5em'},mt:'4em',flexWrap:'wrap',justifyContent:{xs:'center',md:'space-between'}}}>
-                {
-                    Clients.map(item=>{
-                        return <Box key={item.id} sx={{
-                            boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
-                                transform: {lg:item.id !== 2  ? `translateY(-${item.id * 13}px)` : ''},
-                            px:'1.5em',py:'1.25em',maxWidth:{xs:'100%',sm:'300px',lg:'320px'},background:'white',borderRadius:'20px',display:'flex'}}>
-                            <Box sx={{width:'150px',borderRadius:'50%',transform:'translateX(-15px)',mt:'7px',height:'45px'}}>
-                                <img src={item.img} alt="Client's Testimonial  Logo" className="img cover"  />
-                            </Box>
-                            <Box>
-                            <Typography component='h4' sx={{color:'black',fontWeight:500}}>{item.name}</Typography>
-                            <Box>
-                            <AiFillStar color='gold' />
-                            <AiFillStar color='gold' />
-                            <AiFillStar color='gold' />
-                            <AiFillStar color='gold' />
-                            <AiFillStar color='gold' />
-                            </Box>
-                            <Typography component='h4' sx={{pt:'.25em',fontSize:'.9em',color:'black'}}>
-                              {item.description}
-                            </Typography>
-                            </Box>
-                        </Box>
-                    })
-                }
-               </Box>
-            </Container>
+    ]
+  return (
+    <Box className=' flex wrap center ' sx={{width:'100%',height:'100%'}}>
+ <Box className='flex col'  sx={{flex:1,width:'100%',pt:'6em',textAlign:'center'}}>
+                <Typography sx={{color:"black",fontWeight:'700',fontSize:{xs:'2em',sm:'3em',md:'3.5em'}}}>
+                What Our Clients Say
+                </Typography>
+                <Typography sx={{color:"black",fontWeight:'200',fontSize:{xs:'1em',sm:'1.2em'},mb:2}} className=''>
+                    Few of our recent projects from clients that rate us 5 stars 
+                </Typography>
+            </Box>
+       <Box
+            sx={{
+            
+            py: {
+                xs: '.85em',
+                sm: '2em'
+            },
+            width: '100%',
+            maxWidth: 'lg',
+            margin: '0em auto',
+            mb:'6em',
+            display: {
+                xs: 'flex'
+            },
+            height: '100%'
+        }}>
+
+            <Swiper
+                pagination={{
+                clickable: true
+            }}
+                autoplay={{
+                delay: 3000,
+                disableOnInteraction: true
+            }}
+                navigation={true}
+                spaceBetween={10}
+                slidesPerView={1}
+                slidesPerGroup={1}
+                modules={[FreeMode, Autoplay, Pagination]}
+              >
+
+                {tests.map((item ) => {
+                    if (!item.title) 
+                        return
+                    return <SwiperSlide
+                        style={{
+                        marginRight: '0 !important'
+                    }}
+                        key={item.title}>
+                         <UserReview title={item.title} reviewer={item.reviewer} description={item.description}/>
+
+                    </SwiperSlide>
+                    // return <SwiperSlide className='swiper-wrapper1'
+                    // style={{width:'100%',height:'100%'}} key={item._id}>     {/* <HouseCard
+                    //   img={property.images[0] || property.images[1]}         width='95%'
+                    // id={property.id}         isFeatured={isFeatured !== undefined ? isFeatured :
+                    // true}         propertySize={property.propertySize}
+                    // type={property.type}         baths={property.bathrooms}
+                    // rooms={property.rooms}         currency={property.currency}
+                    // price={property.price}         title={property.title}
+                    // location={property.location}/> */}          <ProductCard
+                    // handleQuickView={handleQuickView}          title={item.title}
+                    // images={item.images}          price={item.price}          _id={item._id}
+                    //     category={item.category}          /> </SwiperSlide>
+
+                })
+}
+
+            </Swiper>
+        </Box>
     </Box>
   )
 }
