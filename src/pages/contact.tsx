@@ -36,10 +36,11 @@ const Index = () => {
   return (
     <>
     <Head>
-    <title>Contact Us | OnBeirut Agency </title>
+    <title>Contact Us Page | OnBeirut Agency </title>
     <meta name="description" content="Contact our team today and get in touch with us for more information on our services. We're here to help and provide support to answer any questions you may have." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://ucarecdn.com/3d4abdb1-ac77-45ea-9fc2-30f85a0e1b06/obiconv3.JPG" />
+    <link rel="icon" href="https://ucarecdn.com/f6c61100-9146-483f-af5b-4d3809c48c99/favicon.JPG" />
+
   </Head>
   <Navbar dark/>
   <>
@@ -47,8 +48,8 @@ const Index = () => {
 
         <Grid item xs={12} sm={6}>
     <Container >
-        <Typography className='clr' sx={{fontSize:{xs:'2em'},my:3,fontWeight:'800'}}>
-        Reach us at:
+        <Typography component='h1' className='clr' sx={{fontSize:{xs:'2em'},my:3,fontWeight:'800'}}>
+        Contact Us At:
         </Typography>
         
         <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>

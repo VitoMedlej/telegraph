@@ -34,7 +34,8 @@ export default function Home() {
 At OnBeirut, we empower and grow businesses with custom web and mobile development solutions. Our expert software engineers work with you to build innovative, user-friendly applications that drive growth and streamline operations.
         `} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="https://ucarecdn.com/3d4abdb1-ac77-45ea-9fc2-30f85a0e1b06/obiconv3.JPG" />
+        <link rel="icon" href="https://ucarecdn.com/f6c61100-9146-483f-af5b-4d3809c48c99/favicon.JPG" />
+
       </Head>
       <main>
         <Box className='hero-img' >
@@ -47,7 +48,7 @@ At OnBeirut, we empower and grow businesses with custom web and mobile developme
         <VerticalCarousel/>
         <Services/>
         <Portfolio/>
-        <Plans/>
+        {/* <Plans/> */}
         <Testimonial/>
         <BlogSections/>
       </main>

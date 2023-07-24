@@ -19,11 +19,14 @@ export default function Home() {
     <>
       <Head>
         <title>OnBeirut Web Dev Blog | Tech Related Blog </title>
+
         <meta name="description" content={`
         Expert web design & development services for a strong online presence. Get responsive, SEO-friendly sites & increase conversions. Start now
         `} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="https://ucarecdn.com/3d4abdb1-ac77-45ea-9fc2-30f85a0e1b06/obiconv3.JPG" />
+        <link rel="icon" href="https://ucarecdn.com/f6c61100-9146-483f-af5b-4d3809c48c99/favicon.JPG" />
+
+
       </Head>
       <main>
         <Box sx={{mb:{xs:5,sm:6,md:9}}} className='hero-img' >

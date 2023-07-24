@@ -63,7 +63,8 @@ const Services = () => {
     <title>Services Page | E-commerce - Business Branding - Mobile Apps</title>
     <meta name="description" content="Discover the comprehensive range of software engineering services offered by OnBeirut. From web development to mobile app design, our top-notch team of experts is dedicated to delivering high-quality solutions that align with your business goals. Explore our services today and learn how we can help take your digital innovation to the next level" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://ucarecdn.com/3d4abdb1-ac77-45ea-9fc2-30f85a0e1b06/obiconv3.JPG" />
+    <link rel="icon" href="https://ucarecdn.com/f6c61100-9146-483f-af5b-4d3809c48c99/favicon.JPG" />
+
   </Head>
   <Navbar dark/>
     <Grid container sx={{mb:'2em'}}>
@@ -72,7 +73,7 @@ const Services = () => {
           <Box sx={{maxWidth:'md',margin:'0 auto'}}>
 
         <Typography  className='hero-t1 hid' sx={{color:'white',opacity:0,lineHeight:'1.1em',maxWidth:{xs:'600px',lg:'800px'},fontSize:{xs:'2.75em',sm:'4.2em',md:'4.7em'},fontWeight:'bolder'}} component='h1'>
-                    {' Next-Gen Software Solutions'}
+                    {'Next-Gen Software Solutions'}
                     </Typography>
                     <Typography className=' hero-t2  hid' sx={{color:'white',opacity:0,maxWidth:'450px',my:{xs:2.5,md:2.5},fontSize:{xs:'.80em'}}} component='h4'>
                     {'We specialize in crafting stunning, responsive, budget-friendly web & mobile apps that fuel your growth and enhances your digital presence.'}
@@ -140,7 +141,7 @@ const Services = () => {
             
                 <img
                     src={ "https://ucarecdn.com/2b91fbda-3b9d-432a-a0aa-484303ad75ca/Untitleddesign31.png"}
-                    alt="Image"
+                    alt=" services Image"
                     className="img br8"/>
             </Box>
             
