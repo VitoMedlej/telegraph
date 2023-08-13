@@ -50,11 +50,11 @@ const Testimonial = () => {
   return (
     <Box className=' flex wrap center ' sx={{width:'100%',height:'100%'}}>
  <Box className='flex col'  sx={{flex:1,width:'100%',pt:'6em',textAlign:'center'}}>
-                <Typography sx={{color:"black",fontWeight:'700',fontSize:{xs:'2em',sm:'3em',md:'3.5em'}}}>
+                <Typography component='h1' sx={{color:"black",fontWeight:'700',fontSize:{xs:'2em',sm:'3em',md:'3.5em'}}}>
                 What Our Clients Say
                 </Typography>
                 <Typography sx={{color:"black",fontWeight:'200',fontSize:{xs:'1em',sm:'1.2em'},mb:2}} className=''>
-                    Few of our recent projects from clients that rate us 5 stars 
+                  Authentic Reviews From Our Clients
                 </Typography>
             </Box>
        <Box

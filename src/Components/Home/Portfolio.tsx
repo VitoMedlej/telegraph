@@ -19,12 +19,12 @@ const projects = [
     cate : ['Web dev','ecommerce','online shop']
   },
   {
-    title : 'Powerhouse European Appliances',
-    href : 'powerhouse-lb.com',
-    link : 'https://powerhouse-lb.com/',
-    description : 'European house appliances supplier',
-    img : 'https://images.pexels.com/photos/4865059/pexels-photo-4865059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    cate : ['Web dev','ecommerce']
+    title : 'Olive Deirmimas',
+    href : 'olivedeirmimas.com',
+    link : 'https://olivedeirmimas.com/',
+    description : 'Premium Olive Oil Manufacturer',
+    img : 'https://ucarecdn.com/81f7b924-bf93-4823-9931-66200e780158/358363523_6623745227676155_4132016340727114010_n.jpg',
+    cate : ['Web dev','Single Product','Branding']
   },
   {
     title : 'Zekra For Natural Cosmetics',
@@ -35,11 +35,11 @@ const projects = [
     cate : ['Web dev','ecommerce']
   },
   {
-    title : 'Namliieh Online Shop',
-    href : 'namliiehshop.com',
-    link : 'https://namliiehshop.com/',
-    description : 'Dynamic lifestyle brand from Lebanon. Makers of artisan products.',
-    img : 'https://images.pexels.com/photos/6042358/pexels-photo-6042358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title : 'Baby Wear Shop',
+    href : 'minichicbabywear.com',
+    link : 'https://www.minichicbabywear.com/',
+    description : 'Premium & Authentic kids Wear',
+    img : 'https://images.pexels.com/photos/2505098/pexels-photo-2505098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     cate : ['Web design','Brand']
   },
   

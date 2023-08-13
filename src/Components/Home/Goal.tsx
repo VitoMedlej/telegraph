@@ -14,7 +14,7 @@ const Goal = () => {
         gsap.to('.goal-btn',{opacity:1,y:0,delay:.35,scrollTrigger:{trigger:'.goal-t1',start:'top 50%'}})
       }, [])
     return (
-        <Box sx={{mt:{xs:4}}}>
+        <Box sx={{mt:8}}>
             <Grid
                 container
                 className='flex auto'
@@ -41,7 +41,7 @@ const Goal = () => {
                     }}
                         className='center flex auto align- col'>
 
-                        <Typography component='h2' className='h2 clr2 goal-t1 hid '>
+                        <Typography  sx={{mt:{xs:2,sm:0}}} component='h1' className='h2 clr2 goal-t1 hid '>
                         Your One-Stop Software Development Partner
                         </Typography>
                         <Typography

@@ -66,6 +66,13 @@ body {
   padding: 0.75em 0;
 }
 
+.blog-h3 {
+  font-weight: 700 !important;
+  font-size: 1.25em !important;
+  color: #161616;
+  padding: 0.55em 0;
+}
+
 .bg3 {
   background: white !important;
 }
