@@ -392,7 +392,7 @@ export default function Index() {
                                     <ul className='table'>
                                    
                                   {sectionTitleContents.map(section=>{
-                                    return      <li style={{paddingBottom:'.5em'}}>
+                                    return      <li key={`${section}`} style={{paddingBottom:'.5em'}}>
                                             <Link className='clr4' href={`#${`${section}`.replace(/\s/g , "-")}`}>
                                            {section}
                                             </Link>
@@ -466,7 +466,7 @@ export default function Index() {
          else if (post.type === 'title') {
           return <h2 key={index}>{`${post.content}`}</h2>
         }  else if (post.type === 'image') {
-          return  <Box>
+          return  <Box key={post.src}>
             <img className='img' key={index} src={post.src} alt={post.alt} />
           </Box>
         } else if (post.type === 'paragraphTitle') {
@@ -506,7 +506,7 @@ export default function Index() {
                                     <ul className='table'>
                                    
                                   {sectionTitleContents.map(section=>{
-                                    return      <li style={{paddingBottom:'.5em'}}>
+                                    return      <li key={`${section}`} style={{paddingBottom:'.5em'}}>
                                             <Link className='clr4' href={`#${`${section}`.replace(/\s/g , "-")}`}>
                                            {section}
                                             </Link>
