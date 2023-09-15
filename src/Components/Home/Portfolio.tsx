@@ -27,20 +27,20 @@ const projects = [
     cate : ['Web dev','Single Product','Branding']
   },
   {
-    title : 'Zekra For Natural Cosmetics',
-    href : 'zekra.shop',
-    link : 'https://zekra.shop/',
-    description : 'A natural cosmetics online shop',
-    img : 'https://images.pexels.com/photos/7038154/pexels-photo-7038154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    cate : ['Web dev','ecommerce']
+    title : 'Pets Town Shop',
+    href : 'petstown-lb.com',
+    link : 'https://www.petstown-lb.com/',
+    description : 'Pet Products Supplier',
+    img : 'https://images.pexels.com/photos/2248516/pexels-photo-2248516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    cate : ['Web dev','branding','ecommerce']
   },
   {
-    title : 'Baby Wear Shop',
-    href : 'minichicbabywear.com',
-    link : 'https://www.minichicbabywear.com/',
-    description : 'Premium & Authentic kids Wear',
-    img : 'https://images.pexels.com/photos/2505098/pexels-photo-2505098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    cate : ['Web design','Brand']
+    title : 'The Craft Room Shop',
+    href : 'thecraftroom-lb.com',
+    link : 'https://www.thecraftroom-lb.com/',
+    description : 'Craft Supplies In Lebanon',
+    img : 'https://images.pexels.com/photos/18199526/pexels-photo-18199526/free-photo-of-woman-making-a-drawing-on-a-t-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    cate : ['Web development','Brand','ecommerce']
   },
   
 ]

@@ -11,8 +11,40 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import posts from './blogArticle2.json'
+import post1 from './blogArticle2.json'
+import post2 from './article2.json'
 
+
+export const postsArray = [
+  {
+      title : 'Start a Blog in 5 Easy Steps (do this before monetizing it)',
+      date : 'Jan 20, 2023 ',
+      img : 'https://images.pexels.com/photos/5849592/pexels-photo-5849592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      id:1,
+    tags: ['Web Development ','Tech','Web Design'] 
+,
+      file :post1 
+  },
+  {
+    title : 'AI can replace you as a developer, unless you do this..',
+    date : 'Sept 14, 2023 ',
+    img : 'https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    id:2,
+    file :post2,
+    tags: ['Web Development ','Tech','AI','future'] 
+},
+{
+  title : 'AI can replace you as a developer, unless you do this..',
+  date : 'Sept 14, 2023 ',
+  img : 'https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  id:3,
+  tags: ['Web Development ','Tech','Web Design'] 
+,
+  file :post2
+},
+  
+ 
+]
 
 // const posts = [
 //   {
@@ -256,10 +288,18 @@ import posts from './blogArticle2.json'
 
 export default function Index() {
   const router = useRouter()
-
-  const sectionTitleContents = posts
+  const {id} = router.query
+  
+  // let selectedPost = postsArray[0].file
+  let filteredPost = postsArray.filter(i=> {return Number(i.id) == Number(id)})
+  console.log('filteredPost: ', filteredPost);
+  // selectedPost = selectedPost ? selectedPost.file : null
+  const selectedPost = filteredPost ? filteredPost[0]?.file : null;
+  console.log('selectedPost: ', selectedPost);
+  const sectionTitleContents =   selectedPost ? selectedPost
   .filter(item => item.type === 'sectionTitle')
-  .map(item => `${item?.content}`?.length > 0 && `${item.content}`)
+  .map(item => `${item?.content}`?.length > 0 && `${item.content}`) : null;
+  
   return (
     <>
       <Head>
@@ -368,21 +408,22 @@ export default function Index() {
             </Grid>
         </Grid> */}
 
-
+      {selectedPost &&
+      
      <Grid sx={{py:4,px:1,maxWidth:'lg'}} className=' auto' container>
             <Grid  xs={12} md={8} lg={9.25}  item>
                     <Container  className='bg3 auto' sx={{py:2,border:'1px solid',height:'100%'}}>
       
                         <Box>
                             <Typography component='h1' sx={{py:2,fontWeight:800,fontSize:{xs:'2em'}}}>
-                            Start a Blog in 5 Easy Steps (do this before monetizing it)
+                         {filteredPost[0]?.title}
                             </Typography>
                         </Box>
                         <Box sx={{borderBottom:'1px solid'}}>
                         Jan 20, 2023 • 0 comments
                         </Box>
                         <Box sx={{mt:{xs:1,sm:2,lg:5},maxWidth:'md'}}>
-                            <img src="https://images.pexels.com/photos/5849592/pexels-photo-5849592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Blog Post Main Image" className="img" />
+                            <img src={filteredPost[0].img} alt="Blog Post Main Image" className="img" />
                         </Box>
                                     <Container  sx={{my:2}}>
             <Typography component='h2' sx={{pt:'0 !important'}} className='blog-h2' >
@@ -391,7 +432,7 @@ export default function Index() {
                             <Box sx={{width:'100%'}}>
                                     <ul className='table'>
                                    
-                                  {sectionTitleContents.map(section=>{
+                                  {sectionTitleContents && sectionTitleContents.map(section=>{
                                     return      <li key={`${section}`} style={{paddingBottom:'.5em'}}>
                                             <Link className='clr4' href={`#${`${section}`.replace(/\s/g , "-")}`}>
                                            {section}
@@ -425,7 +466,7 @@ export default function Index() {
                                     </ul>
                         </Box> */}
 
-                        {posts.map((post, index) => {
+                        {selectedPost.map((post, index) => {
         if (post.type === 'sectionTitle') {
           return    <Typography  key={index} component='h1' id={`${post?.content}`.replace(/\s/g , "-")} className={`blog-h1`} >
          {`${post.content}`}
@@ -466,8 +507,8 @@ export default function Index() {
          else if (post.type === 'title') {
           return <h2 key={index}>{`${post.content}`}</h2>
         }  else if (post.type === 'image') {
-          return  <Box key={post.src}>
-            <img className='img' key={index} src={post.src} alt={post.alt} />
+          return  <Box key={post?.src}>
+            <img className='img' key={index} src={post?.src} alt={post?.alt} />
           </Box>
         } else if (post.type === 'paragraphTitle') {
           return      <Typography  key={index} component='h2' className='blog-h3' >
@@ -505,7 +546,7 @@ export default function Index() {
                             <Box sx={{width:'100%'}}>
                                     <ul className='table'>
                                    
-                                  {sectionTitleContents.map(section=>{
+                                  {sectionTitleContents && sectionTitleContents.map(section=>{
                                     return      <li key={`${section}`} style={{paddingBottom:'.5em'}}>
                                             <Link className='clr4' href={`#${`${section}`.replace(/\s/g , "-")}`}>
                                            {section}
@@ -518,7 +559,7 @@ export default function Index() {
                 
             </Grid>
         </Grid>
-
+      }
 
       </main>
     </>
