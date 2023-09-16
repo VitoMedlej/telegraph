@@ -13,6 +13,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import post1 from './blogArticle2.json'
 import post2 from './article2.json'
+import post3 from './article3.json'
 
 
 export const postsArray = [
@@ -34,13 +35,13 @@ export const postsArray = [
     tags: ['Web Development ','Tech','AI','future'] 
 },
 {
-  title : 'AI can replace you as a developer, unless you do this..',
-  date : 'Sept 14, 2023 ',
-  img : 'https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  title : 'How to develop your own ecommerce site today.',
+  date : 'Sept 16, 2023 ',
+  img : 'https://images.pexels.com/photos/6214452/pexels-photo-6214452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   id:3,
-  tags: ['Web Development ','Tech','Web Design'] 
+  tags: ['Web Development','Coding','SEO','Web Design'] 
 ,
-  file :post2
+  file :post3
 },
   
  
@@ -292,10 +293,10 @@ export default function Index() {
   
   // let selectedPost = postsArray[0].file
   let filteredPost = postsArray.filter(i=> {return Number(i.id) == Number(id)})
-  console.log('filteredPost: ', filteredPost);
+  // console.log('filteredPost: ', filteredPost);
   // selectedPost = selectedPost ? selectedPost.file : null
   const selectedPost = filteredPost ? filteredPost[0]?.file : null;
-  console.log('selectedPost: ', selectedPost);
+  // console.log('selectedPost: ', selectedPost);
   const sectionTitleContents =   selectedPost ? selectedPost
   .filter(item => item.type === 'sectionTitle')
   .map(item => `${item?.content}`?.length > 0 && `${item.content}`) : null;
@@ -303,7 +304,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>OnBeirut Software Development Agency | Lebanon </title>
+        <title>{filteredPost[0]?.title.slice(0,65)}</title>
         <meta name="description" content={`
      Looking for a top software development agency in Lebanon? Look no further than OnBeirut. Our skilled developers deliver high-quality web and mobile solutions.
         `} />
