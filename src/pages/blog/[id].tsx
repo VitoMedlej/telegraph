@@ -1,3 +1,4 @@
+"use client"
 // import BlogSections from '@/Components/Home/BlogSections'
 // import Goal from '@/Components/Home/Goal'
 // import Hero from '@/Components/Home/Hero'
