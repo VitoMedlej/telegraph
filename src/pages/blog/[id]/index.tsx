@@ -289,7 +289,8 @@ export const postsArray = [
 
 
 
-export default function Index() {
+export default function Index({data} : any) {
+  console.log('data: ', data);
   const router = useRouter()
   const {id} = router.query
   const [selectedPost,setSelectedPost] = useState<any | null>(null)
@@ -582,4 +583,24 @@ export default function Index() {
       </main>
     </>
   )
+}
+
+
+export async function getStaticPaths() {
+  return {
+    paths: [
+      // String variant:
+      '/blog/1',
+      '/blog/2',
+      '/blog/3',
+    ],
+    fallback: true,
+  }
+}
+export const getStaticProps = () => {
+  return {
+    props : {
+      data : 'abc'
+    }
+  }
 }
