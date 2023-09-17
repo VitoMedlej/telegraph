@@ -12,9 +12,9 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import post1 from './blogArticle2.json'
-import post2 from './article2.json'
-import post3 from './article3.json'
+import post1 from '../blogArticle2.json'
+import post2 from '../article2.json'
+import post3 from '../article3.json'
 import { useEffect, useState } from 'react'
 
 
@@ -548,7 +548,7 @@ export default function Index() {
                 <img src="https://mllj2j8xvfl0.i.optimole.com/cb:pJlS~36fbd/w:60/h:60/q:90/dpr:1.1/f:avif/https://s15165.pcdn.co/wp-content/uploads/2018/09/john-h-1.png" alt="" className="img rounded" />
                 </Box>
                 <Typography sx={{fontWeight:'600'}}>
-                  Admin 
+                  Admin
                 </Typography>
               </Box>
               <Box>
