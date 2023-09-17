@@ -23,7 +23,7 @@ export const postsArray = [
       title : 'Start a Blog in 5 Easy Steps (do this before monetizing it)',
       date : 'Jan 20, 2023 ',
       img : 'https://images.pexels.com/photos/5849592/pexels-photo-5849592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      id:1,
+      id:'1',
     tags: ['Web Development ','Tech','Web Design'] 
 ,
       file :post1 
@@ -32,7 +32,7 @@ export const postsArray = [
     title : 'AI can replace you as a developer, unless you do this..',
     date : 'Sept 14, 2023 ',
     img : 'https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    id:2,
+    id:'2',
     file :post2,
     tags: ['Web Development ','Tech','AI','future'] 
 },
@@ -40,7 +40,7 @@ export const postsArray = [
   title : 'How to develop your own ecommerce site today.',
   date : 'Sept 16, 2023 ',
   img : 'https://images.pexels.com/photos/6214452/pexels-photo-6214452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-  id:3,
+  id:'3',
   tags: ['Web Development','Coding','SEO','Web Design'] 
 ,
   file :post3
@@ -289,28 +289,28 @@ export const postsArray = [
 
 
 
-export default function Index({data} : any) {
-  console.log('data: ', data);
+export default function Index({selectedPost,sectionTitleContents}:any) {
+  // console.log('props: ', props);
   const router = useRouter()
   const {id} = router.query
-  const [selectedPost,setSelectedPost] = useState<any | null>(null)
-  const [sectionTitleContents,setTitleContent] = useState<any | null>(null)
+  // const [selectedPost,setSelectedPost] = useState<any | null>(null)
+  // const [sectionTitleContents,setTitleContent] = useState<any | null>(null)
   
-  useEffect(() => {
-    let filteredPost = postsArray.filter(i=> {return Number(i.id) == Number(id)})
+  // useEffect(() => {
+  //   let filteredPost = postsArray.filter(i=> {return Number(i.id) == Number(id)})
 
-    if (filteredPost[0]?.file) {
+  //   if (filteredPost[0]?.file) {
 
-      setSelectedPost(filteredPost ? filteredPost[0] : null)
-    }
+  //     setSelectedPost(filteredPost ? filteredPost[0] : null)
+  //   }
     
-    if (selectedPost) {
-      setTitleContent( selectedPost.file
-        .filter((item:any) => item.type === 'sectionTitle')
-        .map((item:any) => `${item?.content}`?.length > 0 && `${item.content}`))
-    }
+  //   if (selectedPost) {
+  //     setTitleContent( selectedPost.file
+  //       .filter((item:any) => item.type === 'sectionTitle')
+  //       .map((item:any) => `${item?.content}`?.length > 0 && `${item.content}`))
+  //   }
   
-  }, [id,selectedPost])
+  // }, [id,selectedPost])
    
 
   
@@ -586,21 +586,36 @@ export default function Index({data} : any) {
 }
 
 
+
 export async function getStaticPaths() {
+  // Fetch the list of available blog post IDs and create paths
+  // Example: const postIds = await fetchBlogPostIds();
+  // Generate paths like { params: { id: '1' } }, { params: { id: '2' } }, etc.
+  const paths = postsArray.map((item) => ({ params: { id: item.id.toString() } }));
+  console.log('paths: ', paths);
+
   return {
-    paths: [
-      // String variant:
-      '/blog/1',
-      '/blog/2',
-      '/blog/3',
-    ],
-    fallback: true,
-  }
+    paths,
+    fallback: false, // Set to true if you want to handle missing pages gracefully
+  };
 }
-export const getStaticProps = () => {
-  return {
-    props : {
-      data : 'abc'
-    }
+export const getStaticProps = ({params}:{ params : {id: string}}) => {
+  const filteredPost = postsArray.find(
+    (item) => Number(item?.id) === Number(params?.id)
+  );
+
+  let sectionTitleContents = null;
+
+  if (filteredPost && filteredPost.file) {
+    sectionTitleContents = filteredPost.file
+      .filter((item) => item.type === 'sectionTitle')
+      .map((item) => (Number(item?.content?.length) > 0 ? item.content : null));
   }
+
+  return {
+    props: {
+      selectedPost: filteredPost || null,
+      sectionTitleContents,
+    },
+  };
 }
