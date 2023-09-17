@@ -15,6 +15,7 @@ import { useRouter } from 'next/router'
 import post1 from './blogArticle2.json'
 import post2 from './article2.json'
 import post3 from './article3.json'
+import { useEffect, useState } from 'react'
 
 
 export const postsArray = [
@@ -291,21 +292,36 @@ export const postsArray = [
 export default function Index() {
   const router = useRouter()
   const {id} = router.query
+  const [selectedPost,setSelectedPost] = useState<any | null>(null)
+  const [sectionTitleContents,setTitleContent] = useState<any | null>(null)
   
-  // let selectedPost = postsArray[0].file
-  let filteredPost = postsArray.filter(i=> {return Number(i.id) == Number(id)})
-  // console.log('filteredPost: ', filteredPost);
-  // selectedPost = selectedPost ? selectedPost.file : null
-  const selectedPost = filteredPost ? filteredPost[0]?.file : null;
+  useEffect(() => {
+    let filteredPost = postsArray.filter(i=> {return Number(i.id) == Number(id)})
+
+    if (filteredPost[0]?.file) {
+
+      setSelectedPost(filteredPost ? filteredPost[0] : null)
+    }
+    
+    if (selectedPost) {
+      setTitleContent( selectedPost.file
+        .filter((item:any) => item.type === 'sectionTitle')
+        .map((item:any) => `${item?.content}`?.length > 0 && `${item.content}`))
+    }
+  
+  }, [id,selectedPost])
+   
+
+  
+  
+
+  
   // console.log('selectedPost: ', selectedPost);
-  const sectionTitleContents =   selectedPost ? selectedPost
-  .filter(item => item.type === 'sectionTitle')
-  .map(item => `${item?.content}`?.length > 0 && `${item.content}`) : null;
   
   return (
     <>
       <Head>
-        <title>{filteredPost[0]?.title.slice(0,65)}</title>
+        <title>{selectedPost?.title.slice(0,65)}</title>
         <meta name="description" content={`
      Looking for a top software development agency in Lebanon? Look no further than OnBeirut. Our skilled developers deliver high-quality web and mobile solutions.
         `} />
@@ -418,14 +434,14 @@ export default function Index() {
       
                         <Box>
                             <Typography component='h1' sx={{py:2,fontWeight:800,fontSize:{xs:'2em'}}}>
-                         {filteredPost[0]?.title}
+                         {selectedPost?.title}
                             </Typography>
                         </Box>
                         <Box sx={{borderBottom:'1px solid'}}>
                         Jan 20, 2023 • 0 comments
                         </Box>
                         <Box sx={{mt:{xs:1,sm:2,lg:5},maxWidth:'md'}}>
-                            <img src={filteredPost[0].img} alt="Blog Post Main Image" className="img" />
+                            <img src={selectedPost?.img} alt="Blog Post Main Image" className="img" />
                         </Box>
                                     <Container  sx={{my:2}}>
             <Typography component='h2' sx={{pt:'0 !important'}} className='blog-h2' >
@@ -434,7 +450,7 @@ export default function Index() {
                             <Box sx={{width:'100%'}}>
                                     <ul className='table'>
                                    
-                                  {sectionTitleContents && sectionTitleContents.map(section=>{
+                                  {sectionTitleContents && sectionTitleContents.map((section:string)=>{
                                     return      <li key={`${section}`} style={{paddingBottom:'.5em'}}>
                                             <Link className='clr4' href={`#${`${section}`.replace(/\s/g , "-")}`}>
                                            {section}
@@ -468,7 +484,7 @@ export default function Index() {
                                     </ul>
                         </Box> */}
 
-                        {selectedPost.map((post, index) => {
+                        {selectedPost?.file?.map((post:{alt?:string,content:string | string[],type:string,src?:string}, index:number) => {
         if (post.type === 'sectionTitle') {
           return    <Typography  key={index} component='h1' id={`${post?.content}`.replace(/\s/g , "-")} className={`blog-h1`} >
          {`${post.content}`}
@@ -548,7 +564,7 @@ export default function Index() {
                             <Box sx={{width:'100%'}}>
                                     <ul className='table'>
                                    
-                                  {sectionTitleContents && sectionTitleContents.map(section=>{
+                                  {sectionTitleContents && sectionTitleContents.map((section:string)=>{
                                     return      <li key={`${section}`} style={{paddingBottom:'.5em'}}>
                                             <Link className='clr4' href={`#${`${section}`.replace(/\s/g , "-")}`}>
                                            {section}
