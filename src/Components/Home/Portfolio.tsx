@@ -11,27 +11,27 @@ import Link from 'next/link';
 
 const projects = [
   {
-    title : 'TeenTops Electronics',
-    href : 'teentops-lb.com',
-    link : 'https://teentops-lb.com/',
-    description : 'An Online Electronics Store ',
-    img : 'https://images.pexels.com/photos/5632384/pexels-photo-5632384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    cate : ['Web dev','ecommerce','online shop']
+    title : 'True Nature Blend',
+    href : 'truenatureblend.com',
+    link : 'https://truenatureblend.com/',
+    description : 'Healthy Natural Supplements Shop   ',
+    img : 'https://ucarecdn.com/f27f5048-940f-4a0f-9ab5-6aa91906d1f5/',
+    cate : ['Web dev','online store','branding','startup']
   },
   {
-    title : 'Olive Deirmimas',
-    href : 'olivedeirmimas.com',
-    link : 'https://olivedeirmimas.com/',
-    description : 'Premium Olive Oil Manufacturer',
-    img : 'https://ucarecdn.com/81f7b924-bf93-4823-9931-66200e780158/358363523_6623745227676155_4132016340727114010_n.jpg',
-    cate : ['Web dev','Single Product','Branding']
+    title : 'DesignCompass For Interior Design ',
+    href : 'designcompass-lb.com',
+    link : 'https://www.designcompass-lb.com/',
+    description : 'Interior Design Firm in Lebanon',
+    img : 'https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    cate : ['Web design','design','Firm','Branding']
   },
   {
     title : 'Pets Town Shop',
     href : 'petstown-lb.com',
     link : 'https://www.petstown-lb.com/',
     description : 'Pet Products Supplier',
-    img : 'https://images.pexels.com/photos/2248516/pexels-photo-2248516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    img : 'https://images.pexels.com/photos/3318215/pexels-photo-3318215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     cate : ['Web dev','branding','ecommerce']
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     img : 'https://images.pexels.com/photos/18199526/pexels-photo-18199526/free-photo-of-woman-making-a-drawing-on-a-t-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     cate : ['Web development','Brand','ecommerce']
   },
-  
+
 ]
 const Portfolio = () => {
     useEffect(() => {

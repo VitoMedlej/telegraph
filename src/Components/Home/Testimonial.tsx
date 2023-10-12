@@ -31,12 +31,13 @@ const Testimonial = () => {
         },
         {
             title :`I knew I made the right choice - `,
-            reviewer:`”(Yehya, Co-Founder of Teentops)`,
+            reviewer:`”(Yehya, Founder of Teentops)`,
             description : `I was so impressed with the shop they built for me - it was so easy 
             to use! And when they built my 
             Android app, I knew I made the right choice. No regrets at all.
             `
         },
+   
         
         {
             title :`They made it work perfectly - `,

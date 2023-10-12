@@ -13,6 +13,7 @@ import gsap from 'gsap';
 import { useRouter } from 'next/router'
 import {useEffect} from 'react';
 import Testimonial from '@/Components/Home/Testimonial'
+import InstagramSection from '@/Components/Home/InstagramSection'
 
 export default function Home() {
   const router = useRouter();
@@ -50,6 +51,7 @@ At OnBeirut, we empower and grow businesses with custom web and mobile developme
         <Portfolio/>
         {/* <Plans/> */}
         <Testimonial/>
+        <InstagramSection/>
         <BlogSections/>
       </main>
     </>

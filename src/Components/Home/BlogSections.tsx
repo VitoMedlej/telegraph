@@ -11,7 +11,7 @@ const BlogSections = () => {
   const router= useRouter();
   
     return (
-    <Box sx={{mb:6}}>
+    <Box sx={{my:6}}>
         <Container className='flex wrap auto' sx={{justifyContent:{xs:'center',sm:'space-between'}}} maxWidth='lg'>
         <Typography component='h2' className='h2 clr2 '>
                             Read Our Articles
