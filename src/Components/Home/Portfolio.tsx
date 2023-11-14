@@ -19,11 +19,11 @@ const projects = [
     cate : ['Web dev','online store','branding','startup']
   },
   {
-    title : 'DesignCompass For Interior Design ',
-    href : 'designcompass-lb.com',
-    link : 'https://www.designcompass-lb.com/',
-    description : 'Interior Design Firm in Lebanon',
-    img : 'https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title : 'CivilEnGuide Engineering Firm ',
+    href : 'civilenguide.com',
+    link : 'https://www.civilenguide.com/',
+    description : 'Civil Engineering Firm in Lebanon',
+    img : 'https://images.pexels.com/photos/53212/one-world-trade-center-manhattan-owtc-new-york-53212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     cate : ['Web design','design','Firm','Branding']
   },
   {
