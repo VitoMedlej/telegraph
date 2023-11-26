@@ -44,7 +44,7 @@ const Footer = () => {
               </Link>
             ))}
         </Grid>
-        <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Grid item xs={12} sm={6} md={3} lg={3}>
 
         <Typography sx={{color:"white",fontSize:'1.5em',fontWeight:'700',pb:'.25em'}} className='clr4'>Contact Us</Typography>
        <a href="https://www.instagram.com/onbeirut/" rel='noreferrer' target='_blank'>
@@ -54,12 +54,12 @@ const Footer = () => {
         <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >contact@onbeirut.com</Typography>
 
         </Grid>
-        <Grid item xs={12} sm={6} md={3} lg={4} sx={{my:{xs:4,sm:0}}}>
+        {/* <Grid item xs={12} sm={6} md={3} lg={4} sx={{my:{xs:4,sm:0}}}>
 
 
 
 <iframe width="100%" height="300"  src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Beirut+(OnBeirut)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-        </Grid>
+        </Grid> */}
         </Grid>
         </footer>
   )
