@@ -15,7 +15,7 @@ const projects = [
     href : 'truenatureblend.com',
     link : 'https://truenatureblend.com/',
     description : 'Healthy Natural Supplements Shop   ',
-    img : 'https://ucarecdn.com/f27f5048-940f-4a0f-9ab5-6aa91906d1f5/',
+    img : 'https://ucarecdn.com/f27f5048-940f-4a0f-9ab5-6aa91906d1f5/-/resize/700x700/',
     cate : ['Web dev','online store','branding','startup']
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     href : 'petstown-lb.com',
     link : 'https://www.petstown-lb.com/',
     description : 'Pet Products Supplier',
-    img : 'https://images.pexels.com/photos/3318215/pexels-photo-3318215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    img : 'https://images.pexels.com/photos/3318215/pexels-photo-3318215.jpeg?auto=compress&cs=tinysrgb&w=500&h=650&dpr=1',
     cate : ['Web dev','branding','ecommerce']
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     href : 'thecraftroom-lb.com',
     link : 'https://www.thecraftroom-lb.com/',
     description : 'Craft Supplies In Lebanon',
-    img : 'https://images.pexels.com/photos/18199526/pexels-photo-18199526/free-photo-of-woman-making-a-drawing-on-a-t-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    img : 'https://images.pexels.com/photos/18199526/pexels-photo-18199526/free-photo-of-woman-making-a-drawing-on-a-t-shirt.jpeg?auto=compress&cs=tinysrgb&w=500&h=650&dpr=1',
     cate : ['Web development','Brand','ecommerce']
   },
 

@@ -29,7 +29,7 @@ const Hero = ({blog,imgsm,imgmd,title,desc}:{imgsm?:string,blog?:boolean,imgmd?:
                     <Box sx={{py:2}}>
                         {/* <Link href='/'>Contact</Link> */}
                         <Link className='decor-none' href={blog ? '#latest':'/services'}>
-                        <Btn  blur  sx={{px:{xs:2,sm:3}}} className='hid hero-btn'>
+                        <Btn  blur  sx={{px:{xs:1,sm:3}}} className='hid hero-btn'>
                       {blog ? 'Latest Articles' :  'Our Services'}
                         </Btn>
                         </Link>
@@ -45,18 +45,21 @@ const Hero = ({blog,imgsm,imgmd,title,desc}:{imgsm?:string,blog?:boolean,imgmd?:
                     </Typography>
                     </Box>
                     </Container>
+                    <Box sx={{height:'550px',display:{xs:'none',xl:'flex'}}} className='hero-img absolute'>
+                        <img src={imgmd ? imgmd : "https://ucarecdn.com/8a7cbabd-31c5-4837-b5cf-651ef9ecec49/-/resize/2200x650/full.jpeg"} alt="Main Section Background Image Large Devices" className="img" />
+                    </Box>
                     <Box sx={{height:'550px',display:{xs:'none',md:'flex'}}} className='hero-img absolute'>
-                        <img src={imgmd ? imgmd : "https://ucarecdn.com/5c2b213c-8e9e-4090-b37d-5ae49a5a3eaf/ColourfulMinimalBrainstormRoadmapMindMap1.png"} alt="Main Section Background Image Large Devices" className="img" />
+                        <img src={imgmd ? imgmd : "https://ucarecdn.com/8a7cbabd-31c5-4837-b5cf-651ef9ecec49/-/resize/1200x550/full.jpeg"} alt="Main Section Background Image Large Devices" className="img" />
                     </Box>
                     <Box sx={{height:'480px',display:{xs:'flex',md:'none'}}} className='hero-img absolute'>
-                        <img src={imgsm ? imgsm : "https://ucarecdn.com/1320e76b-8092-4a85-b4b3-ece1972cd17e/ColourfulMinimalBrainstormRoadmapMindMap3.png"} alt="Main Section Background Image Small Devices" className="img" />
+                        <img src={imgsm ? imgsm : "https://ucarecdn.com/b0669374-d6f8-4508-abe4-73b5382c16a8/ColourfulMinimalBrainstormRoadmapMindMap3.jpeg"} alt="Main Section Background Image Small Devices" className="img" />
                     </Box>
 {/* 
                     <Box sx={{display:{xs:'none',md:'flex'}}} className='hero-img absolute'>
                         <img src="https://ucarecdn.com/5c2b213c-8e9e-4090-b37d-5ae49a5a3eaf/ColourfulMinimalBrainstormRoadmapMindMap1.png" alt="" className="img" />
                     </Box>
                     <Box sx={{display:{xs:'flex',md:'none'}}} className='hero-img absolute'>
-                        <img src="https://ucarecdn.com/1320e76b-8092-4a85-b4b3-ece1972cd17e/ColourfulMinimalBrainstormRoadmapMindMap3.png" alt="" className="img" />
+                        <img src="https://ucarecdn.com/a2c2ac61-6896-4184-990f-97466cf8551e/Capture.webp" alt="" className="img" />
                     </Box> */}
 
                     

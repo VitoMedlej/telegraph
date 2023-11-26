@@ -79,7 +79,7 @@ Our goal is to empower businesses by providing affordable, high-quality web and 
                     <Box className='goal-bg goal-img hid'>
 
                         <img
-                            src="https://cdn.dribbble.com/userupload/4395742/file/original-a42b4c3859b1aa2770c49139fd8b97fb.png?compress=1&resize=1024x768"
+                            src="https://cdn.dribbble.com/userupload/4395742/file/original-a42b4c3859b1aa2770c49139fd8b97fb.png?compress=1&resize=768x768"
                             alt="Image List of Website designs"
                             className="contain img"/>
                     </Box>

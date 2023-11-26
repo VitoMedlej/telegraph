@@ -32,7 +32,7 @@ const Services = () => {
                 </Grid>       
                 <Grid item xs={12} sm={5}>
                     <Box className='hid serv-img' sx={{maxWidth:'550px'}}>
-                      <img src="https://ucarecdn.com/94429ac2-a97b-4250-9a70-66aa8655c7b2/-/crop/2578x2362/310,0/-/preview/3000x3000/" alt="OnBeirut UI Services Image" className="img" />
+                      <img src="https://ucarecdn.com/94429ac2-a97b-4250-9a70-66aa8655c7b2/-/resize/1000x1000/" alt="OnBeirut UI Services Image" className="img" />
                     </Box>
                 </Grid>       
         </Grid>
