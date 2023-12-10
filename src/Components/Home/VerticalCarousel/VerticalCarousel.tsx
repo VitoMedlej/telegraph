@@ -103,7 +103,7 @@ scrollTrigger:{
             <Container sx={{width:'100%'}} maxWidth='xl'>
 
                 <Item title={'All Budgets'} text={'We do not not force a fixed budget rather a custom one. Our plan options are super flexible and designed to your specific requirments.'} img={'https://cdn.dribbble.com/users/1240263/screenshots/11126045/media/e2d1d6296cbcf3f508e39f6774818576.png?compress=1&resize=600x500&vertical=top'} n={1}/>
-                <Item title={'Impact and Effect'} text={'We create visually stunning, user-friendly User Interface that engage visitors and drive conversions and promote long-term customer loyalty.'} img={'https://ucarecdn.com/6feb5e16-04b6-4c91-8ddb-65de5f1ae4da/-/resize/600x500/impact.png'} n={2}/>
+                <Item title={'Impact and Effect'} text={'We create visually stunning, user-friendly User Interface that engage visitors and drive conversions and promote long-term customer loyalty.'} img={'https://ucarecdn.com/6feb5e16-04b6-4c91-8ddb-65de5f1ae4da/-/resize/900x600/impact.png'} n={2}/>
                 <Item title={'Quality and Speed'} text={'We create high performance websites and mobile apps that deliver a seamless user experience, driving success for your business.'} img={'https://searchengineland.com/wp-content/seloads/2022/08/Speed-and-the-power-of-page-experience-on-SEO.png'} n={3}/>
                 {/* <Item n={2}/> */}
                 {/* <Item n={3}/> */}
