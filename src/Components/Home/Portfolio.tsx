@@ -19,12 +19,12 @@ const projects = [
     cate : ['Web dev','online store','branding','startup']
   },
   {
-    title : 'CivilEnGuide Engineering Firm ',
-    href : 'civilenguide.com',
-    link : 'https://www.civilenguide.com/',
-    description : 'Civil Engineering Firm in Lebanon',
+    title : 'DesignCompass Lebanon  ',
+    href : 'designcompass-lb.com',
+    link : 'https://www.designcompass-lb.com/',
+    description : 'Interior Design Firm, 12 years of experience',
     img : 'https://images.pexels.com/photos/53212/one-world-trade-center-manhattan-owtc-new-york-53212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    cate : ['Web design','design','Firm','Branding']
+    cate : ['Web Design','Interior Design','Firm','Branding']
   },
   {
     title : 'Pets Town Shop',
