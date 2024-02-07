@@ -28,6 +28,12 @@ const Testimonial = () => {
             description : `Very professional and understanding.
              Prompt reply and fast delivery. Moe deserves a 5 stars rating and more.`
         },
+        
+        {
+            title: 'Amazing assistance',
+            reviewer:'“(Rudy, Pet Business Owner)',
+            description : `Amazing assistance and fast delivery with customization, always ready to help as soon as possible in case of any bug`
+        },
         {
             title : `I just love it! -`,
             reviewer:`“(Zekra Advertising Specialist)`,
