@@ -25,7 +25,7 @@ const Goal = () => {
                     sm: 'row'
                 }
             }}>
-                <Grid item xs={12} sm={7} md={6}>
+                <Grid item xs={12} md={7} lg={6}>
                     <Container
                         sx={{
                         width: {
@@ -41,7 +41,7 @@ const Goal = () => {
                     }}
                         className='center flex auto align- col'>
 
-                        <Typography  sx={{mt:{xs:2,sm:0}}} component='h1' className='h2 clr2 goal-t1 hid '>
+                        <Typography  sx={{mt:{xs:2,sm:6,md:0}}} component='h1' className='h2 clr2 goal-t1 hid '>
                         Your One-Stop Software Development Partner
                         </Typography>
                         <Typography
@@ -75,9 +75,8 @@ Our goal is to empower businesses by providing affordable, high-quality web and 
                             </Link>
                     </Container>
                 </Grid>
-                <Grid item xs={12} sm={5} md={6}>
+                <Grid sx={{mt:{xs:12,sm:6}}} item xs={12}  md={5} lg={6}>
                     <Box className='goal-bg goal-img hid'>
-
                         <img
                             src="https://cdn.dribbble.com/userupload/4395742/file/original-a42b4c3859b1aa2770c49139fd8b97fb.png?compress=1&resize=768x768"
                             alt="Image List of Website designs"

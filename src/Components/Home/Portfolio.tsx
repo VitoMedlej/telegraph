@@ -1,8 +1,9 @@
 import { Box, Container, Typography } from '@mui/material'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import gsap from 'gsap';
 import Btn from '../Btn/Btn';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 
 
@@ -11,12 +12,70 @@ import Link from 'next/link';
 
 const projects = [
   {
+    title : 'Conceptual | Women Fashion Wear',
+    href : 'www.conceptual-wic.com',
+    link : 'https://www.conceptual-wic.com.com/',
+    description : 'Women Streetwear Online Shop',
+    img : 'https://images.pexels.com/photos/10923286/pexels-photo-10923286.jpeg?auto=compress&cs=tinysrgb&w=700&lazy=load',
+    cate : ['ecommerce','Classic','clothing','For Women']
+  },
+  {
+    title : 'Amaria Natural Skin Care',
+    href : 'amaria.shop',
+    link : 'https://amaria-lb.vercel.app/',
+    description : 'Liscened dietitian, aromatherapists, herbalist',
+    img : 'https://ucarecdn.com/62e3fa82-b277-4919-9eef-930660840338/413040906_17962573337695373_7471455854767187837_n.jpg',
+    cate : ['store','Organic Products','Herbs','Skin care']
+  },
+  {
+    title : 'DIY Crafts Diamond Painting',
+    href : 'diycraftsdiamond.com',
+    link : 'https://diycraftsdiamond.com/',
+    description : 'Art and DIY Craft Supplies Store',
+    img : 'https://images.pexels.com/photos/10984997/pexels-photo-10984997.jpeg?auto=compress&cs=tinysrgb&w=700',
+    cate : ['Web dev','online store','branding','New Idea']
+  },
+  {
+    title : 'BeeOrganic For Natural Honey',
+    href : 'beeorganic-lb.com',
+    link : 'https://beeorganic-lb.com.com/',
+    description : 'Premium Organic Honey From Lebanon',
+    img : 'https://ucarecdn.com/20fdd745-f27d-4fcc-810a-b1579112422f/-/resize/700x700/',
+    cate : ['Local Shop','online store','Honey','Organic Store']
+  },
+ 
+  {
+    title : 'Pets Town Shop',
+    href : 'petstown-lb.com',
+    link : 'https://www.petstown-lb.com/',
+    description : 'Pet Products Supplier',
+    img : 'https://ucarecdn.com/a516f876-e25e-4b10-a3ef-b231f38c7ea7/pexelsphoto6864673.jpeg',
+    cate : ['Web dev','branding','ecommerce']
+  },
+  {
     title : 'True Nature Blend',
     href : 'truenatureblend.com',
     link : 'https://truenatureblend.com/',
     description : 'Healthy Natural Supplements Shop   ',
     img : 'https://ucarecdn.com/f27f5048-940f-4a0f-9ab5-6aa91906d1f5/-/resize/700x700/',
     cate : ['Web dev','online store','branding','startup']
+  },
+
+  {
+    title : 'The Craft Room Shop',
+    href : 'thecraftroom-lb.com',
+    link : 'https://www.thecraftroom-lb.com/',
+    description : 'Craft Supplies In Lebanon',
+    img : 'https://images.pexels.com/photos/1646953/pexels-photo-1646953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    cate : ['Web development','Brand','ecommerce']
+  },
+  {
+    title : 'Mounet Dalia Traditional Lebanese Food',
+    href : 'mounetdalia.com',
+    link : 'https://www.mounetdalia.com.com/',
+    description : 'Authentic & Natural Lebanese Mouneh',
+    img : 'https://ucarecdn.com/1a95afe1-0e8e-41fb-a4fa-00ef857ef23a/418621867_1412854806328214_6415211719117463606_n.jpg',
+    cate : ['Authentic','Food','Traditional','ecommerce']
   },
   {
     title : 'DesignCompass Lebanon  ',
@@ -27,33 +86,33 @@ const projects = [
     cate : ['Web Design','Interior Design','Firm','Branding']
   },
   {
-    title : 'Pets Town Shop',
-    href : 'petstown-lb.com',
-    link : 'https://www.petstown-lb.com/',
-    description : 'Pet Products Supplier',
-    img : 'https://images.pexels.com/photos/3318215/pexels-photo-3318215.jpeg?auto=compress&cs=tinysrgb&w=500&h=650&dpr=1',
-    cate : ['Web dev','branding','ecommerce']
+    title : 'Shine Plus Car Spa',
+    href : 'shinepluscarspa.com',
+    link : 'https://shinepluscarspa.com.com/',
+    description : 'Automotive Care Center In Lebanon',
+    img : 'https://images.pexels.com/photos/6872574/pexels-photo-6872574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    cate : ['Car Care','SEO','Car Spa','Automotive']
   },
-  {
-    title : 'The Craft Room Shop',
-    href : 'thecraftroom-lb.com',
-    link : 'https://www.thecraftroom-lb.com/',
-    description : 'Craft Supplies In Lebanon',
-    img : 'https://images.pexels.com/photos/18199526/pexels-photo-18199526/free-photo-of-woman-making-a-drawing-on-a-t-shirt.jpeg?auto=compress&cs=tinysrgb&w=500&h=650&dpr=1',
-    cate : ['Web development','Brand','ecommerce']
-  },
+
 
 ]
 const Portfolio = () => {
+  const [limit,setLimit] = useState(6)
     useEffect(() => {
       gsap.to('.portfolio',{background:'#000000f0',duration:.5,scrollTrigger:{trigger:'.portfolio',markers:false,start:'top 50%'}})
       gsap.to('.img-hider-0',{height:'0%',scrollTrigger:{trigger:'.project-0',start:'10% 60%'}})
       gsap.to('.img-hider-1',{height:'0%',scrollTrigger:{trigger:'.project-1',start:'10% 60%'}})
       gsap.to('.img-hider-2',{height:'0%',scrollTrigger:{trigger:'.project-2',start:'10% 60%'}})
-      gsap.to('.img-hider-3',{height:'0%',scrollTrigger:{trigger:'.project-3',start:'10% 60%'}})
+      gsap.to('.img-hider-4',{height:'0%',scrollTrigger:{trigger:'.project-3',start:'10% 60%'}})
+      gsap.to('.img-hider-5',{height:'0%',scrollTrigger:{trigger:'.project-3',start:'10% 60%'}})
+      gsap.to('.img-hider-6',{height:'0%',scrollTrigger:{trigger:'.project-3',start:'10% 60%'}})
+      gsap.to('.img-hider-7',{height:'0%',scrollTrigger:{trigger:'.project-3',start:'10% 60%'}})
+      gsap.to('.img-hider-8',{height:'0%',scrollTrigger:{trigger:'.project-3',start:'10% 60%'}})
+      gsap.to('.img-hider-9',{height:'0%',scrollTrigger:{trigger:'.project-3',start:'10% 60%'}})
+      gsap.to('.img-hider-10',{height:'0%',scrollTrigger:{trigger:'.project-3',start:'10% 60%'}})
 
     }, [])
-    
+    const router = useRouter()
   return (
     <Box className='portfolio' id='portfolio' sx={{minHeight:'700px',width:'100%',background:'white'}}>
         <Container sx={{pb:"4em"}}  maxWidth='lg'>
@@ -67,15 +126,15 @@ const Portfolio = () => {
             </Box>
             <Box className='flex space-between wrap'>
 
-         {projects.map((project,idx)=>{   return <Box
+         {projects.slice(0,limit).map((project,idx)=>{   return <Box
          key={project.title}
          className={`project-${idx}`}
          sx={{
-          pb:{xs:4,sm:'auto'},
-          mt: {xs:0,sm:idx % 2 === 0 ? 0 : 15}
-          ,width:{xs:'99%',sm:'50%'},maxWidth:'500px'}}>
+          pb:{xs:4,md:'auto'},
+          mt: {xs:4,md:idx % 2 === 0 ? 0 : 15}
+          ,width:{xs:'99%',md:'50%'},maxWidth:'500px'}}>
                 
-                <Box className='relative' sx={{height:'100%',maxHeight:{xs:'450px',sm:'550px',md:'600px',lg:'650px'},maxWidth:'500px'}}>
+                <Box className='relative' sx={{height:{xs:'450px',sm:'550px',md:'600px',lg:'650px'},maxWidth:'500px'}}>
                   
                   <Box className={`absolute img-hider-${idx}`} sx={{background:'#0f0f0f',height:'20%',top:0,width:'100%',maxWidth:'650px'}}/>
                   <img src={project.img} alt="Project Image" className="img" />
@@ -108,15 +167,16 @@ const Portfolio = () => {
               </Box>
             </Box>})}
             </Box>
-            <Box className='auto center'  sx={{pt:5,with:'100%'}}>
-            <Link href='/contact'>
-
-            <Btn >
-              Get Your Own
-            </Btn>
-            </Link>
-            </Box>
         </Container>
+            <Box className='auto center'  sx={{pb:'4em',with:'100%'}}>
+           
+
+            <Btn onClick={()=>
+              limit > 6 ?router.push('/contact'): setLimit(20)
+            }>
+                  {limit > 6 ? 'Contact Us Already!' : 'LOAD MORE PROJECTS'}
+            </Btn>
+            </Box>
     </Box>
   )
 }

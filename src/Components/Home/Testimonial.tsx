@@ -23,6 +23,12 @@ import UserReview from './UserReview.tsx/UserReview';
 const Testimonial = () => {
     const tests = [
         {
+            title: 'Deserves a 5 stars rating and more.',
+            reviewer:'“(Omar, Founder/CEO/Lead Interior Architect )',
+            description : `Very professional and understanding.
+             Prompt reply and fast delivery. Moe deserves a 5 stars rating and more.`
+        },
+        {
             title : `I just love it! -`,
             reviewer:`“(Zekra Advertising Specialist)`,
             description : `We’re a local business and most of our clients are 
@@ -37,7 +43,7 @@ const Testimonial = () => {
             Android app, I knew I made the right choice. No regrets at all.
             `
         },
-   
+        
         
         {
             title :`They made it work perfectly - `,
@@ -83,7 +89,7 @@ const Testimonial = () => {
                 delay: 3000,
                 disableOnInteraction: true
             }}
-                navigation={true}
+                navigation={false}
                 spaceBetween={10}
                 slidesPerView={1}
                 slidesPerGroup={1}
