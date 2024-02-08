@@ -14,7 +14,7 @@ const projects = [
   {
     title : 'Conceptual | Women Fashion Wear',
     href : 'www.conceptual-wic.com',
-    link : 'https://www.conceptual-wic.com.com/',
+    link : 'https://www.conceptual-wic.com/',
     description : 'Women Streetwear Online Shop',
     img : 'https://images.pexels.com/photos/10923286/pexels-photo-10923286.jpeg?auto=compress&cs=tinysrgb&w=700&lazy=load',
     cate : ['ecommerce','Classic','clothing','For Women']
@@ -38,7 +38,7 @@ const projects = [
   {
     title : 'BeeOrganic For Natural Honey',
     href : 'beeorganic-lb.com',
-    link : 'https://beeorganic-lb.com.com/',
+    link : 'https://beeorganic-lb.com/',
     description : 'Premium Organic Honey From Lebanon',
     img : 'https://ucarecdn.com/20fdd745-f27d-4fcc-810a-b1579112422f/-/resize/700x700/',
     cate : ['Local Shop','online store','Honey','Organic Store']
@@ -72,7 +72,7 @@ const projects = [
   {
     title : 'Mounet Dalia Traditional Lebanese Food',
     href : 'mounetdalia.com',
-    link : 'https://www.mounetdalia.com.com/',
+    link : 'https://www.mounetdalia.com/',
     description : 'Authentic & Natural Lebanese Mouneh',
     img : 'https://ucarecdn.com/1a95afe1-0e8e-41fb-a4fa-00ef857ef23a/418621867_1412854806328214_6415211719117463606_n.jpg',
     cate : ['Authentic','Food','Traditional','ecommerce']
@@ -88,7 +88,7 @@ const projects = [
   {
     title : 'Shine Plus Car Spa',
     href : 'shinepluscarspa.com',
-    link : 'https://shinepluscarspa.com.com/',
+    link : 'https://shinepluscarspa.com/',
     description : 'Automotive Care Center In Lebanon',
     img : 'https://images.pexels.com/photos/6872574/pexels-photo-6872574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     cate : ['Car Care','SEO','Car Spa','Automotive']
