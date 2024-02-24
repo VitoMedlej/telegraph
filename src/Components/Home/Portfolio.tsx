@@ -17,15 +17,15 @@ const projects = [
     link : 'https://www.conceptual-wic.com/',
     description : 'Women Streetwear Online Shop',
     img : 'https://images.pexels.com/photos/10923286/pexels-photo-10923286.jpeg?auto=compress&cs=tinysrgb&w=700&lazy=load',
-    cate : ['ecommerce','Classic','clothing','For Women']
+    cate : ['Ecommerce','Classic','clothing','For Women']
   },
   {
     title : 'Amaria Natural Skin Care',
     href : 'amaria.shop',
-    link : 'https://amaria-lb.vercel.app/',
+    link : 'https://amaria.beauty/',
     description : 'Liscened dietitian, aromatherapists, herbalist',
     img : 'https://ucarecdn.com/62e3fa82-b277-4919-9eef-930660840338/413040906_17962573337695373_7471455854767187837_n.jpg',
-    cate : ['store','Organic Products','Herbs','Skin care']
+    cate : ['Store','Organic Products','Herbs','Skin care']
   },
   {
     title : 'DIY Crafts Diamond Painting',
@@ -33,7 +33,7 @@ const projects = [
     link : 'https://diycraftsdiamond.com/',
     description : 'Art and DIY Craft Supplies Store',
     img : 'https://images.pexels.com/photos/10984997/pexels-photo-10984997.jpeg?auto=compress&cs=tinysrgb&w=700',
-    cate : ['Web dev','online store','branding','New Idea']
+    cate : ['Web dev','Online store','Branding','New Idea']
   },
   {
     title : 'BeeOrganic For Natural Honey',
@@ -41,16 +41,23 @@ const projects = [
     link : 'https://beeorganic-lb.com/',
     description : 'Premium Organic Honey From Lebanon',
     img : 'https://ucarecdn.com/20fdd745-f27d-4fcc-810a-b1579112422f/-/resize/700x700/',
-    cate : ['Local Shop','online store','Honey','Organic Store']
+    cate : ['Local Shop','Online store','Honey','Organic Store']
   },
- 
+  {
+    title : 'Number One By Carla',
+    href : 'number1bycarla.com',
+    link : 'https://number1bycarla.com/',
+    description : 'Tanning oils & Body oils Brand',
+    img : 'https://ucarecdn.com/96a270dc-3a32-432a-a2cd-5db9503d013b/417767658_746143730765594_3189711186697857321_n.jpg',
+    cate : ['Online Shop','New Brand','Oils','New Products']
+  },
   {
     title : 'Pets Town Shop',
     href : 'petstown-lb.com',
     link : 'https://www.petstown-lb.com/',
     description : 'Pet Products Supplier',
     img : 'https://ucarecdn.com/a516f876-e25e-4b10-a3ef-b231f38c7ea7/pexelsphoto6864673.jpeg',
-    cate : ['Web dev','branding','ecommerce']
+    cate : ['Web dev','Branding','Ecommerce']
   },
   {
     title : 'True Nature Blend',
@@ -58,7 +65,7 @@ const projects = [
     link : 'https://truenatureblend.com/',
     description : 'Healthy Natural Supplements Shop   ',
     img : 'https://ucarecdn.com/f27f5048-940f-4a0f-9ab5-6aa91906d1f5/-/resize/700x700/',
-    cate : ['Web dev','online store','branding','startup']
+    cate : ['Web dev','Online store','Branding','Startup']
   },
 
   {
@@ -67,7 +74,7 @@ const projects = [
     link : 'https://www.thecraftroom-lb.com/',
     description : 'Craft Supplies In Lebanon',
     img : 'https://images.pexels.com/photos/1646953/pexels-photo-1646953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    cate : ['Web development','Brand','ecommerce']
+    cate : ['Web development','Brand','Ecommerce']
   },
   {
     title : 'Mounet Dalia Traditional Lebanese Food',
@@ -75,7 +82,7 @@ const projects = [
     link : 'https://www.mounetdalia.com/',
     description : 'Authentic & Natural Lebanese Mouneh',
     img : 'https://ucarecdn.com/1a95afe1-0e8e-41fb-a4fa-00ef857ef23a/418621867_1412854806328214_6415211719117463606_n.jpg',
-    cate : ['Authentic','Food','Traditional','ecommerce']
+    cate : ['Authentic','Food','Traditional','Ecommerce']
   },
   {
     title : 'DesignCompass Lebanon  ',
