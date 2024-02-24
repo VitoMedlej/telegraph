@@ -21,7 +21,7 @@ const projects = [
   },
   {
     title : 'Amaria Natural Skin Care',
-    href : 'amaria.shop',
+    href : 'amaria.beauty',
     link : 'https://amaria.beauty/',
     description : 'Liscened dietitian, aromatherapists, herbalist',
     img : 'https://ucarecdn.com/62e3fa82-b277-4919-9eef-930660840338/413040906_17962573337695373_7471455854767187837_n.jpg',
