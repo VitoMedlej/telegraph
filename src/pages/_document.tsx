@@ -17,7 +17,7 @@ export default function Document() {
         <Main />
         <NextScript />
         <a 
-        href='https://wa.me/+96176910252'
+        href='https://wa.me/+96171287235'
         target="_blank"
         rel='nonreferrer'>
         <Box 

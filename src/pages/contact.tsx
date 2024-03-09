@@ -59,7 +59,7 @@ const Index = () => {
             @onbeirut
         </Typography>
         <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>
-            +961 76 910 252
+            +961 71 287 235
         </Typography>
       <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>    
         contact@onbeirut.com

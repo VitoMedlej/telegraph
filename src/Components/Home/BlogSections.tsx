@@ -2,7 +2,7 @@ import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
 import Btn from '../Btn/Btn'
 import { useRouter } from 'next/router'
-import post1 from '@/pages/blog/blogArticle2.json'
+// import post1 from '@/pages/blog/blogArticle2.json'
 import { postsArray } from '@/pages/blog/[id]'
 
 

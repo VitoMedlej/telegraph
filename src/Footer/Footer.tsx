@@ -50,7 +50,7 @@ const Footer = () => {
        <a href="https://www.instagram.com/onbeirut/" rel='noreferrer' target='_blank'>
         <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >@onbeirut</Typography>
        </a>
-        <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >+961 76 910 252</Typography>
+        <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >+961 71 287 235</Typography>
         <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >contact@onbeirut.com</Typography>
 
         </Grid>
