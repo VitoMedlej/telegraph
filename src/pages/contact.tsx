@@ -71,7 +71,7 @@ const Index = () => {
     </Container>
         </Grid>  
         <Grid sx={{mt:{xs:2,sm:0}}} item xs={12} sm={6}>
-          <Typography component='h1' sx={{color:'green',fontWeight:'500',textAlign:'center'}} className='h1'>{status === 200 ? 'Thanks for messaging us, expect a reply soon!' : ""}</Typography>
+          <Typography component='h2' sx={{color:'green',fontWeight:'500',textAlign:'center'}} className='h1'>{status === 200 ? 'Thanks for messaging us, expect a reply soon!' : ""}</Typography>
             <Box ref={form} onSubmit={(e)=>sendMessage(e)} component='form' sx={{gap:1,
           py:2.5,
           px:'1em',

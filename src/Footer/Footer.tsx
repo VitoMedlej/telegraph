@@ -23,7 +23,7 @@ const Footer = () => {
              } 
              className='img' alt="onbeirut logo" />
           </Link>
-          <Typography component='h1' className='clr3' sx={{fontWeight:'100',maxWidth:'450px',mt:1}}>
+          <Typography component='p' className='clr3' sx={{fontWeight:'100',maxWidth:'450px',mt:1}}>
           Our experienced team of web professionals specializes in crafting tailored solutions for businesses of all sizes. We focus on delivering engaging, user-friendly websites and mobile apps, and provide ongoing support to help you achieve lasting online success. With our expertise and passion for the digital world, we’re your reliable partner for all your web and mobile development needs.
           </Typography>
           <SMicons sx={{mt:2}}/>

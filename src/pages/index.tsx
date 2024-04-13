@@ -30,13 +30,20 @@ export default function Home() {
   return (
     <>
       <Head>
-      <title>OnBeirut Agency | Empowering Businesses with Software</title>
+      <title>OnBeirut | Empowering Lebanese Businesses with Software</title>
         <meta name="description" content={`
-At OnBeirut, we empower and grow businesses with custom web and mobile development solutions. Our expert software engineers work with you to build innovative, user-friendly applications that drive growth and streamline operations.
+At OnBeirut, we empower and grow businesses with custom web and mobile development solutions. Our expert software engineers work with you to build innovative, user-friendly applications followed by success.
         `} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="https://ucarecdn.com/f6c61100-9146-483f-af5b-4d3809c48c99/favicon.JPG" />
 
+
+
+        <meta property="og:image" content="https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png" />
+    <meta property="og:url" content="www.onbeirut.com" />
+    <meta name="twitter:card" content="https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png" />
+    <meta name="twitter:title" content="OnBeirut | Empowering Lebanese Businesses with Software" />
+    <meta name="twitter:image" content="https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png" />
       </Head>
       <main>
         <Box className='hero-img' >

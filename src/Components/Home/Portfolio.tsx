@@ -84,8 +84,18 @@ const projects = [
     img : 'https://ucarecdn.com/1a95afe1-0e8e-41fb-a4fa-00ef857ef23a/418621867_1412854806328214_6415211719117463606_n.jpg',
     cate : ['Authentic','Food','Traditional','Ecommerce']
   },
+
   {
-    title : 'DesignCompass Lebanon  ',
+
+title : 'LebNorth Electronics',
+href : 'lebnorth.com',
+link : 'https://lebnorth.com/',
+description : 'Premium Tech Products and Accessories Shop',
+img : 'https://images.pexels.com/photos/2582935/pexels-photo-2582935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+cate : ['Web Development','Technology','Products','Ecommerce']
+  },
+  {
+    title : 'DesignCompass Lebanon',
     href : 'designcompass-lb.com',
     link : 'https://www.designcompass-lb.com/',
     description : 'Interior Design Firm, 12 years of experience',

@@ -58,7 +58,7 @@ const BlogSections = () => {
                 </Box>
             </Box>
                    })}
-                     <Box className='auto center'  sx={{pt:5,with:'100%'}}>
+                     <Box className='auto center'  sx={{pt:5,minWidth:'80vw',with:'100%'}}>
               <Btn dark sx={{px:3,py:.8,fontSize:'.9em'}}>
                 Read More
               </Btn>

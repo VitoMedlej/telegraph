@@ -497,7 +497,7 @@ export default function Index({selectedPost,sectionTitleContents}:any) {
 
                         {selectedPost?.file?.map((post:{alt?:string,content:string | string[],type:string,src?:string}, index:number) => {
         if (post.type === 'sectionTitle') {
-          return    <Typography  key={index} component='h1' id={`${post?.content}`.replace(/\s/g , "-")} className={`blog-h1`} >
+          return    <Typography  key={index} component='p' id={`${post?.content}`.replace(/\s/g , "-")} className={`blog-h1`} >
          {`${post.content}`}
           </Typography>
         }
