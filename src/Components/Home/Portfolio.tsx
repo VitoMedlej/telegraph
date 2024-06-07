@@ -20,6 +20,14 @@ const projects = [
     cate : ['Ecommerce','Classic','clothing','For Women']
   },
   {
+    title : 'Prospecs Middle East',
+    href : 'prospecs.me',
+    link : 'https://prospecs.me/',
+    description : 'Cutting-edge Capacity Development Training Programs.',
+    img : 'https://ucarecdn.com/1fb6121c-7d86-447e-9d96-8c1b0157c360/prosp.jpg',
+    cate : ['Platform','Branding','Landing Page','Customer acquisition']
+  },
+  {
     title : 'Amaria Natural Skin Care',
     href : 'amaria.beauty',
     link : 'https://amaria.beauty/',
