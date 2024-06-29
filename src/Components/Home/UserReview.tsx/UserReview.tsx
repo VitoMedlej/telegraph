@@ -6,11 +6,13 @@ const UserReview = ({title,reviewer,description}:{title:string,reviewer:string,d
         <Box
         className='auto flex center col '
             sx={{
+                border:'1px solid #0000001c',
+                borderRadius:'20px',
                 px:2,
                 maxWidth:'500px',
                 height:'100%',
 
-                borderBottom: '1px solid white'
+                // borderBottom: '1px solid white'
         }}>
 
             <Box className="flex">

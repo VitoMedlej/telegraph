@@ -21,7 +21,7 @@ export default function Home() {
         <title>OnBeirut Web Dev Blog | Tech Related Blog </title>
 
         <meta name="description" content={`
-        Expert web design & development services for a strong online presence. Get responsive, SEO-friendly sites & increase conversions. Start now
+        OnBeirut Blog | Expert web design & development services for a strong online presence. Get responsive, SEO-friendly sites & increase conversions.
         `} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="https://ucarecdn.com/f6c61100-9146-483f-af5b-4d3809c48c99/favicon.JPG" />

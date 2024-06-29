@@ -77,6 +77,15 @@ const projects = [
   },
 
   {
+    title : 'Mirach Personalized Handcrafted Bags',
+    href : 'mirach-lb.com',
+    link : 'https://mirach-lb.com/',
+    description : 'Lebanese Personalized Handcrafted Bags',
+    img : 'https://ucarecdn.com/859e99a7-4a1c-4fe7-a2bb-dcfd15c1d780/-/resize/700x700/',
+    cate : ['Custom site','Online shop','Animations','Lebanese Brand']
+  },
+
+  {
     title : 'The Craft Room Shop',
     href : 'thecraftroom-lb.com',
     link : 'https://www.thecraftroom-lb.com/',

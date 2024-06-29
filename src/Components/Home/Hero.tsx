@@ -28,9 +28,9 @@ const Hero = ({blog,imgsm,imgmd,title,desc}:{imgsm?:string,blog?:boolean,imgmd?:
 
                     <Box sx={{py:2}}>
                         {/* <Link href='/'>Contact</Link> */}
-                        <Link className='decor-none' href={blog ? '#latest':'/services'}>
+                        <Link className='decor-none' href={blog ? '#latest':'/#portfolio'}>
                         <Btn  blur  sx={{px:{xs:1,sm:3}}} className='hid hero-btn'>
-                      {blog ? 'Latest Articles' :  'Our Services'}
+                      {blog ? 'Latest Articles' :  'Our Work'}
                         </Btn>
                         </Link>
                         <Link href='/contact' className='decor-none'>

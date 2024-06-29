@@ -18,8 +18,9 @@ const Services = () => {
         <Grid container className='flex center items-center align-center auto'  maxWidth='xl' sx={{height:'100%',minHeight:'600px'}} >
              <Grid item xs={12} sm={7}>
                     <Container sx={{mt:{xs:4,sm:0},textAlign:{xs:'center',sm:'left'},color:'white'}}>
-                    <Typography className='hid serv-t1' sx={{fontWeight:"700",fontSize:{xs:'2em',sm:'3.2em',lg:'3.5em'}}}>
-                    Ecommerce sites, Web Apps & Mobile Apps
+                    <Typography className='hid serv-t1' sx={{fontWeight:"700",fontSize:{xs:'1.6em',sm:'2.7em',lg:'2.8em'}}}>
+                    From Ecommerce sites to Web Apps to Mobile Apps, we build it all.
+
                     </Typography>
                     
                     <Btn blur onClick={()=>router.push('/services')} sx={{my:2}} className='hid serv-btn'>

@@ -95,7 +95,7 @@ const Testimonial = () => {
                 delay: 3000,
                 disableOnInteraction: true
             }}
-                navigation={false}
+                navigation={true}
                 spaceBetween={10}
                 slidesPerView={1}
                 slidesPerGroup={1}

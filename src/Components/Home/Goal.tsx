@@ -50,10 +50,16 @@ const Goal = () => {
                             mt: 1.5
                         }}
                             className='clr2 goal-t2 hid '>
-
-Our goal is to empower businesses by providing affordable, high-quality web and mobile apps development services.
-                            We&apos;re committed to helping you achieve online presence without costing you a fortune. 
-                            Experience the perfect balance of quality and affordability with OnBeirut – let us be your partner in online success.                                
+{
+    `
+   We’re the architects of your digital dreams. Together, we can build unparalleled digital experiences.
+    `
+}                                
+{
+    `
+    Let us be the only software development agency you'll ever need
+`
+}                                
                             {/* Our goal is to empower small and medium-sized businesses by providing affordable, high-quality web development services.
                             We understand the importance of a strong online presence in today&apos;s digital world, and we&apos;re committed to helping you achieve it without costing you a fortune. 
                             Experience the perfect balance of quality and affordability with OnBeirut – let us be your partner in online success. */}

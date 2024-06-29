@@ -15,20 +15,11 @@ import { useRouter } from 'next/router'
 import post1 from '../blogArticle2.json'
 import post2 from '../article2.json'
 import post3 from '../article3.json'
-import post4 from '../article4.json'
-import { useEffect, useState } from 'react'
+// import post4 from '../article4.json'
+// import { useEffect, useState } from 'react'
 
 
 export const postsArray = [
-  {
-    title : 'Start a Blog in 5 Easy Steps (do this before monetizing it)',
-    date : 'Mar 9, 2024 ',
-    img : 'https://images.pexels.com/photos/5849592/pexels-photo-5849592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    id:'4',
-  tags: ['Web Development ','Tech','Web Design'] 
-,
-    file :post4
-},
   {
       title : 'Start a Blog in 5 Easy Steps (do this before monetizing it)',
       date : 'Jan 20, 2023 ',
