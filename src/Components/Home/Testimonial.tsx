@@ -28,6 +28,13 @@ const Testimonial = () => {
             description : `Very professional and understanding.
              Prompt reply and fast delivery. Moe deserves a 5 stars rating and more.`
         },
+        {
+            title: 'Very professional and responsive. Highly recommended!',
+            reviewer:'“(Fady, Electronics Relatiler)',
+            description : `Excellent service! My eCommerce site looks fantastic 
+            and works perfectly. They are very
+             professional and responsive. Highly recommended!`
+        },
         
         {
             title: 'Amazing assistance',

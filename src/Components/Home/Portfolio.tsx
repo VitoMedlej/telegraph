@@ -68,6 +68,16 @@ const projects = [
     cate : ['Web dev','Branding','Ecommerce']
   },
   {
+    title : 'Ghanem Trading Ecommerce',
+    href : 'ghanemtrading.com',
+    link : 'https://www.ghanemtrading.com/',
+    description : 'Full Ecommerce Webapp',
+    img : 'https://ucarecdn.com/300c7d35-6c52-428b-8d2e-b31681e983a4/pexelsphoto4099350.jpeg',
+    cate : ['Trading','Appliances','Eshop']
+  },
+
+  
+  {
     title : 'True Nature Blend',
     href : 'truenatureblend.com',
     link : 'https://truenatureblend.com/',
