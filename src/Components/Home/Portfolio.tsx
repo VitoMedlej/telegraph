@@ -60,6 +60,14 @@ const projects = [
     cate : ['Online Shop','New Brand','Oils','New Products']
   },
   {
+    title : 'Mirach Personalized Handcrafted Bags',
+    href : 'mirach-lb.com',
+    link : 'https://mirach-lb.com/',
+    description : 'Lebanese Personalized Handcrafted Bags',
+    img : 'https://ucarecdn.com/859e99a7-4a1c-4fe7-a2bb-dcfd15c1d780/-/resize/700x700/',
+    cate : ['Custom site','Online shop','Animations','Lebanese Brand']
+  },
+  {
     title : 'Pets Town Shop',
     href : 'petstown-lb.com',
     link : 'https://www.petstown-lb.com/',
@@ -86,14 +94,7 @@ const projects = [
     cate : ['Web dev','Online store','Branding','Startup']
   },
 
-  {
-    title : 'Mirach Personalized Handcrafted Bags',
-    href : 'mirach-lb.com',
-    link : 'https://mirach-lb.com/',
-    description : 'Lebanese Personalized Handcrafted Bags',
-    img : 'https://ucarecdn.com/859e99a7-4a1c-4fe7-a2bb-dcfd15c1d780/-/resize/700x700/',
-    cate : ['Custom site','Online shop','Animations','Lebanese Brand']
-  },
+
 
   {
     title : 'The Craft Room Shop',
@@ -136,6 +137,15 @@ cate : ['Web Development','Technology','Products','Ecommerce']
     description : 'Automotive Care Center In Lebanon',
     img : 'https://images.pexels.com/photos/6872574/pexels-photo-6872574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     cate : ['Car Care','SEO','Car Spa','Automotive']
+  },
+
+  {
+    title : 'Olive Deirmimas',
+    href : 'olivedeirmimas.com',
+    link : 'https://olivedeirmimas.com/',
+    description : 'Extra Virgin Lebanese Olive Oil',
+    img : 'https://th.bing.com/th/id/R.04859a396a8c97982e3dcc4f7e850538?rik=0AIlqUHJu1YZhg&pid=ImgRaw&r=0',
+    cate : ['Brand','Olive Oil','Lebanon','Landing page']
   },
 
 
