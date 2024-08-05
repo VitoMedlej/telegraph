@@ -15,11 +15,21 @@ import { useRouter } from 'next/router'
 import post1 from '../blogArticle2.json'
 import post2 from '../article2.json'
 import post3 from '../article3.json'
+import post4 from '../article4.json'
 // import post4 from '../article4.json'
 // import { useEffect, useState } from 'react'
 
 
 export const postsArray = [
+  {
+    title : 'Read this before opening your online shop in Lebanon',
+    date : 'Aug 6, 2024',
+    img : 'https://www.arabnews.pk/sites/default/files/styles/660x371_watermarkpakistan/public/main-image/2020/08/25/2242601-589507853.png?itok=n3npFz5o',
+    id:'4',
+  tags: ['Ecommerce ','Online','Lebanon'] 
+,
+    file :post4
+},
   {
       title : 'Start a Blog in 5 Easy Steps (do this before monetizing it)',
       date : 'Jan 20, 2023 ',
