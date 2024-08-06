@@ -59,7 +59,9 @@ const BlogSections = () => {
             </Box>
                    })}
                      <Box className='auto center'  sx={{pt:5,minWidth:'80vw',with:'100%'}}>
-              <Btn dark sx={{px:3,py:.8,fontSize:'.9em'}}>
+              <Btn
+              onClick={()=>router.push('/blog')}
+              dark sx={{px:3,py:.8,fontSize:'.9em'}}>
                 Read More
               </Btn>
               </Box>

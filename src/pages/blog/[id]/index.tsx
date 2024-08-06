@@ -59,6 +59,12 @@ export const postsArray = [
   
  
 ]
+type FileItem = {
+  type: string;
+  content: string | string[] | { type: string; content: string; url?: string }[];
+  src?: string;
+  alt?: string;
+};
 
 // const posts = [
 //   {
@@ -617,10 +623,10 @@ export const getStaticProps = ({params}:{ params : {id: string}}) => {
 
   let sectionTitleContents = null;
 
-  if (filteredPost && filteredPost.file) {
-    sectionTitleContents = filteredPost.file
-      .filter((item) => item.type === 'sectionTitle')
-      .map((item) => (Number(item?.content?.length) > 0 ? item.content : null));
+  if (filteredPost && filteredPost?.file) {
+    sectionTitleContents = (filteredPost.file as FileItem[])
+      .filter((item: FileItem) => item.type === 'sectionTitle')
+      .map((item: FileItem) => (typeof item.content === 'string' && item.content.length > 0 ? item.content : null));
   }
 
   return {
