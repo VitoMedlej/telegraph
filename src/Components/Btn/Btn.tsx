@@ -6,6 +6,7 @@ const styles =(dark?:boolean) => {
   let a;
   dark ? a= {
     border:'1px solid black',
+    borderRadius:0,
     background:'transparent',
     color:'black',
     px:'3.5em',
@@ -13,8 +14,9 @@ const styles =(dark?:boolean) => {
   }
   :
   a= {
-    
     border:'1px solid white',
+    borderRadius:0,
+
     background:'transparent',
     color:'white',
     px:'3.5em',
@@ -22,9 +24,10 @@ const styles =(dark?:boolean) => {
   }
   return a
 }
-const Btn = ({onClick,className,dark,children,blur,sx}:{onClick?:any,className?:string,dark?:boolean,blur?:boolean,sx?:any,children?:any}) => {
+const Btn = ({disabled,onClick,className,dark,children,blur,sx}:{disabled?:boolean,onClick?:any,className?:string,dark?:boolean,blur?:boolean,sx?:any,children?:any}) => {
   return (
     <Button 
+    disabled={disabled === true ? true : false}
     type='submit'
     onClick={onClick && onClick}
     className={`${blur ? 'blur' :'' } ${className ? className : ""}`}

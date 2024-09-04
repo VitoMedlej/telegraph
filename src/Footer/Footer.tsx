@@ -1,68 +1,72 @@
+"use client"
+import Link from 'next/link';
+import {Typography , Box, Grid } from '@mui/material'
 import SMicons from '@/Components/SocialMedia/SMicons';
-import { Grid, Typography } from '@mui/material'
-import Link from 'next/link'
-import { useRouter } from 'next/router';
-import React from 'react'
 
 
-const pages = [{href:'/',title:'Home'}, {title:'Services',href:'/services'}, {title:'Pricing',href:'#pricing'},{title:'Portfolio',href:'#portfolio'},{href:'/blog',title:'Blog'},{href:'/contact',title:'Contact'}];
 
-const Footer = () => {
-  const router = useRouter()
-    return (
-    <footer className='footer bg2'>
-        <Grid  className=' auto flex space-between' container sx={{maxWidth:'xl',padding:'4.5em .9em',width:'100%',minHeight:'300px'}}>
-        <Grid item xs={12} sm={12} md={4}>
-            
-        <Link
-
-            className=' filter footerlogo'
-            href="/" 
-          > 
-              <img src={  'https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png'
-             } 
-             className='img' alt="onbeirut logo" />
-          </Link>
-          <Typography component='p' className='clr3' sx={{fontWeight:'100',maxWidth:'450px',mt:1}}>
-          Our experienced team of web professionals specializes in crafting tailored solutions for businesses of all sizes. We focus on delivering engaging, user-friendly websites and mobile apps, and provide ongoing support to help you achieve lasting online success. With our expertise and passion for the digital world, we’re your reliable partner for all your web and mobile development needs.
+const Footer = () => (
+      <Box component='footer'  className='bg'> 
+          <Grid container className='auto' sx={{py:8,px:2,maxWidth:'md'}} >
+            <Grid item xs={12} sm={6} lg={6}>
+              <Box>
+                  <Typography
+                  className=''
+                  sx={{maxWidth:'300px',fontSize:'.7em',color:'white'}}>
+                  Stay informed with the latest updates from Lebanon and around the world. Follow us on social media to never miss out on important news and stories.
+                  </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={3} md={3}>
+        <Box sx={{pt:{xs:4,sm:0}}}>
+          <Typography className='white' component={'h1'} sx={{fontWeight:'600',fontSize:'.9em',pb:1}}>
+              Site Links
           </Typography>
-          <SMicons sx={{mt:2}}/>
+          <Box sx={{gap:1}} className="flex wrap col gap1">
 
-        </Grid>
-        <Grid item xs={12} sm={4} md={2} lg={1} sx={{my:{xs:4,sm:0}}}>
-            <Typography sx={{color:"white",fontSize:'1.5em',fontWeight:'700',pb:'.25em'}} className='clr4'>Links</Typography>
-        {pages.map((page) => (
-              <Link
-                href={page.href}
-                className={` decor-none wfit flex`}
-                key={page.title}
-                onClick={()=>{router.push(`${page.href}`)}}        
-              >
-                <Typography className=' clr3' sx={{':hover':{color:'white !important'},my:.5,fontSize:{xs:'1.05em',sm:'1.11em'},fontWeight:'100'}} component='h4'>
-                {page.title}
-                </Typography>
-              </Link>
-            ))}
-        </Grid>
-        <Grid item xs={12} sm={12} md={3} lg={3}>
+          <Link href='/' className='white decor-none' style={{fontSize:'.8em'}}>
+              Home
+          </Link>
+          <Link href='/about' className='white decor-none' style={{fontSize:'.8em'}}>
+              About
+          </Link>
+        
+          </Box>
 
-        <Typography sx={{color:"white",fontSize:'1.5em',fontWeight:'700',pb:'.25em'}} className='clr4'>Contact Us</Typography>
-       <a href="https://www.instagram.com/onbeirut/" rel='noreferrer' target='_blank'>
-        <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >@onbeirut</Typography>
-       </a>
-        <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >+961 71 287 235</Typography>
-        <Typography sx={{color:"white",fontSize:{xs:'1em',md:'1.3em'},fontWeight:'500',pb:'.25em'}} >contact@onbeirut.com</Typography>
-
-        </Grid>
-        {/* <Grid item xs={12} sm={12} md={3} lg={4} sx={{my:{xs:4,sm:0}}}>
+        </Box>
+</Grid>
 
 
 
-<iframe width="100%" height="300"  src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Beirut+(OnBeirut)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-        </Grid> */}
-        </Grid>
-        </footer>
-  )
-}
+<Grid item xs={12} sm={3} md={3}>
+<Box sx={{pt:{xs:4,sm:0}}}> 
+          <Typography className='white' component={'h1'} sx={{fontWeight:'600',fontSize:'.9em',pb:1}}>
+              Contacts
+          </Typography>
+          <Box className="flex wrap col gap1 white">
+            <Typography sx={{wordBreak:'break-all'}}>
+
+          Newstelegraphlb@gmail.com
+            </Typography>
+        
+          
+          </Box>
+
+        </Box>
+        <Box sx={{mt:2}}>
+
+        <SMicons/>
+        </Box>
+</Grid>
+          </Grid>
+          <Box className='flex  center auto' sx={{background:'#ffffff',py:1,color:'#494949d0'}}>
+            <Typography component='p' sx={{fontSize:'.8em'}}>
+            Site Developed By <span><a target='_blank' href='https://NewsTelegraph.com'>News Telegraph</a></span>
+            </Typography>
+          </Box>
+      </Box>
+);
+
 
 export default Footer
+

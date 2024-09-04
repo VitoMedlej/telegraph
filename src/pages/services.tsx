@@ -61,9 +61,9 @@ const Services = () => {
     <>
     <Head>
     <title>Services Page | E-commerce - Business Branding - Mobile Apps</title>
-    <meta name="description" content="Discover the comprehensive range of software engineering services offered by OnBeirut. From web development to mobile app design, our top-notch team of experts is dedicated to delivering high-quality solutions that align with your business goals. Explore our services today and learn how we can help take your digital innovation to the next level" />
+    <meta name="description" content="Discover the comprehensive range of software engineering services offered by NewsTelegraph. From web development to mobile app design, our top-notch team of experts is dedicated to delivering high-quality solutions that align with your business goals. Explore our services today and learn how we can help take your digital innovation to the next level" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://ucarecdn.com/f6c61100-9146-483f-af5b-4d3809c48c99/favicon.JPG" />
+    <link rel="icon" href="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg" />
 
   </Head>
   <Navbar dark/>

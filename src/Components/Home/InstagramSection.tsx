@@ -33,10 +33,10 @@ const InstagramSection = () => {
                                 Follow our instagram where we post valuable content for everyone.
                         </Typography>
                         <Box className='auto flex center'  sx={{flex:1,pb:2,with:'100%'}}>
-              <a href="https://www.instagram.com/onbeirut/" target='_black' rel='nonrefere' className="decore-none">
+              <a href="https://www.instagram.com/NewsTelegraph/" target='_black' rel='nonrefere' className="decore-none">
 
               <Btn dark sx={{background:'purple',color:'white',border:'none',':hover':{color:'black'},px:3,py:.8,fontSize:'.9em'}}>
-                @onbeirut
+                @NewsTelegraph
               </Btn>
               </a>
               </Box>

@@ -36,61 +36,90 @@ const Index = () => {
   return (
     <>
     <Head>
-    <title>Contact Us Page | OnBeirut Agency </title>
+    <title>Contact Us Page | News Telegraph </title>
     <meta name="description" content="Contact our team today and get in touch with us for more information on our services. We're here to help and provide support to answer any questions you may have." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://ucarecdn.com/f6c61100-9146-483f-af5b-4d3809c48c99/favicon.JPG" />
+    <link rel="icon" href="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg" />
 
   </Head>
   <Navbar dark/>
-  <>
-    <Grid container maxWidth='lg'  className='auto'  sx={{py:10}}>
+  <Box sx={{background:'white'}}>
+    <Grid container maxWidth='lg'  className='auto'  sx={{background:'white',py:10}}>
 
-        <Grid item xs={12} sm={6}>
-    <Container >
-        <Typography component='h1' className='clr' sx={{fontSize:{xs:'2em'},my:3,fontWeight:'800'}}>
-        Contact Us At:
-        </Typography>
-        
-        <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>
-            Lebanon/Beirut
-        </Typography>
-        <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>
-            @onbeirut
-        </Typography>
-        <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>
-            +961 71 287 235
-        </Typography>
-      <Typography className='clr2' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>    
-        contact@onbeirut.com
-        </Typography>
-        <Typography className='clr' sx={{fontSize:{xs:'2em'},my:3,fontWeight:'800'}}>
-        Social media:
-        </Typography>
-        <SMicons color='black' sx={{'a':{borderColor:'black'},mt:2.5}}/>
-    </Container>
-        </Grid>  
+    
         <Grid sx={{mt:{xs:2,sm:0}}} item xs={12} sm={6}>
           <Typography component='h2' sx={{color:'green',fontWeight:'500',textAlign:'center'}} className='h1'>{status === 200 ? 'Thanks for messaging us, expect a reply soon!' : ""}</Typography>
             <Box ref={form} onSubmit={(e)=>sendMessage(e)} component='form' sx={{gap:1,
           py:2.5,
           px:'1em',
             
-          boxShadow: 'rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px'}} className='flex space-between wrap'>
-              <TextField name={'FirstName'} sx={{width:'49%',py:1}} variant='standard' placeholder='First Name'/>
-              <TextField name={'LastName'} variant='standard' sx={{width:'49%',py:1}} placeholder='Last Name'/>
-              <TextField name={'Email'} onChange={(e)=>setEmail(e?.target?.value)} variant='standard' sx={{width:'99%',py:1}} type='email' placeholder='Email'/>
-              <TextField name={'Phone'} variant='standard' sx={{width:'99%',py:1,}} placeholder='Phone Number (Optional)'/>
-              <TextField name={'Message'} multiline={true} variant='standard' rows={4}  sx={{width:'99%',py:2}} placeholder='Message'/>
-              <Btn dark>
+        }} className='flex space-between wrap'>
+              <TextField name={'FullName'} sx={{width:'99%',py:1}} variant='outlined' placeholder='Full Name'/>
+              <TextField name={'Email'} onChange={(e)=>setEmail(e?.target?.value)} variant='outlined' sx={{width:'99%',py:1}} type='email' placeholder='Email'/>
+              <TextField name={'Message'} multiline={true} variant='outlined' rows={4}  sx={{width:'99%',py:1}} placeholder='Message'/>
+              <Btn sx={{width:'100%'}} className='bg'>
                 Submit
-                <BsFillSendFill/>
               </Btn>
             </Box>
         </Grid>
+
+        <Grid item xs={12} sm={6}>
+    <Container >
+        <Typography component='h1' className='clr arb' sx={{fontSize:{xs:'1.4em'},my:3,fontWeight:'800'}}>
+       
+
+نيوزتلغراف.نت تستهدف نقل العالم وشرحه، وإضافة أفضل المعلومات والتحليلات لفهم الأحداث
+        </Typography>
+        
+        <Typography className='arb' sx={{fontSize:{xs:'1.35em'},fontWeight:'500'}}>
+        أخبار منوعة من لبنان والعالم
+        </Typography>
+        <Typography className='arb ' sx={{fontSize:{xs:'1.05em'},fontWeight:'400'}}>
+        للتبرع ودعم عملنا في مجال الصحافة المستقلة يُرجى التواصل معنا عبر أرقام الهاتف أدناه
+
+        </Typography>
+
+        <Typography className='arb clr' sx={{mt:4,fontSize:{xs:'1.35em'},fontWeight:'800'}}>
+        الأخبار الواردة لا تُعبّر بالضرورة عن رأي وتوجهات الموقع
+        </Typography>
+        <Typography className='arb clr' sx={{fontSize:{xs:'1.35em'},fontWeight:'800'}}>
+        موقع نيوزتلغراف.نت ملائم للأشخاص ذوي الإعاقة البصرية
+        </Typography>
+
+      <Typography className='arb' sx={{mt:2,wordBreak:'break-all',fontSize:{xs:'1.05em'},fontWeight:'400'}}>    
+     {
+      `
+      موقع "نيوزتلغراف.نت" مُسجل في وزارة الاقتصاد والتجارة اللبنانية - المديرية العامة للإقتصاد والتجارة, مصلحة حماية الملكية الفكرية
+      `
+     }
+        </Typography>
+
+        <Typography className='arb' sx={{mt:2,wordBreak:'break-all',fontSize:{xs:'1.05em'},fontWeight:'400'}}>    
+      {
+        `
+        ومُسجل في وزارة الاعلام اللبنانية - المجلس الوطني للإعلام المرئي والمسموع، علم وخبر رقم ٢٣/٢٢٧ تشرين الأول ٢٠١٨ 
+        `
+      }
+        </Typography>
+
+
+
+        <Typography className='clr' sx={{fontSize:{xs:'1.4em'},my:3,fontWeight:'800'}}>
+        للتواصل او الإعلان أو للرعاية الإعلامية       
+        </Typography>
+        <Typography className='' sx={{mt:2,wordBreak:'break-all',fontSize:{xs:'1.05em'},fontWeight:'400'}}>    
+        Newstelegraphlb@gmail.com 
+ 
+          </Typography>
+          <Typography className='' sx={{wordBreak:'break-all',fontSize:{xs:'1.05em'},fontWeight:'400'}}>    
+T/WA: 00961.3.988292
+          </Typography>
+        <SMicons color='black' sx={{'a':{borderColor:'black'},mt:2.5}}/>
+    </Container>
+        </Grid>  
     </Grid>
 
-  </>
+  </Box>
     </>
   )
 }

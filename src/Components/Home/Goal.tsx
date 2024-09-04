@@ -62,7 +62,7 @@ const Goal = () => {
 }                                
                             {/* Our goal is to empower small and medium-sized businesses by providing affordable, high-quality web development services.
                             We understand the importance of a strong online presence in today&apos;s digital world, and we&apos;re committed to helping you achieve it without costing you a fortune. 
-                            Experience the perfect balance of quality and affordability with OnBeirut – let us be your partner in online success. */}
+                            Experience the perfect balance of quality and affordability with NewsTelegraph – let us be your partner in online success. */}
                             </Typography>
             <Link href='/services' className="decor-none">
 

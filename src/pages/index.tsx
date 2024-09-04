@@ -1,65 +1,86 @@
+"use client"
 import BlogSections from '@/Components/Home/BlogSections'
-import Goal from '@/Components/Home/Goal'
 import Hero from '@/Components/Home/Hero'
-import Plans from '@/Components/Home/Plans'
-import Portfolio from '@/Components/Home/Portfolio'
-import Services from '@/Components/Home/Services'
-import Teaser from '@/Components/Home/Teaser'
-import VerticalCarousel from '@/Components/Home/VerticalCarousel/VerticalCarousel'
 import Navbar from '@/Navbar/Navbar'
 import { Box } from '@mui/material'
 import Head from 'next/head'
-import gsap from 'gsap';
 import { useRouter } from 'next/router'
-import {useEffect} from 'react';
-import Testimonial from '@/Components/Home/Testimonial'
-// import InstagramSection from '@/Components/Home/InstagramSection'
+import {useEffect, useState} from 'react';
+
+
+type Post = {
+  _id: string;
+  title: string;
+  content: string;
+  // Add other fields you need
+};
 
 export default function Home() {
   const router = useRouter();
-  const {scrollTo} = router.query
-  useEffect(() => {
-    
-    if (scrollTo) {
-        gsap.to(window, {duration: 2,delay:.4, scrollTo : `${scrollTo}` });
-        
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
+
+  const fetchPosts = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch(`/api/get-data?page=${page}&limit=12`);
+      const data = await res.json();
+      const content = data?.data?.featuredProducts;
+      console.log('content: ', content);
+
+      if (data.success && content) {
+        setPosts((prevPosts) => {
+          const newPosts = content.filter((post:any) => !prevPosts.some(p => p._id === post._id));
+          return [...prevPosts, ...newPosts];
+        });
+        setPage(page + 1);
+      }
+    } catch (error) {
+      console.error('Error fetching posts:', error);
+    } finally {
+      setLoading(false);
     }
-    
-  }, [scrollTo])
-  
+  };
+
+  // Initially load the first 12 posts
+  useEffect(() => {
+
+    fetchPosts(); // This should only run once
+  }, []);
+
+
   return (
     <>
       <Head>
-      <title>OnBeirut | Empowering Lebanese Businesses with Software</title>
+      <title>
+      أخبار لبنان والعالم - News Telegraph | تغطية شاملة للأحداث من حولك</title>
         <meta name="description" content={`
-At OnBeirut, we empower and grow businesses with custom web and mobile development solutions. Our expert software engineers work with you to build innovative, user-friendly applications followed by success.
-        `} />
+News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم. نحن نقدم لك تغطية شاملة لأهم الأحداث السياسية والاجتماعية والثقافية.
+`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="https://ucarecdn.com/f6c61100-9146-483f-af5b-4d3809c48c99/favicon.JPG" />
+        <link rel="icon" href="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg" />
 
-
-
-        <meta property="og:image" content="https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png" />
-    <meta property="og:url" content="www.onbeirut.com" />
-    <meta name="twitter:card" content="https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png" />
-    <meta name="twitter:title" content="OnBeirut | Empowering Lebanese Businesses with Software" />
-    <meta name="twitter:image" content="https://ucarecdn.com/92766691-547c-49fd-812f-0b633857fb06/logoblack_o65q34transformed1.png" />
+        <meta property="og:image" content="https://ucarecdn.com/46393bac-42e6-4c08-aed5-9fa3ac22663f/image.jpg" />
+    <meta property="og:url" content="www.NewsTelegraph.com" />
+    <meta name="twitter:card" content="https://ucarecdn.com/46393bac-42e6-4c08-aed5-9fa3ac22663f/image.jpg" />
+    <meta name="twitter:title" content="NewsTelegraph | Empowering Lebanese Businesses with Software" />
+    <meta name="twitter:image" content="https://ucarecdn.com/46393bac-42e6-4c08-aed5-9fa3ac22663f/image.jpg" />
       </Head>
       <main>
         <Box className='hero-img' >
 
   <Navbar/>
-        <Hero/>
+  <Hero blog={true} 
+      
+        desc={''}
+        imgsm={'https://ucarecdn.com/dcd042d6-edbb-4fa5-bea3-c9be977ef041/Greyminimalistbusinessprojectpresentation.jpg'}
+        title={'Expand Your Knowledge'} imgmd={`https://ucarecdn.com/dcd042d6-edbb-4fa5-bea3-c9be977ef041/Greyminimalistbusinessprojectpresentation.jpg`}/>
         </Box>
-        <Goal/>
-        <Teaser/>
-        <VerticalCarousel/>
-        <Services/>
-        <Portfolio/>
-        {/* <Plans/> */}
-        <Testimonial/>
-        {/* <InstagramSection/> */}
-        <BlogSections/>
+        <BlogSections
+          fetchPosts={fetchPosts}
+          posts={posts}
+        />
       </main>
     </>
   )

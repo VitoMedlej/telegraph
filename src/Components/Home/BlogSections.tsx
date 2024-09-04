@@ -3,64 +3,117 @@ import React from 'react'
 import Btn from '../Btn/Btn'
 import { useRouter } from 'next/router'
 // import post1 from '@/pages/blog/blogArticle2.json'
-import { postsArray } from '@/pages/blog/[id]'
 
 
 
-const BlogSections = () => {
+const BlogSections = ({loading,fetchPosts,posts}:any) => {
   const router= useRouter();
   
     return (
-    <Box sx={{my:6}}>
-        <Container className='flex wrap auto' sx={{justifyContent:{xs:'center',sm:'space-between'}}} maxWidth='lg'>
-        <Typography component='h2' className='h2 clr2 '>
-                            Read Our Articles
+    <Box className='' id='latest' sx={{mt:{xs:14,md:22},mb:8}}>
+        <Container className='flex wrap auto' 
+        sx={{justifyContent:{xs:'center',sm:'space-between'}}} maxWidth='lg'>
+        <Typography component='h2' sx={{ 
+          
+          width:'100% ',pb:2}} className='h2 black arb '>
+        آخر الأخبار
                         </Typography>
-                        <Typography
-                            component='p'
-                            sx={{
-                            mt: 1.5,mb:4,
-                        }}
-                            className='clr2 '>
-                            Stay informed with our blog, featuring expert insights and industry updates for web enthusiasts
-                        </Typography>
-       {postsArray && postsArray.map(i=>{
-
- return <Box key={i.id} className='shadow' sx={{maxWidth:'400px',my:1,width:{xs:'99%',sm:'49%',md:'33%'},}}>
+                    
+       {posts && posts?.length > 0 && posts.map((post:any)=>{
+       const description = post.description && JSON.parse(post.description)?.blocks[0]?.text || '';
+ return <Box key={post._id} className='shadow ' sx={{
+  background:'white',
+  my:1,width:{xs:'99%',md:'49%'}}}>
                 <Box sx={{width:'100%',height:'260px'}}>
-                    <img src={i.img} alt="Blog Post Image" className="img" />
+                    <img src={`${post?.images && post?.images[0]}`} alt="Blog Post Image" className="img" />
                 </Box>
                 <Box sx={{px:1}}>
-                <Typography className='clr' sx={{ pt: '.25em', fontWeight: '600', fontSize: '.8em' }}>
-      {i.tags.map((word, index) => (
-        <React.Fragment key={index}>
-          {index > 0 && ' • '}
-          {word}
+                <Typography className=''
+                 sx={{ pt: '.55em', fontWeight: '600',
+                 
+                  direction:'rtl',
+                  textAlign: 'right',
+                 fontSize: '.68em' }}>
+    
+        <React.Fragment key={post?._id}>
+          {/* {index > 0 && ' • '} */}
+          <span style={{fontWeight:300}} className=''>{post?.dateAdded}</span> 
+            <span style={{margin:'.25em '}}>
+            • 
+            </span>
+          <span className='clr'>
+             {post?.category} 
+            </span>
+
+            
         </React.Fragment>
-      ))}
+    
     </Typography>
-                    <Typography
-                    
-                    onClick={()=>router.push(`/blog/${i.id}?title=${i.title.replaceAll(' ', '-')}`)}
-                    className='pointer' sx={{fontWeight:'700',fontSize:{xs:'1.05em',sm:'1.15em',md:'1.25em'}}}>
-                        {i.title}
-                    </Typography>
+    <Typography
+  onClick={() =>
+    router.push(`/blog/${post?._id}?title=${post?.title.replaceAll(' ', '-')}`)
+  }
+  className='pointer'
+  sx={{
+    fontWeight: '900',
+    fontSize: { xs: '1.45em', sm: '1.35em', md: '1.65em' },
+    direction: /[\u0600-\u06FF]/.test(post?.title) ? 'rtl' : 'ltr',
+    textAlign: /[\u0600-\u06FF]/.test(post?.title) ? 'right' : 'left',
+  }}
+>
+  {post.title}
+</Typography>
+<Typography
+      onClick={() =>
+        router.push(`/blog/${post?._id}?title=${post?.title.replaceAll(' ', '-')}`)
+      }
+      className="pointer clr1"
+      sx={{
+        fontWeight: '300',
+        py:.25,
+        fontSize: { xs: '1em', sm: '1em', md: '1em' },
+        direction: /[\u0600-\u06FF]/.test(description) ? 'rtl' : 'ltr',
+        textAlign: /[\u0600-\u06FF]/.test(description) ? 'right' : 'left',
+        overflow: 'hidden',
+        display: '-webkit-box',
+        WebkitBoxOrient: 'vertical',
+        WebkitLineClamp: 2, // Limits the text to 2 lines
+      }}
+    >
+      {description}
+    </Typography>
                 </Box>
-                <Box className='flex   align-center ' sx={{gap:1.55,px:1}}>
-                    <Btn onClick={()=>router.push(`/blog/${i.id}?title=${i.title.replaceAll(' ', '-')}`)} dark  sx={{border:'none',px:0}}>
-                        <Typography className='clr' sx={{fontWeight:'600 !important',textAlign:'left',fontSize:".8em"}}>
-                        Read Now
-                        </Typography>
+                <Box className='flex    ' sx={{
+                  
+                  direction:'rtl',
+                  textAlign: 'right',
+                  gap:1.55,px:1}}>
+
+
+                    <Btn onClick={()=>router.push(`/blog/${post._id}?title=${post?.title.replaceAll(' ', '-')}`)} dark  
+              
+                    sx={{
+                      my:2,
+                      border:'none',px:0}}>
+                        <Typography className='clr' sx={{
+                          direction:'ltr',
+                          textAlign: 'right',
+                        
+                          fontWeight:'600 !important',fontSize:"1em"}}>
+                        أكمل القراءة     
+                                           </Typography>
                     </Btn>
                 <Typography sx={{fontWeight:'300',fontSize:'.75em'}}>
-                        {i.date} | OnBeirut 
+                        {post.date}
                     </Typography>
                 </Box>
             </Box>
                    })}
                      <Box className='auto center'  sx={{pt:5,minWidth:'80vw',with:'100%'}}>
               <Btn
-              onClick={()=>router.push('/blog')}
+              onClick={fetchPosts}
+               disabled={loading}
+             
               dark sx={{px:3,py:.8,fontSize:'.9em'}}>
                 Read More
               </Btn>

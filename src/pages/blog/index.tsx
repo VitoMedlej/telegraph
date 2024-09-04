@@ -18,13 +18,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>OnBeirut Web Dev Blog | Tech Related Blog </title>
+        <title>NewsTelegraph Web Dev Blog | Tech Related Blog </title>
 
         <meta name="description" content={`
-        OnBeirut Blog | Expert web design & development services for a strong online presence. Get responsive, SEO-friendly sites & increase conversions.
+        NewsTelegraph Blog | Expert web design & development services for a strong online presence. Get responsive, SEO-friendly sites & increase conversions.
         `} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="https://ucarecdn.com/f6c61100-9146-483f-af5b-4d3809c48c99/favicon.JPG" />
+        <link rel="icon" href="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg" />
 
 
       </Head>

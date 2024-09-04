@@ -2,12 +2,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Cairo", sans-serif !important;
 }
 
 *, h1, h2, h3, h4, h5, h6, p, button, a {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Cairo", sans-serif !important;
 }
 
 .decor-none {
@@ -28,7 +27,7 @@ body {
 }
 
 .clr {
-  color: #0D2068 !important;
+  color: #319eab !important;
 }
 
 .clr4 {
@@ -37,8 +36,8 @@ body {
 
 .blog-h1 {
   padding: 1em 0 !important;
-  color: #0D2068 !important;
-  font-size: 2em !important;
+  color: #319eab !important;
+  font-size: 1.8em !important;
   font-weight: 700 !important;
 }
 
@@ -47,7 +46,7 @@ body {
 }
 
 .bg {
-  background: #0D2068 !important;
+  background: #319eab !important;
 }
 
 .bg4 {
@@ -56,20 +55,20 @@ body {
 
 .blog-p {
   font-weight: 400 !important;
-  font-size: 1.15em !important;
+  font-size: 1em !important;
 }
 
 .blog-h2 {
   font-weight: 700 !important;
-  font-size: 1.5em !important;
-  color: #161616;
+  font-size: 1.25em !important;
+  color: #eceded;
   padding: 0.75em 0;
 }
 
 .blog-h3 {
   font-weight: 700 !important;
   font-size: 1.25em !important;
-  color: #161616;
+  color: #eceded;
   padding: 0.55em 0;
 }
 
@@ -83,11 +82,11 @@ body {
 }
 
 .smIcon {
-  border: 1px solid white;
   padding: 0.61em;
   width: 1.25em;
   gap: 0.25em;
   height: 1.25em;
+  margin: 0;
 }
 
 .gap2 {
@@ -132,18 +131,18 @@ body {
 }
 
 .bg2 {
-  background: #161616 !important;
+  background: #eceded !important;
 }
 
 .hover {
   transition: all 0.3s ease;
 }
 .hover:hover {
-  color: #0D2068 !important;
+  color: #319eab !important;
 }
 
 .clr2 {
-  color: #161616 !important;
+  color: #eceded !important;
 }
 
 .logo {
@@ -212,6 +211,33 @@ body {
   text-align: center;
 }
 
+h1.blog-text {
+  font-size: 1.48em !important;
+  font-weight: 700;
+  color: #2d4f62;
+  padding: 0.35em 0;
+}
+
+h2.blog-text {
+  font-size: 1.44em !important;
+  padding: 0.25em 0;
+}
+
+h3.blog-text {
+  font-size: 1.24em !important;
+  padding: 0.15em 0;
+}
+
+p.blog-text {
+  font-size: 1.02em !important;
+  line-height: 1.55;
+  padding: 0.1em 0;
+}
+
+.UNDERLINE {
+  text-decoration: underline !important;
+}
+
 .footer {
   display: flex;
 }
@@ -231,6 +257,14 @@ body {
 .h2 {
   font-size: 2.55em !important;
   font-weight: bolder !important;
+}
+
+.BOLD {
+  font-weight: bold !important;
+}
+
+.ITALIC {
+  font-style: italic !important;
 }
 
 .contain {
@@ -276,10 +310,17 @@ body {
   border-radius: 50% !important;
 }
 
+.arb {
+  direction: rtl;
+  text-align: right;
+}
+
 .menu {
-  top: -150%;
-  height: 100vh;
-  background: #0D2068;
+  right: 0;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 2em;
+  background: #319eab;
   justify-content: end;
   opacity: 0;
   display: none;
@@ -288,7 +329,6 @@ body {
   margin: 0;
   display: flex;
   width: 100%;
-  max-width: 768px;
 }
 
 .center {
@@ -297,7 +337,7 @@ body {
 }
 
 .menu2 {
-  background: #161616;
+  background: #eceded;
   top: -150%;
   height: 100vh;
   opacity: 0;

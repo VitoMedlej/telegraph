@@ -61,7 +61,7 @@ const Testimonial = () => {
         {
             title :`They made it work perfectly - `,
             reviewer:`”(Powerhouse’s Owner)`,
-            description : `OnBeirut really came through for me. I was worried that my huge inventory 
+            description : `NewsTelegraph really came through for me. I was worried that my huge inventory 
             would be too much for the site to handle, 
             but they made it work perfectly. I’m so grateful for them.`
         }
