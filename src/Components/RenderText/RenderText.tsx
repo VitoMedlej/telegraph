@@ -46,7 +46,7 @@ const renderBlocks = (blocks: Block[]): JSX.Element[] => {
 
     return (
       <Component 
-      className={`${className} blog-text`}
+      className={`${className} blog-text break-spaces`}
       key={block.key} {...typographyProps}
       sx={{
         direction: /[\u0600-\u06FF]/.test(block.text) ? 'rtl' : 'ltr',
@@ -64,7 +64,7 @@ const RenderJson: FC<{ json: string }> = ({ json }) => {
   const data: JsonData = JSON.parse(json);
 
   return (
-    <div>
+    <div className='break-spaces'>
       {renderBlocks(data.blocks)}
     </div>
   );

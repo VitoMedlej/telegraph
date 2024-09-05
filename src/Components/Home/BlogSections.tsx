@@ -34,7 +34,7 @@ const BlogSections = ({loading,fetchPosts,posts,title}:any) => {
                   router.push(`/blog/${post?._id}?title=${post?.title.replaceAll(' ', '-')}`)
                 }
                 sx={{width:'100%',height:'260px'}}>
-                    <img src={`${thumbnail}`} alt="Blog Post Image" className="img pointer" />
+                    <img src={`${thumbnail}`} alt={`Blog Post Image ${post?.alt ? post?.alt : ''}`} className="img pointer" />
                 </Box>
                 <Box sx={{px:1}}>
                 <Typography className=''

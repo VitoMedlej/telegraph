@@ -192,6 +192,10 @@ body {
   position: relative !important;
 }
 
+.break-spaces {
+  white-space: break-spaces !important;
+}
+
 .drawer {
   z-index: 22;
   display: none;
@@ -211,7 +215,12 @@ body {
   text-align: center;
 }
 
+.blog-text {
+  font-family: arial, "helvetica neue", helvetica, sans-serif !important;
+}
+
 h1.blog-text {
+  font-family: arial, "helvetica neue", helvetica, sans-serif !important;
   font-size: 1.48em !important;
   font-weight: 700;
   color: #2d4f62;
@@ -232,6 +241,7 @@ p.blog-text {
   font-size: 1.02em !important;
   line-height: 1.55;
   padding: 0.1em 0;
+  font-family: arial, "helvetica neue", helvetica, sans-serif !important;
 }
 
 .UNDERLINE {

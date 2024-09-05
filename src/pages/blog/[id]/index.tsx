@@ -20,6 +20,9 @@ interface Post {
   description: string;
   isFeatured ?: boolean;
   link ?: string;
+  dateAdded : any;
+  category : string;
+  alt ?: string;
   // other fields as necessary
 }
 
@@ -87,7 +90,11 @@ export default function Index({selectedPost,sectionTitleContents}:any) {
     <>
       <Head>
       <title>
-      أخبار لبنان والعالم - News Telegraph | تغطية شاملة للأحداث من حولك</title>
+      {/* أخبار لبنان والعالم - News Telegraph | تغطية شاملة للأحداث من حولك */}
+      {
+        post?.title
+      }
+      </title>
         <meta name="description" content={`
 News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم. نحن نقدم لك تغطية شاملة لأهم الأحداث السياسية والاجتماعية والثقافية.
 `} />
@@ -106,6 +113,9 @@ News Telegraph - تابع أحدث الأخبار العاجلة والمتنو�
             <Grid  xs={12} md={8} lg={9} xl={8.25} item>
                     <Container  className='bg3 auto' sx={{py:2,height:'100%'}}>
       
+                    <Box sx={{pb:1}} >
+                        {post?.dateAdded} • {post?.category}
+                        </Box>
                         <Box sx={{width:{xs:'100%'}}}>
                     {post?.isFeatured === true && post?.link ?
                     <Box>
@@ -124,9 +134,12 @@ News Telegraph - تابع أحدث الأخبار العاجلة والمتنو�
                       }}>
                             <img src={post?.images[0]} alt="Blog Post Main Image" className="img" />
                         </Box>}
-                        <Box >
-                        Jan 20, 2023 • 0 comments
-                        </Box>
+                     {post?.alt &&   <Box>
+                          <Typography sx={{fontSize:'.8em',fontWeight:400}}>
+                            {`${post?.alt}`?.length > 0 ? post?.alt : ''}
+                          </Typography>
+                        </Box>}
+                      
                             <Typography component='h1' 
                             sx={{py:2,
                               color:'#2d4f62',  

@@ -167,6 +167,9 @@ $trans : all .3s ease;
 .relative{
     position: relative !important;
 }
+.break-spaces {
+    white-space: break-spaces !important;
+}
 .drawer {
     z-index: 22;
     display: none;
@@ -184,8 +187,11 @@ $trans : all .3s ease;
     text-align: center;
 }
 
-
+.blog-text {
+    font-family: arial, "helvetica neue", helvetica, sans-serif !important;
+}
 h1.blog-text {
+    font-family: arial, "helvetica neue", helvetica, sans-serif !important;
     font-size: 1.48em !important;
     font-weight: 700;
     color: $clr6;
@@ -206,6 +212,7 @@ p.blog-text {
     font-size: 1.02em !important;
     line-height: 1.55;
     padding: .1em 0;
+    font-family: arial, "helvetica neue", helvetica, sans-serif !important;
 }
 .UNDERLINE {
 text-decoration: underline !important;

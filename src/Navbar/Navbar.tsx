@@ -110,9 +110,9 @@ const pages = [
                     setMenuOpen(false);
                     handleRoute(`${page.href}`, page.isHome);
                   }}
-                  sx={{ my: { xs: 0.25, sm: 0.25 }, color: 'white', display: 'block' }}
+                  sx={{ my: { xs: 0.2, sm: 0.15 }, color: 'white', display: 'block' }}
                 >
-                  <Typography sx={{ fontSize: { xs: '.75em', sm: '.9em' }, fontWeight: 'bolder' }} component="h4">
+                  <Typography sx={{ fontSize: { xs: '.95em', sm: '1em' }, fontWeight: 'bolder' }} component="h4">
                     {page.title}
                   </Typography>
                 </Button>
