@@ -48,7 +48,7 @@ const Page = () => {
     useEffect(() => {
   
       fetchPosts(); // This should only run once
-    }, []);
+    }, [category]);
   
     if (loading) return <Box className='center flex auto' sx={{height:'100vh'}}>Loading..</Box>
   return (
