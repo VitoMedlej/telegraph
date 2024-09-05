@@ -56,7 +56,7 @@ const pages = [
           <Box sx={{display:{xs:'none',md:"flex"}}}>
             {pages.map((item, index) => (
         <MenuItem key={item.title} onClick={() => handleRoute(item.href, false)}>
-          <Typography sx={{ fontSize: '.9em', color: 'white' }} textAlign="center">
+          <Typography sx={{ fontSize: '1.2em', color: 'white' }} textAlign="center">
             {item.title}
           </Typography>
         </MenuItem>
@@ -112,7 +112,7 @@ const pages = [
                   }}
                   sx={{ my: { xs: 0.2, sm: 0.15 }, color: 'white', display: 'block' }}
                 >
-                  <Typography sx={{ fontSize: { xs: '.95em', sm: '1em' }, fontWeight: 'bolder' }} component="h4">
+                  <Typography sx={{ fontSize: { xs: '1.6em', sm: '1.65em' }, fontWeight: 'bolder' }} component="h4">
                     {page.title}
                   </Typography>
                 </Button>
