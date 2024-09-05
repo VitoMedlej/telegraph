@@ -109,7 +109,7 @@ News Telegraph - تابع أحدث الأخبار العاجلة والمتنو�
                         <Box sx={{width:{xs:'100%'}}}>
                     {post?.isFeatured === true && post?.link ?
                     <Box>
-             <YouTube videoId={getYouTubeId(`${post?.link}`)} opts={{
+             <YouTube videoId={`${getYouTubeId(`${post?.link}`)}`} opts={{
     height: '390',
     width: '100%',
     playerVars: {
