@@ -1,3 +1,5 @@
+"use client"
+
 import { Box } from '@mui/material';
 import React from 'react'
 import {FaFacebook ,FaInstagram,FaYoutube,FaTwitter,FaWhatsapp} from 'react-icons/fa';
@@ -12,11 +14,11 @@ const sm = [
     url: process.env.NEXT_PUBLIC_YT,
     Icon: FaYoutube 
   },
-  {
-    name: 'Whatsapp',
-    url: process.env.NEXT_PUBLIC_WA,
-    Icon: FaWhatsapp 
-  },
+  // {
+  //   name: 'Whatsapp',
+  //   url: process.env.NEXT_PUBLIC_WA,
+  //   Icon: FaWhatsapp 
+  // },
   {
     name: 'X',
     url: process.env.NEXT_PUBLIC_X,

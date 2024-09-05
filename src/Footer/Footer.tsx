@@ -6,6 +6,25 @@ import SMicons from '@/Components/SocialMedia/SMicons';
 
 
 const Footer = () => (
+
+  <>
+  <Box className='auto flex col' sx={{py:4,width:{xs:'98%',sm:'400px',md:'600px'}}}>
+
+  <iframe 
+        src="https://zeno.fm/player/cineradio" 
+        width="100%" 
+        height="300" 
+        title="CineRadio Player"
+      ></iframe>
+      <a 
+        href="https://zeno.fm/" 
+        target="_blank" 
+        style={{ display: "block", fontSize: "0.9em", lineHeight: "10px" }}
+      >
+        A Zeno.FM Station
+      </a>
+  </Box>
+
       <Box component='footer'  className='bg'> 
           <Grid container className='auto' sx={{py:8,px:2,maxWidth:'md'}} >
             {/* <Grid item xs={12} sm={6} lg={6}>
@@ -65,6 +84,9 @@ const Footer = () => (
             </Typography>
           </Box>
       </Box>
+
+  </>
+
 );
 
 

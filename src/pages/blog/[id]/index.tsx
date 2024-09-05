@@ -1,5 +1,6 @@
 "use client"
 import RenderText from '@/Components/RenderText/RenderText'
+import ShareIcons from '@/Components/ShareIcons/ShareIcons'
 import SMicons from '@/Components/SocialMedia/SMicons'
 import { getYouTubeId } from '@/Components/YoutubeThumbail/YoutubeThumbnail'
 import Navbar from '@/Navbar/Navbar'
@@ -250,7 +251,8 @@ News Telegraph - تابع أحدث الأخبار العاجلة والمتنو�
                 }}>
 تابع الأخبار على وسائل التواصل الاجتماعي الخاصة بنا 
                 </Typography>
-              <SMicons invert/>
+              {/* <SMicons invert/> */}
+              <ShareIcons invert/>
               <Box>
                 {/* <Typography className='clr2' sx={{fontSize:'.9em'}}>
                     NewsTelegraph Blog Article
