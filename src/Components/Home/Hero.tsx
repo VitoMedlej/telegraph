@@ -18,7 +18,7 @@ const Hero = ({blog,imgsm,imgmd,title,desc}:{imgsm?:string,blog?:boolean,imgmd?:
     <Box sx={{py:4,width:'100%'}}>
         <Grid  container maxWidth='xl' className='auto' sx={{my:5,color:'white'}}>
                 <Grid item md={12} sx={{height:'100%'}} className='flex center col'>
-                  <Container  sx={{pt:{xs:4,sm:0}}}>
+                  <Container className='flex col center items-center'  sx={{pt:{xs:4,sm:0}}}>
                     <Typography  className='hero-t1  auto text-center' sx={{lineHeight:'1.1em',maxWidth:'md',fontSize:{xs:'2.75em',sm:'4.2em',md:'4.7em'},fontWeight:'bolder'}} component='h1'>
                     أخبار منوعة من لبنان والعالم
                     </Typography>

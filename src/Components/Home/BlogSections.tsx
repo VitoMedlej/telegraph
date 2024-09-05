@@ -2,30 +2,39 @@ import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
 import Btn from '../Btn/Btn'
 import { useRouter } from 'next/router'
+import YouTubeThumbnail from '../YoutubeThumbail/YoutubeThumbnail'
 // import post1 from '@/pages/blog/blogArticle2.json'
 
 
 
-const BlogSections = ({loading,fetchPosts,posts}:any) => {
+const BlogSections = ({loading,fetchPosts,posts,title}:any) => {
   const router= useRouter();
   
     return (
-    <Box className='' id='latest' sx={{mt:{xs:14,md:22},mb:8}}>
+    <Box className='' id='latest' sx={{mt:{xs:4,md:8,lg:12},mb:8}}>
         <Container className='flex wrap auto' 
         sx={{justifyContent:{xs:'center',sm:'space-between'}}} maxWidth='lg'>
         <Typography component='h2' sx={{ 
           
           width:'100% ',pb:2}} className='h2 black arb '>
-        آخر الأخبار
+        {title ? title : `آخر الأخبار`}
                         </Typography>
                     
        {posts && posts?.length > 0 && posts.map((post:any)=>{
+        
+       const thumbnail = post?.isFeatured === true && post?.link ? YouTubeThumbnail({url:post?.link}) : post?.images?.length > 0 ? post?.images[0] : ''; 
        const description = post.description && JSON.parse(post.description)?.blocks[0]?.text || '';
+
  return <Box key={post._id} className='shadow ' sx={{
   background:'white',
   my:1,width:{xs:'99%',md:'49%'}}}>
-                <Box sx={{width:'100%',height:'260px'}}>
-                    <img src={`${post?.images && post?.images[0]}`} alt="Blog Post Image" className="img" />
+                <Box
+                
+                onClick={() =>
+                  router.push(`/blog/${post?._id}?title=${post?.title.replaceAll(' ', '-')}`)
+                }
+                sx={{width:'100%',height:'260px'}}>
+                    <img src={`${thumbnail}`} alt="Blog Post Image" className="img pointer" />
                 </Box>
                 <Box sx={{px:1}}>
                 <Typography className=''

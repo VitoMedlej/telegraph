@@ -4,28 +4,27 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-// import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import gsap from 'gsap';
 import MenuItem from '@mui/material/MenuItem';
-// import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
-import {BiMenuAltRight} from 'react-icons/bi'
 import {IoMdClose} from 'react-icons/io'
 import { IoMdMenu } from "react-icons/io";
 import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
-import Btn from '@/Components/Btn/Btn';
 
-const pages = [{href:'/',title:'Home',isHome:true},
-   {title:'Services',isHome:false,href:'/services'}, {
-  
-  isHome:true,title:'Pricing',href:'#pricing'},
-  
-  {isHome:true,title:'Portfolio',href:'#portfolio'},
-  {isHome:true,title:'Testimonials',href:'#testimonial'},
-  {isHome:false,href:'/blog',title:'Blog'},
-  {isHome:false,href:'/contact',title:'Contact'}];
+const pages = [
+  { href: '/category/الأخبار', title: 'الأخبار', isHome: false },
+  { href: '/category/السكري', title: 'السكري', isHome: false },
+  { href: '/category/المرأة', title: 'المرأة', isHome: false },
+  { href: '/category/بانوراما', title: 'بانوراما', isHome: false },
+  { href: '/category/جونيور', title: 'جونيور', isHome: false },
+  { href: '/category/خدمات', title: 'خدمات', isHome: false },
+  { href: '/category/رياضة', title: 'رياضة', isHome: false },
+  { href: '/category/سينما', title: 'سينما', isHome: false },
+  { href: '/category/صحة وبيئة', title: 'صحة وبيئة', isHome: false },
+  { href: '/category/فنون', title: 'فنون', isHome: false },
+  { href: '/contact', title: 'تواصل', isHome: false },
+];
 
   function ResponsiveAppBar({ dark }: { dark?: boolean }) {
     const [menuOpen, setMenuOpen] = React.useState(false);
@@ -42,7 +41,7 @@ const pages = [{href:'/',title:'Home',isHome:true},
     };
   
     return (
-      <AppBar position="static" sx={{ background: 'transparent', boxShadow: 'none' }}>
+      <AppBar className='bg' position="static" sx={{ background: 'transparent', boxShadow: 'none' }}>
         <Container maxWidth="xl" sx={{ margin: '0 auto' }}>
           <Toolbar sx={{ maxWidth: 'xl', py: 1, margin: '0 auto' }} disableGutters>
             <Link className={`logo ${dark ? '' : ''}`} href="/">
@@ -54,20 +53,25 @@ const pages = [{href:'/',title:'Home',isHome:true},
             </Link>
   
             <Box sx={{ flexGrow: 1, display: { xs: 'flex' }, justifyContent: 'flex-end', alignItems: 'right' }}>
-              <MenuItem onClick={() => handleRoute('/fooer', false)}>
-                <Typography sx={{ fontSize: '.9em', color: 'black' }} textAlign="center">
-                  fasf
-                </Typography>
-              </MenuItem>
+          <Box sx={{display:{xs:'none',md:"flex"}}}>
+            {pages.map((item, index) => (
+        <MenuItem key={item.title} onClick={() => handleRoute(item.href, false)}>
+          <Typography sx={{ fontSize: '.9em', color: 'white' }} textAlign="center">
+            {item.title}
+          </Typography>
+        </MenuItem>
+      ))}
+            </Box> 
+
               <IconButton
                 size="large"
-                sx={{ border: '1px solid transparent', zIndex: '124124' }}
+                sx={{ display:{xs:'flex',md:'none'}, border: '1px solid transparent', zIndex: '124124' }}
                 aria-label="toggle menu"
                 aria-haspopup="true"
                 color="inherit"
                 onClick={handleToggleMenu}
               >
-                {menuOpen ? <IoMdClose color="black" /> : <IoMdMenu color={dark ? 'black' : 'black'} />}
+                {menuOpen ? <IoMdClose color="black" /> : <IoMdMenu color={dark ? 'white' : 'white'} />}
               </IconButton>
             </Box>
           </Toolbar>

@@ -1,13 +1,14 @@
 "use client"
 import RenderText from '@/Components/RenderText/RenderText'
 import SMicons from '@/Components/SocialMedia/SMicons'
+import { getYouTubeId } from '@/Components/YoutubeThumbail/YoutubeThumbnail'
 import Navbar from '@/Navbar/Navbar'
 import { Box, Container, Grid, Typography } from '@mui/material'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-
+import YouTube from 'react-youtube';
 
 
 
@@ -17,6 +18,8 @@ interface Post {
   _id: string;
   title: string;
   description: string;
+  isFeatured ?: boolean;
+  link ?: string;
   // other fields as necessary
 }
 
@@ -97,19 +100,30 @@ News Telegraph - تابع أحدث الأخبار العاجلة والمتنو�
 
 
    
-
       {post && post?._id &&
       
      <Grid sx={{py:4,px:1,maxWidth:'lg'}} className=' auto' container>
             <Grid  xs={12} md={8} lg={9} xl={8.25} item>
                     <Container  className='bg3 auto' sx={{py:2,height:'100%'}}>
       
-                        <Box>
-                        <Box sx={{mt:{xs:1,sm:2,lg:5},maxWidth:'md',
+                        <Box sx={{width:{xs:'100%'}}}>
+                    {post?.isFeatured === true && post?.link ?
+                    <Box>
+             <YouTube videoId={getYouTubeId(`${post?.link}`)} opts={{
+    height: '390',
+    width: '100%',
+    playerVars: {
+      autoplay: 0,
+    },
+  }} />
+                    </Box>
+                    :
+
+                    <Box sx={{mt:{xs:1,sm:2,lg:5},maxWidth:'md',
                       height:{xs:'100%',sm:'400px',md:'500px'}
                       }}>
                             <img src={post?.images[0]} alt="Blog Post Main Image" className="img" />
-                        </Box>
+                        </Box>}
                         <Box >
                         Jan 20, 2023 • 0 comments
                         </Box>

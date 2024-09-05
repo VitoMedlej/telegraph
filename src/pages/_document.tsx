@@ -15,11 +15,11 @@ export default function Document() {
       <body className='bg2'>
         <Main />
         <NextScript />
-        <Box
+        {/* <Box
   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
   sx={{
     cursor: 'pointer',
-    width: '50px',
+    width: '40px',
     position: 'fixed',
     bottom: '5%',
     right: '3%',
@@ -29,7 +29,7 @@ export default function Document() {
     alt="Scroll to Top Icon"
     className="img"
   />
-</Box>
+</Box> */}
       </body>
     </Html>
   )
