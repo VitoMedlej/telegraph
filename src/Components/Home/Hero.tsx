@@ -25,10 +25,10 @@ const Hero = ({blog,imgsm,imgmd,title,desc}:{imgsm?:string,blog?:boolean,imgmd?:
                     <Typography  className='hero-t1  auto text-center' sx={{lineHeight:'1.1em',maxWidth:'md',fontSize:{xs:'2.75em',sm:'4.2em',md:'4.7em'},fontWeight:'bolder'}} component='h1'>
                     أخبار منوعة من لبنان والعالم
                     </Typography>
-                    <Typography className=' hero-t2   auto text-center'
+                    {/* <Typography className=' hero-t2   auto text-center'
                      sx={{maxWidth:'600px',py:{xs:2.5,md:2.5},fontSize:{xs:'.89em'}}} component='h4'>
                    مصدرك الأول للأخبار العاجلة والتغطيات الشاملة من لبنان والعالم. كن على اطلاع دائم بأهم الأحداث
-                    </Typography>
+                    </Typography> */}
                     </Container>
                  
                 

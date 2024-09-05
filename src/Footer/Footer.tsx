@@ -8,7 +8,7 @@ import SMicons from '@/Components/SocialMedia/SMicons';
 const Footer = () => (
       <Box component='footer'  className='bg'> 
           <Grid container className='auto' sx={{py:8,px:2,maxWidth:'md'}} >
-            <Grid item xs={12} sm={6} lg={6}>
+            {/* <Grid item xs={12} sm={6} lg={6}>
               <Box>
                   <Typography
                   className=''
@@ -16,7 +16,7 @@ const Footer = () => (
                   Stay informed with the latest updates from Lebanon and around the world. Follow us on social media to never miss out on important news and stories.
                   </Typography>
               </Box>
-            </Grid>
+            </Grid> */}
             <Grid item xs={12} sm={3} md={3}>
         <Box sx={{pt:{xs:4,sm:0}}}>
           <Typography className='white' component={'h1'} sx={{fontWeight:'600',fontSize:'.9em',pb:1}}>
