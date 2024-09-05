@@ -17,7 +17,7 @@ const Footer = () => (
                   </Typography>
               </Box>
             </Grid> */}
-            <Grid item xs={12} sm={3} md={3}>
+            {/* <Grid item xs={12} sm={3} md={3}>
         <Box sx={{pt:{xs:4,sm:0}}}>
           <Typography className='white' component={'h1'} sx={{fontWeight:'600',fontSize:'.9em',pb:1}}>
               Site Links
@@ -34,11 +34,11 @@ const Footer = () => (
           </Box>
 
         </Box>
-</Grid>
+</Grid> */}
 
 
 
-<Grid item xs={12} sm={3} md={3}>
+<Grid item xs={12} sm={12} md={12}>
 <Box sx={{pt:{xs:4,sm:0}}}> 
           <Typography className='white' component={'h1'} sx={{fontWeight:'600',fontSize:'.9em',pb:1}}>
               Contacts

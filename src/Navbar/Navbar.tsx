@@ -16,7 +16,7 @@ const pages = [
   { href: '/category/الأخبار', title: 'الأخبار', isHome: false },
   { href: '/category/السكري', title: 'السكري', isHome: false },
   { href: '/category/المرأة', title: 'المرأة', isHome: false },
-  { href: '/category/بانوراما', title: 'بانوراما', isHome: false },
+  // { href: '/category/بانوراما', title: 'بانوراما', isHome: false },
   { href: '/category/جونيور', title: 'جونيور', isHome: false },
   { href: '/category/خدمات', title: 'خدمات', isHome: false },
   { href: '/category/رياضة', title: 'رياضة', isHome: false },
