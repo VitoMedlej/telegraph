@@ -1,38 +1,16 @@
-"use client"
 import RenderText from '@/Components/RenderText/RenderText'
 import ShareIcons from '@/Components/ShareIcons/ShareIcons'
-import SMicons from '@/Components/SocialMedia/SMicons'
 import { getYouTubeId } from '@/Components/YoutubeThumbail/YoutubeThumbnail'
 import Navbar from '@/Navbar/Navbar'
 import { Box, Container, Grid, Typography } from '@mui/material'
 import Head from 'next/head'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
 import YouTube from 'react-youtube';
 
-
-
-
-interface Post {
-  images: string[];
-  _id: string;
-  title: string;
-  description: any;
-  isFeatured ?: boolean;
-  link ?: string;
-  dateAdded : any;
-  category : string;
-  alt ?: string;
-  // other fields as necessary
-}
+// Your existing helper functions
 const extractTextFromJson = (jsonString: string): string | null => {
   try {
     if (!jsonString) return null;
-    // Parse the JSON string
     const data = JSON.parse(jsonString);
-    
-    // Check if blocks and text exist
     if (data.blocks && data.blocks.length > 0 && data.blocks[0]?.text) {
       return `${data.blocks[0].text?.slice(0, 140)}`;
     }
@@ -40,113 +18,54 @@ const extractTextFromJson = (jsonString: string): string | null => {
     console.error('Error parsing JSON:', error);
     return null;
   }
-
   return null;
-}
-
-
-const fetchPostById = async (id: string): Promise<Post | null> => {
-  try {
-    const res = await fetch(`/api/get-by-id?id=${id}`);
-    
-    // Check if the response is okay
-    if (!res.ok) {
-      throw new Error(`HTTP error! Status: ${res.status}`);
-    }
-    
-    const data = await res.json();
-    const post = data?.data?.post;
-    console.log('post: ', post);
-
-    if (data.success && post) {
-      return post;
-    } else {
-      console.error('Failed to fetch post:', data.message || 'Unknown error');
-      return null;
-    }
-  } catch (error) {
-    console.error('Error fetching post:', error);
-    return null;
-  }
 };
 
+const fetchPostById = async (id: string) => {
+  const res = await fetch(`https://yourapi.com/api/get-by-id?id=${id}`);
+  const data = await res.json();
+  return data?.data?.post;
+};
 
+// Fetch data server-side
+export const getServerSideProps = async (context: any) => {
+  const { id } = context.query;
+  const post = await fetchPostById(id);
 
-export default function Index({selectedPost,sectionTitleContents}:any) {
- 
-  const router = useRouter()
-  const {id} = router.query
-  const [post, setPost] = useState<Post | null>(null);
-  console.log('post: ', extractTextFromJson(post?.description));
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  
-  useEffect(() => {
-    const fetchPost = async () => {
-      if (typeof id !== 'string') return;
-      setLoading(true);
-      setError(null);
-      
-      const fetchedPost = await fetchPostById(`${id}`);
-      console.log('fetchedPost: ', fetchedPost);
-      
-      if (fetchedPost) {
-        setPost(fetchedPost);
-      } else {
-        setError('Failed to load post.');
-      }
-      
-      setLoading(false);
-    };
-    
-    fetchPost();
-  }, [id]);
-  
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
-  
+  return {
+    props: {
+      post,
+    },
+  };
+};
+
+export default function Index({ post }: any) {
   return (
     <>
       <Head>
-      <title>
-  {post?.title || "أخبار لبنان والعالم - News Telegraph"}
-</title>
-<meta
-  name="description"
-  content={extractTextFromJson(post?.description) || "News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم. نحن نقدم لك تغطية شاملة لأهم الأحداث السياسية والاجتماعية."}
-/>
-
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link
-  rel="icon"
-  href="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"
-/>
-
-{/* Open Graph / Facebook */}
-<meta property="og:title" content={post?.title || "أخبار لبنان والعالم - News Telegraph"} />
-<meta
-  property="og:description"
-  content={extractTextFromJson(post?.description) || "News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم. نحن نقدم لك تغطية شاملة لأهم الأحداث السياسية والاجتماعية."}
-/>
-<meta
-  property="og:image"
-  content="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"
-/>
-<meta property="og:url" content={`https://newstelegraph.net/${post?._id}` } />
-<meta property="og:type" content="article" />
-
-{/* Twitter Card */}
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@NewsTelegraph" />
-<meta name="twitter:title" content={post?.title || "أخبار لبنان والعالم - News Telegraph"} />
-<meta
-  name="twitter:description"
-  content={extractTextFromJson(post?.description) || "News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم. نحن نقدم لك تغطية شاملة لأهم الأحداث السياسية والاجتماعية."}
-/>
-<meta
-  name="twitter:image"
-  content="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"
-/>
+        <title>{post?.title || "أخبار لبنان والعالم - News Telegraph"}</title>
+        <meta
+          name="description"
+          content={extractTextFromJson(post?.description) || "News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم."}
+        />
+        <meta property="og:title" content={post?.title || "أخبار لبنان والعالم - News Telegraph"} />
+        <meta
+          property="og:description"
+          content={extractTextFromJson(post?.description) || "News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم."}
+        />
+        <meta property="og:image" content="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg" />
+        <meta property="og:url" content={`https://newstelegraph.net/${post?._id}`} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post?.title || "أخبار لبنان والعالم - News Telegraph"} />
+        <meta
+          name="twitter:description"
+          content={extractTextFromJson(post?.description) || "News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم."}
+        />
+        <meta
+          name="twitter:image"
+          content="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"
+        />
       </Head>
       <main className="bg4">
   <Navbar dark/>
@@ -197,77 +116,6 @@ export default function Index({selectedPost,sectionTitleContents}:any) {
                         </Box>
                        
                       
-                                    {/* <Container  sx={{my:2}}>
-            <Typography component='h2' sx={{pt:'0 !important'}} className='blog-h2' >
-                          Article Summary:
-                            </Typography>
-                            <Box sx={{width:'100%'}}>
-                                    <ul className='table'>
-                                   
-                                  {sectionTitleContents && sectionTitleContents.map((section:string)=>{
-                                    return      <li key={`${section}`} style={{paddingBottom:'.5em'}}>
-                                            <Link className='clr4' href={`#${`${section}`.replace(/\s/g , "-")}`}>
-                                           {section}
-                                            </Link>
-                                            </li>
-                                  })}
-                                    </ul>
-                        </Box>
-            </Container> */}
-{/* 
-                        {selectedPost?.file?.map((post:{alt?:string,content:string | string[],type:string,src?:string}, index:number) => {
-        if (post.type === 'sectionTitle') {
-          return    <Typography  key={index} component='p' id={`${post?.content}`.replace(/\s/g , "-")} className={`blog-h1`} >
-         {`${post.content}`}
-          </Typography>
-        }
-        else if (post.type === 'paragraphArray' && Array.isArray(post.content)) {
-         return     (
-
-              post?.content?.map((para, index) : any => {
-               return   <Typography key={index} sx={{py:1}} component='p' className='blog-p'>  {`${para}`}   </Typography>
-              })
-            )
-     
-        }
-        else if (post.type === 'paragraph') {
-          return (
-            <Typography key={index} sx={{py:1}} component='p' className='blog-p'>
-     
-              {Array.isArray(post.content)
-                ? post.content.map((item : any, i) => {
-                    if (item.type === 'text') {
-                      return item.content
-                    } else if (item.type === 'link') {
-                      return (
-                        <a key={i} href={item.url}>
-                          {item.content}
-                        </a>
-                      )
-                    }
-                  })
-                :
-           
-                
-              `${post.content}`}
-              </Typography>
-          )
-        }
-         else if (post.type === 'title') {
-          return <h2 key={index}>{`${post.content}`}</h2>
-        }  else if (post.type === 'image') {
-          return  <Box key={post?.src}>
-            <img className='img' key={index} src={post?.src} alt={post?.alt} />
-          </Box>
-        } else if (post.type === 'paragraphTitle') {
-          return      <Typography  key={index} component='h2' className='blog-h3' >
-        {`${post.content}`}
-          </Typography>
-          
-       
-        }
-      })} */}
-
       <RenderText
       json={post?.description}
       />
@@ -296,31 +144,11 @@ export default function Index({selectedPost,sectionTitleContents}:any) {
                 }}>
 تابع الأخبار على وسائل التواصل الاجتماعي الخاصة بنا 
                 </Typography>
-              {/* <SMicons invert/> */}
               <ShareIcons  invert/>
               <Box>
-                {/* <Typography className='clr2' sx={{fontSize:'.9em'}}>
-                    NewsTelegraph Blog Article
-                </Typography> */}
+              
               </Box>
             </Container>
-            {/* <Container className='bg3' disableGutters sx={{my:{xs:1}, mx:{md:1},px:1,border:'1px solid'}}>
-            <Typography component='h2' className='blog-h2' >
-                            Invest in link building:
-                            </Typography>
-                            <Box sx={{width:'100%'}}>
-                                    <ul className='table'>
-                                   
-                                  {sectionTitleContents && sectionTitleContents.map((section:string)=>{
-                                    return      <li key={`${section}`} style={{paddingBottom:'.5em'}}>
-                                            <Link className='clr4' href={`#${`${section}`.replace(/\s/g , "-")}`}>
-                                           {section}
-                                            </Link>
-                                            </li>
-                                  })}
-                                    </ul>
-                        </Box>
-            </Container> */}
                 
             </Grid>
         </Grid>
@@ -328,6 +156,5 @@ export default function Index({selectedPost,sectionTitleContents}:any) {
 
       </main>
     </>
-  )
+  );
 }
-
