@@ -11,7 +11,7 @@ const BlogSections = ({loading,fetchPosts,posts,title}:any) => {
   const router= useRouter();
   
     return (
-    <Box className='' id='latest' sx={{mt:{xs:4,md:8,lg:12},mb:8}}>
+    <Box className='' id='latest' sx={{mt:{xs:8,md:8,lg:12},mb:8}}>
         <Container className='flex wrap auto' 
         sx={{justifyContent:{xs:'center',sm:'space-between'}}} maxWidth='lg'>
         <Typography component='h2' sx={{ 

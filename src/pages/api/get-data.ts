@@ -23,7 +23,7 @@ export default async function handler(
     const currentPage = parseInt(page as string, 12) || 1;
     const perPage = 12; // Number of products per page (adjust as needed)
     const skip = (currentPage - 1) * perPage;
-    console.log('skip: ', skip);
+  
 
     // Build the filter object
     let filter: any = {  };
@@ -39,6 +39,7 @@ export default async function handler(
     // Fetch products with pagination (skip and limit)
     const featuredProductsQuery = await ProductsCollection
       .find(filter)
+      .sort({ _id: -1 })
       .skip(skip)
       .limit(perPage);
 
