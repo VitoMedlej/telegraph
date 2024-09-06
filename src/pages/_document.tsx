@@ -10,6 +10,18 @@ export default function Document() {
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet"/>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P3GN29QE7M"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-P3GN29QE7M');
+          `,
+          }}
+        />
       
       </Head>
       <body className='bg2'>
