@@ -18,7 +18,7 @@ interface Post {
   images: string[];
   _id: string;
   title: string;
-  description: string;
+  description: any;
   isFeatured ?: boolean;
   link ?: string;
   dateAdded : any;
@@ -26,6 +26,24 @@ interface Post {
   alt ?: string;
   // other fields as necessary
 }
+const extractTextFromJson = (jsonString: string): string | null => {
+  try {
+    if (!jsonString) return null;
+    // Parse the JSON string
+    const data = JSON.parse(jsonString);
+    
+    // Check if blocks and text exist
+    if (data.blocks && data.blocks.length > 0 && data.blocks[0]?.text) {
+      return `${data.blocks[0].text?.slice(0, 140)}`;
+    }
+  } catch (error) {
+    console.error('Error parsing JSON:', error);
+    return null;
+  }
+
+  return null;
+}
+
 
 const fetchPostById = async (id: string): Promise<Post | null> => {
   try {
@@ -59,7 +77,7 @@ export default function Index({selectedPost,sectionTitleContents}:any) {
   const router = useRouter()
   const {id} = router.query
   const [post, setPost] = useState<Post | null>(null);
-  console.log('post: ', post);
+  console.log('post: ', extractTextFromJson(post?.description));
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
@@ -91,17 +109,44 @@ export default function Index({selectedPost,sectionTitleContents}:any) {
     <>
       <Head>
       <title>
-      {/* أخبار لبنان والعالم - News Telegraph | تغطية شاملة للأحداث من حولك */}
-      {
-        post?.title
-      }
-      </title>
-        <meta name="description" content={`
-News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم. نحن نقدم لك تغطية شاملة لأهم الأحداث السياسية والاجتماعية والثقافية.
-`} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg" />
+  {post?.title || "أخبار لبنان والعالم - News Telegraph"}
+</title>
+<meta
+  name="description"
+  content={extractTextFromJson(post?.description) || "News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم. نحن نقدم لك تغطية شاملة لأهم الأحداث السياسية والاجتماعية."}
+/>
 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+  rel="icon"
+  href="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"
+/>
+
+{/* Open Graph / Facebook */}
+<meta property="og:title" content={post?.title || "أخبار لبنان والعالم - News Telegraph"} />
+<meta
+  property="og:description"
+  content={extractTextFromJson(post?.description) || "News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم. نحن نقدم لك تغطية شاملة لأهم الأحداث السياسية والاجتماعية."}
+/>
+<meta
+  property="og:image"
+  content="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"
+/>
+<meta property="og:url" content={`https://newstelegraph.net/${post?._id}` } />
+<meta property="og:type" content="article" />
+
+{/* Twitter Card */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@NewsTelegraph" />
+<meta name="twitter:title" content={post?.title || "أخبار لبنان والعالم - News Telegraph"} />
+<meta
+  name="twitter:description"
+  content={extractTextFromJson(post?.description) || "News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم. نحن نقدم لك تغطية شاملة لأهم الأحداث السياسية والاجتماعية."}
+/>
+<meta
+  name="twitter:image"
+  content="https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"
+/>
       </Head>
       <main className="bg4">
   <Navbar dark/>
@@ -252,7 +297,7 @@ News Telegraph - تابع أحدث الأخبار العاجلة والمتنو�
 تابع الأخبار على وسائل التواصل الاجتماعي الخاصة بنا 
                 </Typography>
               {/* <SMicons invert/> */}
-              <ShareIcons invert/>
+              <ShareIcons  invert/>
               <Box>
                 {/* <Typography className='clr2' sx={{fontSize:'.9em'}}>
                     NewsTelegraph Blog Article

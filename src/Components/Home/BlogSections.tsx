@@ -31,7 +31,7 @@ const BlogSections = ({loading,fetchPosts,posts,title}:any) => {
                 <Box
                 
                 onClick={() =>
-                  router.push(`/blog/${post?._id}?title=${post?.title.replaceAll(' ', '-')}`)
+                  router.push(`/blog/${post?._id}`)
                 }
                 sx={{width:'100%',height:'260px'}}>
                     <img src={`${thumbnail}`} alt={`Blog Post Image ${post?.alt ? post?.alt : ''}`} className="img pointer" />
@@ -60,7 +60,7 @@ const BlogSections = ({loading,fetchPosts,posts,title}:any) => {
     </Typography>
     <Typography
   onClick={() =>
-    router.push(`/blog/${post?._id}?title=${post?.title.replaceAll(' ', '-')}`)
+    router.push(`/blog/${post?._id}`)
   }
   className='pointer'
   sx={{
@@ -74,7 +74,7 @@ const BlogSections = ({loading,fetchPosts,posts,title}:any) => {
 </Typography>
 <Typography
       onClick={() =>
-        router.push(`/blog/${post?._id}?title=${post?.title.replaceAll(' ', '-')}`)
+        router.push(`/blog/${post?._id}`)
       }
       className="pointer clr1"
       sx={{
@@ -99,7 +99,7 @@ const BlogSections = ({loading,fetchPosts,posts,title}:any) => {
                   gap:1.55,px:1}}>
 
 
-                    <Btn onClick={()=>router.push(`/blog/${post._id}?title=${post?.title.replaceAll(' ', '-')}`)} dark  
+                    <Btn onClick={()=>router.push(`/blog/${post._id}`)} dark  
               
                     sx={{
                       my:2,

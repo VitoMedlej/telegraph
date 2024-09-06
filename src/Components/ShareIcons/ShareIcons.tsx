@@ -1,10 +1,9 @@
 "use client";
-import { Box, Button } from '@mui/material';
-import React from 'react';
-import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaWhatsapp, FaCopy } from 'react-icons/fa';
+import { Box, Button, Snackbar } from '@mui/material';
+import React, { useState } from 'react';
+import { FaFacebook, FaTwitter, FaCopy } from 'react-icons/fa';
 
 const sm = [
-  
   {
     name: 'X',
     shareUrl: (url: string) => `https://twitter.com/intent/tweet?url=${url}`,
@@ -15,21 +14,25 @@ const sm = [
     shareUrl: (url: string) => `https://www.facebook.com/sharer/sharer.php?u=${url}`,
     Icon: FaFacebook
   }
-
 ];
 
 const SMicons = ({ sx, color, invert }: { color?: string, sx?: any, invert?: boolean }) => {
+  const [open, setOpen] = useState(false); // State for showing the snackbar (popup)
   const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   const handleCopyUrl = async () => {
     if (navigator.clipboard) {
       try {
         await navigator.clipboard.writeText(currentUrl);
-        alert("URL copied to clipboard!");
+        setOpen(true); // Show the popup alert
       } catch (err) {
         alert("Failed to copy URL.");
       }
     }
+  };
+
+  const handleClose = () => {
+    setOpen(false); // Close the popup alert
   };
 
   return (
@@ -47,9 +50,18 @@ const SMicons = ({ sx, color, invert }: { color?: string, sx?: any, invert?: boo
       ))}
 
       {/* Copy URL button */}
-      <Button onClick={handleCopyUrl} className="center flex smIcon pointer align-center gap">
-        <FaCopy color={color || 'white'} size="2em" />
-      </Button>
+      <Box onClick={handleCopyUrl} className="center flex smIcon pointer align-center gap">
+        <FaCopy color={color || 'black'} size="2em" />
+      </Box>
+
+      {/* Snackbar for "Link copied" popup */}
+      <Snackbar
+        open={open}
+        autoHideDuration={3000}
+        onClose={handleClose}
+        message="Link copied"
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      />
     </Box>
   );
 };
