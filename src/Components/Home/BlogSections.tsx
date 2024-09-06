@@ -22,7 +22,7 @@ const BlogSections = ({loading,fetchPosts,posts,title}:any) => {
                     
        {posts && posts?.length > 0 && posts.map((post:any)=>{
         
-       const thumbnail = post?.isFeatured === true && post?.link ? YouTubeThumbnail({url:post?.link}) : post?.images?.length > 0 ? post?.images[0] : ''; 
+       const thumbnail = post?.isFeatured === true && post?.link ? YouTubeThumbnail({url:post?.link}) : post?.images?.length > 0 ? `${post?.images[0]}-/resize/600/` : ''; 
        const description = post.description && JSON.parse(post.description)?.blocks[0]?.text || '';
 
  return <Box key={post._id} className='shadow ' sx={{

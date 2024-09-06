@@ -22,9 +22,16 @@ const extractTextFromJson = (jsonString: string): string | null => {
 };
 
 const fetchPostById = async (id: string) => {
-  const res = await fetch(`https://yourapi.com/api/get-by-id?id=${id}`);
-  const data = await res.json();
-  return data?.data?.post;
+  try {
+
+ const res= await fetch(`https://newstelegraph.net/api/get-by-id?id=${id}`);
+    const data = await res.json();
+    return data?.data?.post;
+  }
+  catch (e) {
+    console.log('e: ', e);
+    return null;
+  }
 };
 
 // Fetch data server-side
@@ -40,6 +47,7 @@ export const getServerSideProps = async (context: any) => {
 };
 
 export default function Index({ post }: any) {
+  if (!post) return <></>
   return (
     <>
       <Head>
