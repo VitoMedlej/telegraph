@@ -61,10 +61,10 @@ export default function Index({ post }: any) {
           property="og:description"
           content={extractTextFromJson(post?.description) || "News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم."}
         />
-        <meta property="og:image" content={`${post?.images[0]}-/resize/100/` || "https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"} />
+        <meta property="og:image" content={`${post?.images[0]}-/resize/600/` || "https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"} />
         <meta property="og:url" content={`https://newstelegraph.net/${post?._id}`} />
         <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content={`${post?.images[0]}-/resize/900/` || "https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"} />
         <meta name="twitter:title" content={post?.title || "أخبار لبنان والعالم - News Telegraph"} />
         <meta
           name="twitter:description"
@@ -72,7 +72,7 @@ export default function Index({ post }: any) {
         />
         <meta
           name="twitter:image"
-          content={`${post?.images[0]}-/resize/100/` || "https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"}
+          content={`${post?.images[0]}-/resize/600/` || "https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"}
         />
       </Head>
       <main className="bg4">
