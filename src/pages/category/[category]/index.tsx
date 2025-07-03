@@ -36,13 +36,19 @@ const Page = () => {
 
     setLoading(true);
     try {
-      const res = await fetch(`/api/get-data?page=${reset ? 1 : page}&limit=12&category=${category || ''}`);
+      const currentPage = reset ? 1 : page;
+      const res = await fetch(`/api/get-data?page=${currentPage}&limit=24&category=${category || ''}`);
       const data = await res.json();
       const content = data?.data?.featuredProducts || [];
 
       if (data.success && content.length > 0) {
         setPosts((prevPosts) => (reset ? content : [...prevPosts, ...content])); // Reset or append posts
         setPage((prevPage) => reset ? 2 : prevPage + 1);  // Set page for next fetch
+        
+        // If we got less than 24 posts, we've reached the end
+        if (content.length < 24) {
+          setHasMore(false);
+        }
       } else if (reset) {
         setPosts([]);  // If reset and no posts, ensure empty state
         setHasMore(false); // Disable further pagination
@@ -64,8 +70,10 @@ const Page = () => {
           {posts.length > 0 && (
             <BlogSections
               title={category}
-              fetchPosts={fetchPosts}
+              fetchPosts={() => fetchPosts(false)}
               posts={posts}
+              loading={loading}
+              hasMore={hasMore}
             />
           )}
           {loading && (

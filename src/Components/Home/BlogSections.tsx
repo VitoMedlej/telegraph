@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Btn from '../Btn/Btn'
 import { useRouter } from 'next/router'
 import YouTubeThumbnail from '../YoutubeThumbail/YoutubeThumbnail'
@@ -7,8 +7,19 @@ import YouTubeThumbnail from '../YoutubeThumbail/YoutubeThumbnail'
 
 
 
-const BlogSections = ({loading,fetchPosts,posts,title}:any) => {
+const BlogSections = ({loading,fetchPosts,posts,title,hasMore}:any) => {
   const router= useRouter();
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsDesktop(window.innerWidth > 900);
+    };
+    
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
   
     return (
     <Box className='' id='latest' sx={{mt:{xs:8,md:8,lg:12},mb:8}}>
@@ -34,7 +45,11 @@ const BlogSections = ({loading,fetchPosts,posts,title}:any) => {
                   router.push(`/blog/${post?._id}`)
                 }
                 sx={{width:'100%',height:'260px'}}>
-                    <img src={`${thumbnail}`} alt={`Blog Post Image ${post?.alt ? post?.alt : ''}`} className="img pointer" />
+                    <img 
+                      src={`${thumbnail}`} 
+                      alt={`Blog Post Image ${post?.alt ? post?.alt : ''}`} 
+                      className={`img pointer${isDesktop ? ' contain' : ''}`}
+                    />
                 </Box>
                 <Box sx={{px:1}}>
                 <Typography className=''
@@ -119,13 +134,15 @@ const BlogSections = ({loading,fetchPosts,posts,title}:any) => {
             </Box>
                    })}
                      <Box className='auto center'  sx={{pt:5,minWidth:'80vw',with:'100%'}}>
-              <Btn
-              onClick={fetchPosts}
-               disabled={loading}
-             
-              dark sx={{px:3,py:.8,fontSize:'.9em'}}>
-                Read More
-              </Btn>
+              {hasMore !== false && (
+                <Btn
+                onClick={fetchPosts}
+                disabled={loading}
+               
+                dark sx={{px:3,py:.8,fontSize:'.9em'}}>
+                  {loading ? 'Loading...' : 'Read More'}
+                </Btn>
+              )}
               </Box>
         </Container>
     </Box>
