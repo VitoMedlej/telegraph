@@ -46,13 +46,10 @@ const pages = [
         <Container maxWidth="xl" sx={{ margin: '0 auto' }}>
           <Toolbar sx={{ maxWidth: 'xl', py: 1, margin: '0 auto' }} disableGutters>
             <Link className={`logo ${dark ? '' : ''}`} href="/">
-              <UcImage
+              <img
                 src={'https://ucarecdn.com/f13733f8-fece-4b1c-93d7-20d530da52dc/newslogosmall.JPG'}
                 className="img"
                 alt="NewsTelegraph logo"
-                widthHint={180}
-                maxWidth={180}
-                quality="lightest"
                 style={{maxWidth:120}}
               />
             </Link>

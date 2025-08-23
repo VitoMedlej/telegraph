@@ -17,7 +17,7 @@ const Hero = ({blog,imgsm,imgmd,title,desc}:{imgsm?:string,blog?:boolean,imgmd?:
                     </Typography>
                     </Container>
                     <Box sx={{height:'400px',display:{xs:'flex'}}} className='hero-img absolute'>
-                        <UcImage src={imgsm ? imgsm : "https://ucarecdn.com/b0669374-d6f8-4508-abe4-73b5382c16a8/ColourfulMinimalBrainstormRoadmapMindMap3.jpeg"} alt="Main Section Background Image Small Devices" className="img" widthHint={800} maxWidth={800} quality="lightest" />
+                        <img src={imgsm ? imgsm : "https://ucarecdn.com/b0669374-d6f8-4508-abe4-73b5382c16a8/ColourfulMinimalBrainstormRoadmapMindMap3.jpeg"} alt="Main Section Background Image Small Devices" className="img" />
                     </Box>
                 </Grid>
         </Grid>
