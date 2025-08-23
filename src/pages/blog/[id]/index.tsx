@@ -5,6 +5,7 @@ import Navbar from '@/Navbar/Navbar'
 import { Box, Container, Grid, Typography } from '@mui/material'
 import Head from 'next/head'
 import YouTube from 'react-youtube';
+import UcImage from '@/Components/UcImage/UcImage';
 
 // Your existing helper functions
 const extractTextFromJson = (jsonString: string): string | null => {
@@ -105,7 +106,7 @@ export default function Index({ post }: any) {
                     <Box sx={{mt:{xs:1,sm:2,lg:5},maxWidth:'md',
                       height:{xs:'100%',sm:'400px',md:'500px'}
                       }}>
-                            <img src={post?.images[0]} alt="Blog Post Main Image" className="img" />
+                            <UcImage src={post?.images[0]} alt="Blog Post Main Image" className="img" widthHint={800} maxWidth={800} quality="lightest" />
                         </Box>}
                      {post?.alt &&   <Box>
                           <Typography sx={{fontSize:'.8em',fontWeight:400}}>
@@ -137,7 +138,7 @@ export default function Index({ post }: any) {
              sx={{my:{xs:1,sm:0},py:2,px:1,mx:{md:1}}}>
               <Box className='flex row align-center gap2' sx={{mb:.25,width:'100%'}}>
                 <Box sx={{width:'50px'}}>
-                <img src="https://ucarecdn.com/620b779a-2991-457a-b2ed-664dcdbacad2/426693078_377420818337662_3520521881156974498_n.jpg" alt="" className="img rounded" />
+                <UcImage src="https://ucarecdn.com/620b779a-2991-457a-b2ed-664dcdbacad2/426693078_377420818337662_3520521881156974498_n.jpg" alt="" className="img rounded" widthHint={50} maxWidth={100} quality="lightest" />
                 </Box>
                 <Typography sx={{fontWeight:'600'}}>
                   NewsTelegraph

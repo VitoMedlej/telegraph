@@ -2,6 +2,7 @@ import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
 import Btn from '../Btn/Btn'
 import { useRouter } from 'next/router'
+import UcImage from '../UcImage/UcImage'
 
 
 
@@ -48,7 +49,7 @@ const InstagramSection = () => {
 
  return <Box key={i} className='shadow' sx={{minWidth:'150px',margin:1,width:{xs:'45%',sm:'47%',md:'31%'}}}>
                 <Box sx={{width:'100%',height:{xs:'200px',sm:'350px'}}}>
-                    <img src={i} alt="Blog Post Image" className="img cover" />
+                    <UcImage src={i} alt="Blog Post Image" className="img cover" widthHint={350} maxWidth={500} quality="lightest" />
                 </Box>
             
             </Box>

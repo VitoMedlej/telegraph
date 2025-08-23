@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Btn from '../Btn/Btn'
 import gsap from 'gsap';
 import { useRouter } from 'next/router';
+import UcImage from '../UcImage/UcImage';
 
 
 const Services = () => {
@@ -33,7 +34,7 @@ const Services = () => {
                 </Grid>       
                 <Grid item xs={12} sm={5}>
                     <Box className='hid serv-img' sx={{maxWidth:'550px'}}>
-                      <img src="https://ucarecdn.com/94429ac2-a97b-4250-9a70-66aa8655c7b2/-/resize/1000x1000/" alt="NewsTelegraph UI Services Image" className="img" />
+                      <UcImage src="https://ucarecdn.com/94429ac2-a97b-4250-9a70-66aa8655c7b2/-/resize/1000x1000/" alt="NewsTelegraph UI Services Image" className="img" widthHint={500} maxWidth={550} quality="lightest" />
                     </Box>
                 </Grid>       
         </Grid>

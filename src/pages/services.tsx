@@ -4,6 +4,7 @@ import { Grid, Box, Link, Typography } from '@mui/material'
 import Head  from 'next/head'
 import React, { useEffect } from 'react'
 import gsap from 'gsap';
+import UcImage from '@/Components/UcImage/UcImage';
 
 
 const Services = () => {
@@ -120,7 +121,7 @@ const Services = () => {
                 borderRadius: '8px'
             }}>
             
-                <img
+                <UcImage
                     src={ "https://ucarecdn.com/2b91fbda-3b9d-432a-a0aa-484303ad75ca/Untitleddesign31.png"}
                     alt="Image"
                     className="img br8"/>
@@ -139,7 +140,7 @@ const Services = () => {
                 borderRadius: '8px'
             }}>
             
-                <img
+                <UcImage
                     src={ "https://ucarecdn.com/2b91fbda-3b9d-432a-a0aa-484303ad75ca/Untitleddesign31.png"}
                     alt=" services Image"
                     className="img br8"/>
@@ -251,7 +252,7 @@ const Services = () => {
                 borderRadius: '8px'
             }}>
             
-                <img
+                <UcImage
                     src={ "https://ucarecdn.com/31c473ed-c20a-494c-8c73-b81dd7837605/Untitleddesign21.png"}
                     alt="Image"
                     className="img br8"/>
@@ -272,7 +273,7 @@ const Services = () => {
                 borderRadius: '8px'
             }}>
             
-                <img
+                <UcImage
                     src={ "https://ucarecdn.com/31c473ed-c20a-494c-8c73-b81dd7837605/Untitleddesign21.png"}
                     alt="Image"
                     className="img br8"/>
@@ -340,7 +341,7 @@ const Services = () => {
                 borderRadius: '8px'
             }}>
             
-                <img
+                <UcImage
                     src={ "https://ucarecdn.com/05238096-18e8-4c12-ae04-d22a14742aac/Untitleddesign.png"}
                     alt="Image"
                     className="img br8"/>
@@ -359,7 +360,7 @@ const Services = () => {
                 borderRadius: '8px'
             }}>
             
-                <img
+                <UcImage
                     src={ "https://ucarecdn.com/5ed73574-bf82-4f2c-8cc9-82a49791eff0/Untitleddesign111.png"}
                     alt="Image"
                     className="img br8"/>
