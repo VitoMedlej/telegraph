@@ -48,7 +48,7 @@ const projects = [
     href : 'beeorganic-lb.com',
     link : 'https://beeorganic-lb.com/',
     description : 'Premium Organic Honey From Lebanon',
-    img : 'https://ucarecdn.com/20fdd745-f27d-4fcc-810a-b1579112422f/-/resize/700x700/',
+    img : 'https://ucarecdn.com/20fdd745-f27d-4fcc-810a-b1579112422f/',
     cate : ['Local Shop','Online store','Honey','Organic Store']
   },
   {
@@ -64,7 +64,7 @@ const projects = [
     href : 'mirach-lb.com',
     link : 'https://mirach-lb.com/',
     description : 'Lebanese Personalized Handcrafted Bags',
-    img : 'https://ucarecdn.com/859e99a7-4a1c-4fe7-a2bb-dcfd15c1d780/-/resize/700x700/',
+    img : 'https://ucarecdn.com/859e99a7-4a1c-4fe7-a2bb-dcfd15c1d780/',
     cate : ['Custom site','Online shop','Animations','Lebanese Brand']
   },
   {
@@ -90,7 +90,7 @@ const projects = [
     href : 'truenatureblend.com',
     link : 'https://truenatureblend.com/',
     description : 'Healthy Natural Supplements Shop   ',
-    img : 'https://ucarecdn.com/f27f5048-940f-4a0f-9ab5-6aa91906d1f5/-/resize/700x700/',
+    img : 'https://ucarecdn.com/f27f5048-940f-4a0f-9ab5-6aa91906d1f5/',
     cate : ['Web dev','Online store','Branding','Startup']
   },
 
