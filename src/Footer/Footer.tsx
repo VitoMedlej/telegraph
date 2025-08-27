@@ -80,7 +80,7 @@ const Footer = () => (
           </Grid>
           <Box className='flex  center auto' sx={{background:'#ffffff',py:1,color:'#494949d0'}}>
             <Typography component='p' sx={{fontSize:'.8em'}}>
-            Site Developed By <span><a target='_blank' href='https://onbeirut.com'>Onbeirut Agency</a></span>
+            Site Developed By <span><a target='_blank' href='https://wavescode.com'>Wavescode Agency</a></span>
             </Typography>
           </Box>
       </Box>

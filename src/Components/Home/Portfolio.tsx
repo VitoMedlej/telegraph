@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import Btn from '../Btn/Btn';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
+import UcImage from '../UcImage/UcImage';
 
 
 
@@ -191,7 +191,7 @@ const Portfolio = () => {
                 <Box className='relative' sx={{height:{xs:'450px',sm:'550px',md:'600px',lg:'650px'},maxWidth:'500px'}}>
                   
                   <Box className={`absolute img-hider-${idx}`} sx={{background:'#0f0f0f',height:'20%',top:0,width:'100%',maxWidth:'650px'}}/>
-                  <img src={project.img} alt="Project Image" className="img" />
+                  <UcImage src={project.img} alt="Project Image" className="img" widthHint={500} maxWidth={650} quality="lightest" />
                 </Box>
                 <Box className='flex row' sx={{gap:'.5em'}}>
                     {

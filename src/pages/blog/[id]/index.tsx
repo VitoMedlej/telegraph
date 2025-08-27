@@ -5,6 +5,7 @@ import Navbar from '@/Navbar/Navbar'
 import { Box, Container, Grid, Typography } from '@mui/material'
 import Head from 'next/head'
 import YouTube from 'react-youtube';
+import UcImage from '@/Components/UcImage/UcImage';
 
 // Your existing helper functions
 const extractTextFromJson = (jsonString: string): string | null => {
@@ -61,7 +62,7 @@ export default function Index({ post }: any) {
           property="og:description"
           content={extractTextFromJson(post?.description) || "News Telegraph - تابع أحدث الأخبار العاجلة والمتنوعة من لبنان والعالم."}
         />
-        <meta property="og:image" content={`${post?.images[0]}` || "https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"} />
+        <meta property="og:image" content={`${post?.images[0]}-/resize/300/` || "https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"} />
         <meta property="og:url" content={`https://newstelegraph.net/${post?._id}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -72,7 +73,7 @@ export default function Index({ post }: any) {
         />
         <meta
           name="twitter:image"
-          content={`${post?.images[0]}` || "https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"}
+          content={`${post?.images[0]}-/resize/300/` || "https://ucarecdn.com/d61bbd32-7e00-4c97-ab6e-830a55d2c430/426298383_862973212505626_547961837728015954_n.jpg"}
         />
       </Head>
       <main className="bg4">
@@ -105,7 +106,7 @@ export default function Index({ post }: any) {
                     <Box sx={{mt:{xs:1,sm:2,lg:5},maxWidth:'md',
                       height:{xs:'100%',sm:'400px',md:'500px'}
                       }}>
-                            <img src={post?.images[0]} alt="Blog Post Main Image" className="img" />
+                            <img src={`${post?.images[0]}-/resize/500/`} alt="Blog Post Main Image" className="img" />
                         </Box>}
                      {post?.alt &&   <Box>
                           <Typography sx={{fontSize:'.8em',fontWeight:400}}>
@@ -137,7 +138,7 @@ export default function Index({ post }: any) {
              sx={{my:{xs:1,sm:0},py:2,px:1,mx:{md:1}}}>
               <Box className='flex row align-center gap2' sx={{mb:.25,width:'100%'}}>
                 <Box sx={{width:'50px'}}>
-                <img src="https://ucarecdn.com/620b779a-2991-457a-b2ed-664dcdbacad2/426693078_377420818337662_3520521881156974498_n.jpg" alt="" className="img rounded" />
+                <img src="https://ucarecdn.com/620b779a-2991-457a-b2ed-664dcdbacad2/-/resize/200/" alt="" className="img rounded" />
                 </Box>
                 <Typography sx={{fontWeight:'600'}}>
                   NewsTelegraph

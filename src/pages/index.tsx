@@ -25,7 +25,7 @@ export default function Home({ initialPosts }: HomeProps) {
   const fetchPosts = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`/api/get-data?page=${page}&limit=12`);
+      const res = await fetch(`/api/get-data?page=${page}&limit=24`);
       const data = await res.json();
       const content = data?.data?.featuredProducts;
 
@@ -84,7 +84,7 @@ export default function Home({ initialPosts }: HomeProps) {
 // Preload the initial posts at build time
 export async function getStaticProps() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data?page=1&limit=12`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data?page=1&limit=24`);
     const data = await res.json();
     const initialPosts = data?.data?.featuredProducts || [];
 

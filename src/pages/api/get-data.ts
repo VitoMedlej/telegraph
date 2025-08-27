@@ -20,8 +20,8 @@ export default async function handler(
     const { category, page = '1' } = req.query;
 
     // Convert page to a number and set items per page
-    const currentPage = parseInt(page as string, 12) || 1;
-    const perPage = 12; // Number of products per page (adjust as needed)
+    const currentPage = parseInt(page as string, 24) || 1;
+    const perPage = 24; // Number of products per page (adjust as needed)
     const skip = (currentPage - 1) * perPage;
   
 

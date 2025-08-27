@@ -11,6 +11,7 @@ import {IoMdClose} from 'react-icons/io'
 import { IoMdMenu } from "react-icons/io";
 import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
+import UcImage from '../Components/UcImage/UcImage';
 
 const pages = [
   { href: '/category/الأخبار', title: 'الأخبار', isHome: false },
@@ -49,6 +50,7 @@ const pages = [
                 src={'https://ucarecdn.com/f13733f8-fece-4b1c-93d7-20d530da52dc/newslogosmall.JPG'}
                 className="img"
                 alt="NewsTelegraph logo"
+                style={{maxWidth:120}}
               />
             </Link>
   
