@@ -63,13 +63,26 @@ const renderBlocks = (blocks: Block[]): JSX.Element[] => {
 
 // Component to render the JSON
 const RenderJson: FC<{ json: string }> = ({ json }) => {
-  const data: JsonData = JSON.parse(json);
+  if (!json || typeof json !== 'string' || json.trim() === '') {
+    return null;
+  }
 
-  return (
-    <div className='break-spaces'>
-      {renderBlocks(data.blocks)}
-    </div>
-  );
+  try {
+    const data: JsonData = JSON.parse(json);
+
+    if (!data || !data.blocks || !Array.isArray(data.blocks)) {
+      return null;
+    }
+
+    return (
+      <div className='break-spaces'>
+        {renderBlocks(data.blocks)}
+      </div>
+    );
+  } catch (error) {
+    console.error('Error parsing JSON in RenderText:', error);
+    return null;
+  }
 };
 
 export default RenderJson;
